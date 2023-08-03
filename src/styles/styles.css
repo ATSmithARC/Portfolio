@@ -118,16 +118,20 @@ body {
   background-color: var(--color-bg);
 }
 .wrapper {
-  margin-left: 6rem;
+  margin-left: 6.5rem;
   margin-right: 2rem;
 }
 .content {
   display: flex;
   flex-direction: column;
 }
+.project-container {
+  display:flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 .menu-container {
-  margin-top: 2rem;
-  width: 10rem;
+  width: 8rem;
 }
 .menu li {
   margin-bottom: 0.5rem;
@@ -143,6 +147,27 @@ body {
   opacity: 0;
   font-size: 1.5rem;
 }
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -1rem;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 1rem;
+  background-clip: padding-box;
+}
+.my-masonry-grid_column .masonryItem {
+  cursor:pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.my-masonry-grid_column .masonryItem img {
+  object-fit: cover;
+  width: 100%;
+}
+
 /* Begin Media Section */
 @media only screen and (max-width: 800px) {
   .logomation{
@@ -173,7 +198,7 @@ body {
     justify-content: center;
     gap: 1.5rem;
     background-color: var(--color-primary);
-    transition: 1s;
+    transition: 500ms;
     transform: translateY(-100vh);
     z-index: 2;
   }
@@ -205,7 +230,7 @@ body {
     justify-content: center;
     gap: 1.5rem;
     background-color: var(--color-primary);
-    transition: 1s;
+    transition: 500ms;
     transform: translateX(-100vw);
     z-index: 1;
   }

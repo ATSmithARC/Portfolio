@@ -9,12 +9,12 @@ import "../styles/styles.css";
 
 function Footer() {
   return (
-    <footer class="myfooter">
-      <div class="row-cen-inview">
-        <ul class="social-footer">
+    <footer className="myfooter">
+      <div className="row-cen-inview">
+        <ul className="social-footer">
           <li>
             <a
-              class="icon"
+              className="icon"
               title="LinkedIn"
               target="_blank"
               href="https://www.linkedin.com/in/atsmitharc/"
@@ -24,7 +24,7 @@ function Footer() {
           </li>
           <li>
             <a
-              class="icon"
+              className="icon"
               title="Github"
               target="_blank"
               href="https://github.com/ATSmithARC"
@@ -34,7 +34,7 @@ function Footer() {
           </li>
           <li>
             <a
-              class="icon"
+              className="icon"
               title="Email"
               target="_blank"
               href="mailto:atsmitharc@gmail.com"
@@ -44,7 +44,7 @@ function Footer() {
           </li>
           <li>
             <a
-              class="icon"
+              className="icon"
               title="YouTube"
               target="_blank"
               href="https://www.youtube.com/channel/UCyatriboiXwvFkkuPRFMRxw"
@@ -54,7 +54,7 @@ function Footer() {
           </li>
           <li>
             <a
-              class="icon ar"
+              className="icon ar"
               title="Archinect"
               target="_blank"
               href="https://archinect.com/atsmitharc"

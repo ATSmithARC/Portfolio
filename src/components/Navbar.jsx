@@ -12,15 +12,15 @@ function Navbar() {
 
   return (
       <header>
-      <div class="logomation">
+      <div className="logomation">
         <a>
           <TypeIt
             getBeforeInit={(instance) => {
               instance
                 .type("andrew_smith")
-                .pause(750)
+                .pause(1500)
                 .delete(11)
-                .pause(500)
+                .pause(200)
                 .type("_s");
               return instance;
             }}
@@ -28,16 +28,16 @@ function Navbar() {
         </a>
       </div>
         <nav ref={navRef}>
-          <Link href="/" class="animatedLink" onClick={showNavbar}>
+          <Link href="/" className="animatedLink" onClick={showNavbar}>
             Home
           </Link>
-          <Link href="/projects" class="animatedLink" onClick={showNavbar}>
+          <Link href="/projects" className="animatedLink" onClick={showNavbar}>
             Projects
           </Link>
-          <Link href="/contact" class="animatedLink" onClick={showNavbar}>
+          <Link href="/contact" className="animatedLink" onClick={showNavbar}>
             Contact
           </Link>
-          <Link href="/about" class="animatedLink" onClick={showNavbar}>
+          <Link href="/about" className="animatedLink" onClick={showNavbar}>
             About
           </Link>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
