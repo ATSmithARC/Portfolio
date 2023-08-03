@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ATSmithARC.github.io/Portfolio",
+  "homepage": "http://atsmitharc.com",
   "name": "glitch-hello-react",
   "version": "0.0.5",
   "description": "A simple React single page app, built with Vite and React.",
@@ -7,7 +7,7 @@
     "start": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -18,10 +18,12 @@
     "react-icons": "^4.10.1",
     "react-spring": "^9.7.2",
     "wouter": "^2.11.0",
-    "typeit-react": "^2.6.4"
+    "typeit-react": "^2.6.4",
+    "react-masonry-css": "^1.0.16"
   },
   "devDependencies": {
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "gh-pages": "^5.0.0"
   },
   "browserslist": [
     ">0.2%",
