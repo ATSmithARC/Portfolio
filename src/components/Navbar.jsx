@@ -1,17 +1,40 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Router, Link } from "wouter";
+import { Link, useLocation} from "wouter";
 import TypeIt from "typeit-react";
 import "../styles/styles.css";
 
 function Navbar() {
+  function normalize(path) {
+    let arr = path.split("/");
+    let sliced = arr.slice(0, 2);
+    let normPath = sliced.join("/");
+    return normPath;
+  }
   const navRef = useRef();
+  const [location] = useLocation();
+  const root = normalize(location);
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+  const handleNavClick = (event) => {
+    showNavbar();
+  };
+  const ActiveLink = (props) => {
+    const isActive = (root === props.href)
+    return (
+      <Link
+        {...props}
+        className={isActive ? "activeLink" : "animatedLink"}
+        onClick={handleNavClick}
+      >
+        {props.children}
+      </Link>
+    );
+  };
 
   return (
-      <header>
+    <header>
       <div className="logomation">
         <a>
           <TypeIt
@@ -27,28 +50,19 @@ function Navbar() {
           />
         </a>
       </div>
-        <nav ref={navRef}>
-          <Link href="/" className="animatedLink" onClick={showNavbar}>
-            Home
-          </Link>
-          <Link href="/projects" className="animatedLink" onClick={showNavbar}>
-            Projects
-          </Link>
-          <Link href="/contact" className="animatedLink" onClick={showNavbar}>
-            Contact
-          </Link>
-          <Link href="/about" className="animatedLink" onClick={showNavbar}>
-            About
-          </Link>
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes />
-          </button>
-        </nav>
-        <button className="nav-btn" onClick={showNavbar}>
-          <FaBars />
+      <nav ref={navRef}>
+        <ActiveLink href="/">Home</ActiveLink>
+        <ActiveLink href="/projects">Projects</ActiveLink>
+        <ActiveLink href="/contact">Contact</ActiveLink>
+        <ActiveLink href="/about">About</ActiveLink>
+        <button className="nav-btn nav-close-btn" onClick={handleNavClick}>
+          <FaTimes />
         </button>
-      </header>
-    
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
   );
 }
 

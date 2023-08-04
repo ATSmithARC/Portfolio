@@ -1,22 +1,26 @@
 import React, { useState } from 'react';
 import { useRef } from "react";
 import { FaFilter, FaTimes } from "react-icons/fa";
-import { Router, Link } from "wouter";
+import { Router, Link, useRoute } from "wouter";
 import ProjectMasonry from "../components/ProjectMasonry.jsx";
 import "../styles/styles.css";
 
-function ProjectMenu() {
-  const [category, setCategory] = useState('All');
+function ProjectMenu(props) {
   const menuRef = useRef();
   const showMenu = () => {
     menuRef.current.classList.toggle("responsive_menu");
   };
-  function handleClick(category) {
-    console.log(`State Changed to ${category}`)
-    setCategory(category);
+  const handleFilterClick = (event) => {
     showMenu();
-  }
-  
+  };
+  const ActiveLink = props => {
+  const [isActive] = useRoute(props.href);
+  return (
+    <Link {...props} className={isActive ? "menu-item activeLink" : "menu-item animatedLink"} onClick={handleFilterClick}>
+      {props.children}
+    </Link>
+  );
+};
   return (
     <React.Fragment>
     <div className="menu-container">
@@ -30,33 +34,32 @@ function ProjectMenu() {
           </button>
         </li>
         <li>
-          <a onClick={() => handleClick('All')} className="menu-item animatedLink">
-            <span className="link-wrapper">All</span>
-          </a>
+          <ActiveLink href="/projects">
+            All
+          </ActiveLink>
         </li>
         <li>
-          <a onClick={() => handleClick('Undergraduate')} className="menu-item animatedLink">
-            <span className="link-wrapper">Undergraduate</span>
-          </a>
+          <ActiveLink href="/projects/undergraduate">
+            Undergraduate
+          </ActiveLink>
         </li>
         <li>
-          <a onClick={() => handleClick('Graduate')} className="menu-item-selected animatedLink">
-            <span className="link-wrapper">Graduate</span>
-          </a>
+          <ActiveLink href="/projects/graduate">
+            Graduate
+          </ActiveLink>
         </li>
         <li>
-          <a onClick={() => handleClick('Professional')} className="menu-item animatedLink">
-            <span className="link-wrapper">Professional</span>
-          </a>
+          <ActiveLink href="/projects/professional">
+            Professional
+          </ActiveLink>
         </li>
         <li>
-          <a onClick={() => handleClick('Pro Bono')} className="menu-item animatedLink">
-            <span className="link-wrapper">Pro Bono</span>
-          </a>
+          <ActiveLink href="/projects/pro-bono">
+            Pro Bono
+          </ActiveLink>
         </li>
       </ul>
     </div>
-    <ProjectMasonry category={category} setCategory={setCategory} />
     </React.Fragment>
   );
 }
