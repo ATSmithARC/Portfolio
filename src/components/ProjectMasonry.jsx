@@ -1,13 +1,16 @@
+import { Router, Link, useLocation } from "wouter";
 import projects from "../projects.json";
 import Masonry from "react-masonry-css";
 
 const breakpointColumnsObj = {
-  default: 3,
-  1100: 2,
-  700: 1,
+  default: 4,
+  1400: 3,
+  1000: 2,
+  400: 1,
 };
 
 function ProjectMasonry(props) {
+  const [location] = useLocation();
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
@@ -17,25 +20,30 @@ function ProjectMasonry(props) {
       {projects
         .filter((project) => {
           switch (props.category) {
-            case "All":
+            case "all":
               return true;
-            case "Professional":
+            case "professional":
               return project.category === 0;
-            case "Pro Bono":
+            case "pro-bono":
               return project.category === 1;
-            case "Undergraduate":
+            case "undergraduate":
               return project.category === 2;
-            case "Graduate":
+            case "graduate":
               return project.category === 3;
             default:
               return false;
           }
         })
         .map((project) => (
-          <div className="masonryItem" key={project.id}>
-            <img src={project.thumb} alt={project.name} />
-          <b>{project.name}</b>
-          </div>
+          <Link key={project.id} href={'projects/' + project.href}>
+              <div className="masonryItem" key={project.id}>
+                <div className="imageWrapper" style={{ backgroundColor: `#000000` }}>
+                  <p>{project.desc}</p>
+                  <img src={project.thumb} alt={project.name} />
+                </div>
+                <b>{project.name}</b>
+            </div>
+          </Link>
         ))}
     </Masonry>
   );

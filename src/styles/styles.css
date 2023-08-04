@@ -44,10 +44,7 @@ header {
 .logomation {
   position:fixed;
   left: 2rem;
-  background-color: var(--color-bg);
-  border: solid;
-  border-color: var(--color-bg);
-  border-width: 5px;
+  z-index:0;
 }
 nav a {
   margin: 0 2rem;
@@ -65,6 +62,19 @@ nav a {
   width: 0;
 }
 .animatedLink:hover:after {
+  width: 100%;
+  left: 0;
+}
+.activeLink:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -4px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 100%;
   left: 0;
 }
@@ -120,6 +130,7 @@ body {
 .wrapper {
   margin-left: 6.5rem;
   margin-right: 2rem;
+  padding-bottom: 10rem;
 }
 .content {
   display: flex;
@@ -127,10 +138,12 @@ body {
 }
 .project-container {
   display:flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 .menu-container {
+  padding-top:4rem;
   width: 8rem;
 }
 .menu li {
@@ -153,6 +166,8 @@ body {
   display: flex;
   margin-left: -1rem;
   width: auto;
+  z-index: 1;
+  background-color:var(--color-bg);
 }
 .my-masonry-grid_column {
   padding-left: 1rem;
@@ -163,25 +178,44 @@ body {
   width: 100%;
   margin-bottom: 1rem;
 }
-.my-masonry-grid_column .masonryItem img {
-  object-fit: cover;
+.my-masonry-grid_column .masonryItem .imageWrapper {
+  height:100%;
+  position: relative;
+}
+.my-masonry-grid_column .masonryItem .imageWrapper img {
+  position: relative;
   width: 100%;
+  object-fit: cover;
+  z-index: 5;
+  display: block;
+}
+.my-masonry-grid_column .masonryItem .imageWrapper p {
+  padding:10px;
+  color: white;
+  position: absolute;
+  top:30%;  
+  z-index: 4;
+}
+.my-masonry-grid_column .masonryItem .imageWrapper img:hover {
+  transition: 500ms;
+  opacity: 0%;
 }
 
 /* Begin Media Section */
 @media only screen and (max-width: 800px) {
   .logomation{
-    left: 1.5rem;
+    left: 1rem;
   }
   .wrapper {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
   }
   header {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     justify-content:right;
   }
   header .nav-btn {
+    position: fixed;
     width: auto;
     visibility: visible;
     opacity: 1;
@@ -200,21 +234,25 @@ body {
     background-color: var(--color-primary);
     transition: 500ms;
     transform: translateY(-100vh);
-    z-index: 2;
+    z-index: 3;
   }
   header .responsive_nav {
     transform: none;
   }
   nav .nav-close-btn {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1rem;
   }
   nav a {
     font-size: 1.5rem;
   }
   
   .menu-btn {
+    top: 50%;
+    right: 1rem;
+    position: fixed;
+    width: auto;
     visibility: visible;
     opacity: 1;
   }
@@ -231,8 +269,8 @@ body {
     gap: 1.5rem;
     background-color: var(--color-primary);
     transition: 500ms;
-    transform: translateX(-100vw);
-    z-index: 1;
+    transform: translateX(100vw);
+    z-index: 2;
   }
   .menu-container a {
     font-size: 1.5rem;
@@ -242,8 +280,11 @@ body {
   }
   .menu-close-btn {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  .project-container {
+  gap: 1rem;
   }
 }
 /* End Media Section */

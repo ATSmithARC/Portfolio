@@ -7,11 +7,12 @@
     "site": "Sydney, AU",
     "yearStart": 2020,
     "yearEnd": 2020,
-    "thumb": "https://storage.googleapis.com/atsmitharc-media/thumb/thumb-acadia2018.webp",
+    "thumb": "https://storage.googleapis.com/atsmitharc-media/thumb/thumb-barangaroo.webp",
     "employer": "HKS Architects",
     "color": "fcb56d",
     "desc": "a waterfront pavilion inspired by storytelling",
-    "collab": ["Lance Evans", "Mike Rogers", "Andrew Colling", "Bryan Rincon"]
+    "collab": ["Lance Evans", "Mike Rogers", "Andrew Colling", "Bryan Rincon"],
+    "href":"barangaroo-pavilion"
   },
   {
     "id": 1,
@@ -25,7 +26,8 @@
     "employer": "HKS Architects",
     "color": "3277b8",
     "desc": "a global stage shaped by LA culture",
-    "collab": ["Lance Evans", "Mike Rogers", "Manzer Mirkar", "Bryan Rincon"]
+    "collab": ["Lance Evans", "Mike Rogers", "Manzer Mirkar", "Bryan Rincon"],
+    "href":"sofi-stadium"
   },
   {
     "id": 2,
@@ -39,7 +41,8 @@
     "employer": "HKS Architects",
     "color": "192378",
     "desc": "a ship in a bottle",
-    "collab": ["Lance Evans", "Mike Rogers", "Michelle Stevenson", "Manzer Mirkar"]
+    "collab": ["Lance Evans", "Mike Rogers", "Michelle Stevenson", "Manzer Mirkar"],
+    "href":"youtube-theater"
   },
   {
     "id": 3,
@@ -53,7 +56,8 @@
     "employer": "HKS Architects",
     "color": "a8b3a2",
     "desc": "a innovative integrated design process",
-    "collab": ["Heath May", "Jon Bailey", "James Warton", "Chad Porter"]
+    "collab": ["Heath May", "Jon Bailey", "James Warton", "Chad Porter"],
+    "href":"fbi-innovation-center"
   },
   {
     "id": 4,
@@ -67,7 +71,8 @@
     "employer": "HKS Architects",
     "color": "4c76a6",
     "desc": "a guide to hacking texas's fracking infrastructure",
-    "collab": ["Ryan Griffin (Co-Author)", "Julie Hiromoto", "Cory Brugger"]
+    "collab": ["Ryan Griffin (Co-Author)", "Julie Hiromoto", "Cory Brugger"],
+    "href":"hack-a-frac"
   },
   {
     "id": 5,
@@ -81,7 +86,8 @@
     "employer": "HKS Architects",
     "color": "154fd6",
     "desc": "a topology optimization stratgey for shell structures",
-    "collab": ["HKS Line", "Thorton Tomasetti","Altair"]
+    "collab": ["HKS Line", "Thorton Tomasetti","Altair"],
+    "href":"polyhedral-timber-topologies"
   },
   {
     "id": 6,
@@ -95,7 +101,8 @@
     "employer": "HKS Architects",
     "color": "d6bb4d",
     "desc": "a cross-section optimization stratgey for lattice structures",
-    "collab": ["HKS Line", "Thorton Tomasetti"]
+    "collab": ["HKS Line", "Thorton Tomasetti"],
+    "href":"structural-optimization-strategies"
   },
   {
     "id": 7,
@@ -109,7 +116,8 @@
     "employer": "SCI-Arc",
     "color": "005A9C",
     "desc": "a plan for the future of dodgers stadium",
-    "collab": ["Professor"]
+    "collab": ["Professor"],
+    "href":"dodgers-stadium-extension"
   },
   {
     "id": 8,
@@ -123,7 +131,8 @@
     "employer": "The Royal Danish Academy",
     "color": "598113",
     "desc": "a computational framework for animal aided design",
-    "collab": ["Tom Svilans"]
+    "collab": ["Tom Svilans"],
+    "href":"planimal"
   },
   {
     "id": 9,
@@ -137,6 +146,7 @@
     "employer": "Self Directed",
     "color": "972e93",
     "desc": "an open-source library for modeling stadia geometries",
-    "collab": ["None"]
+    "collab": ["None"],
+    "href":"stadiumtools"
   }
 ]
