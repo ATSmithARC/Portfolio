@@ -9,6 +9,9 @@ const breakpointColumnsObj = {
   400: 1,
 };
 
+const api = "https://storage.googleapis.com/atsmitharc-media/thumb/";
+const ext = ".webp"
+
 function ProjectMasonry(props) {
   const [location] = useLocation();
   return (
@@ -39,7 +42,11 @@ function ProjectMasonry(props) {
               <div className="masonryItem" key={project.id}>
                 <div className="imageWrapper" style={{ backgroundColor: `#000000` }}>
                   <p>{project.desc}</p>
-                  <img src={project.thumb} alt={project.name} />
+                  <img src={api + project.href + "-800" + ext} 
+                       srcset={`${api}${project.href}-400${ext} 400w,
+                                ${api}${project.href}-600${ext} 600w,
+                                ${api}${project.href}-1000${ext} 1000w`}
+                       alt={project.name} />
                 </div>
                 <b>{project.name}</b>
             </div>

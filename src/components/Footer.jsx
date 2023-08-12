@@ -65,7 +65,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p>Copenhagen, DK</p>
+      <p>Architect_MAA | Copenhagen_DK</p>
     </footer>
   );
 }

@@ -17,6 +17,17 @@ import P7 from "../projects/p7";
 import P8 from "../projects/p8";
 import P9 from "../projects/p9";
 import P10 from "../projects/p10";
+import P11 from "../projects/p11";
+import P12 from "../projects/p12";
+import P13 from "../projects/p13";
+import P14 from "../projects/p14";
+import P15 from "../projects/p15";
+import P16 from "../projects/p16";
+import P17 from "../projects/p17";
+import P18 from "../projects/p18";
+import P19 from "../projects/p19";
+import P20 from "../projects/p20";
+import P21 from "../projects/p21";
 
 export default () => (
   <Router>
@@ -42,6 +53,17 @@ export default () => (
       <Route path={"/projects/" + p[8].href} component={P8} />
       <Route path={"/projects/" + p[9].href} component={P9} />
       <Route path={"/projects/" + p[10].href} component={P10} />
+      <Route path={"/projects/" + p[11].href} component={P11} />
+      <Route path={"/projects/" + p[12].href} component={P12} />
+      <Route path={"/projects/" + p[13].href} component={P13} />
+      <Route path={"/projects/" + p[14].href} component={P14} />
+      <Route path={"/projects/" + p[15].href} component={P15} />
+      <Route path={"/projects/" + p[16].href} component={P16} />
+      <Route path={"/projects/" + p[17].href} component={P17} />
+      <Route path={"/projects/" + p[18].href} component={P18} />
+      <Route path={"/projects/" + p[19].href} component={P19} />
+      <Route path={"/projects/" + p[20].href} component={P20} />
+      <Route path={"/projects/" + p[21].href} component={P21} />
     </Switch>
     </Router>
 );
