@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa6";
 import "../styles/styles.css";
 
+
 function Footer() {
   return (
     <footer className="myfooter">
@@ -64,7 +65,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p>Copenhagen, DK</p>
+      <p>Architect_MAA | Copenhagen_DK</p>
     </footer>
   );
 }

@@ -35,8 +35,8 @@ function Navbar() {
 
   return (
     <header>
-      <div className="logomation">
-        <a>
+      <div title="Andrew_Smith" className="logomation">
+        <Link href="./">
           <TypeIt
             getBeforeInit={(instance) => {
               instance
@@ -48,7 +48,7 @@ function Navbar() {
               return instance;
             }}
           />
-        </a>
+        </Link>
       </div>
       <nav ref={navRef}>
         <ActiveLink href="/">Home</ActiveLink>
@@ -59,7 +59,7 @@ function Navbar() {
           <FaTimes />
         </button>
       </nav>
-      <button className="nav-btn" onClick={showNavbar}>
+      <button title="Menu Button" className="nav-btn" onClick={showNavbar}>
         <FaBars />
       </button>
     </header>

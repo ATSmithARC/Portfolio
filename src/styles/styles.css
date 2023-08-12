@@ -17,6 +17,7 @@
 #root {
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -38,13 +39,24 @@ header {
   justify-content: center;
   min-height: 80px;
   padding: 0 2rem;
-  background-color: var(--color-bg);
   color: var(--color-text);
 }
+canvas {
+    position: absolute;
+    bottom: 15vh;
+    left: -1vw;
+    width: 101vw;
+    height: 33vh;    
+    outline: none;
+    pointer-events: none;
+    background-color: var(--color-bg);
+    z-index: -1;
+}
 .logomation {
+  cursor: pointer;
   position:fixed;
   left: 2rem;
-  z-index:0;
+  z-index:1;
 }
 nav a {
   margin: 0 2rem;
@@ -93,6 +105,7 @@ header .nav-btn {
 header span {
   font-size: 1.5rem;
   font-weight: 600;
+  mix-blend-mode: difference;
 }
 footer {
   position: absolute;
@@ -130,7 +143,7 @@ body {
 .wrapper {
   margin-left: 6.5rem;
   margin-right: 2rem;
-  padding-bottom: 10rem;
+  padding-bottom: 20rem;
 }
 .content {
   display: flex;
@@ -161,17 +174,17 @@ body {
   font-size: 1.5rem;
 }
 .my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: -1rem;
   width: auto;
   z-index: 1;
-  background-color:var(--color-bg);
 }
 .my-masonry-grid_column {
   padding-left: 1rem;
   background-clip: padding-box;
+  background-color: var(--color-bg);
 }
 .my-masonry-grid_column .masonryItem {
   cursor:pointer;
@@ -184,21 +197,22 @@ body {
 }
 .my-masonry-grid_column .masonryItem .imageWrapper img {
   position: relative;
+  transition: 500ms;
   width: 100%;
   object-fit: cover;
   z-index: 5;
   display: block;
 }
 .my-masonry-grid_column .masonryItem .imageWrapper p {
+  color: #ffffff;
   padding:10px;
-  color: white;
   position: absolute;
   top:30%;  
   z-index: 4;
 }
 .my-masonry-grid_column .masonryItem .imageWrapper img:hover {
-  transition: 500ms;
   opacity: 0%;
+  width: 103%
 }
 
 /* Begin Media Section */
@@ -249,7 +263,7 @@ body {
   }
   
   .menu-btn {
-    top: 50%;
+    top: 50vh;
     right: 1rem;
     position: fixed;
     width: auto;
