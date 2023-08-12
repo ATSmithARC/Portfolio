@@ -24,7 +24,7 @@ function ProjectMenu(props) {
   return (
     <React.Fragment>
     <div className="menu-container">
-      <button className="menu-btn" onClick={showMenu}>
+      <button title="Filter Button" className="menu-btn" onClick={showMenu}>
         <FaFilter />
       </button>
       <ul className="menu" ref={menuRef}>

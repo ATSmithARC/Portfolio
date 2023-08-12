@@ -1,4 +1,4 @@
-export default function Stadiumtools() {
+export default function P9() {
 return (
       <div className="page">
       <h1>StadiumTools</h1>

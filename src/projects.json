@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "Barangaroo Pavilion",
+    "name": "Barangaroo Pier Pavilion",
     "category": 0,
     "type": 0,
     "site": "Sydney, AU",
@@ -12,7 +12,7 @@
     "color": "fcb56d",
     "desc": "a waterfront pavilion inspired by storytelling",
     "collab": ["Lance Evans", "Mike Rogers", "Andrew Colling", "Bryan Rincon"],
-    "href":"barangaroo-pavilion"
+    "href":"barangaroo-pier-pavilion"
   },
   {
     "id": 1,
@@ -137,7 +137,7 @@
   {
     "id": 9,
     "name": "StadiumTools",
-    "category": 2,
+    "category": 1,
     "type": 0,
     "site": "None",
     "yearStart": 2022,
@@ -148,5 +148,20 @@
     "desc": "an open-source library for modeling stadia geometries",
     "collab": ["None"],
     "href":"stadiumtools"
+  },
+  {
+    "id": 10,
+    "name": "Graded Knitted Membranes",
+    "category": 3,
+    "type": 0,
+    "site": "None",
+    "yearStart": 2022,
+    "yearEnd": 2022,
+    "thumb": "https://storage.googleapis.com/atsmitharc-media/thumb/thumb-knitted.webp",
+    "employer": "Royal Danish Academy",
+    "color": "972e93",
+    "desc": "steering material differentiation by formal and structural inputs",
+    "collab": ["Sandro Siefert", "Søren Henning", "Camila Alarcon", "Daniel Bilesky", "Yuliya Sinke"],
+    "href":"graded-knit"
   }
 ]
