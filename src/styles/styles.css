@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 :root {
   --color-bg: #ffffff;
   --color-text: #000000;
-  --color-primary: #ffffff;
+  --color-primary: #000000;
   --color-secondary: #ffffff;
   --font-family: "Ubuntu Mono";
   --font-family-header: "Ubuntu Mono";
@@ -43,7 +42,7 @@ header {
 }
 canvas {
     position: absolute;
-    bottom: 15vh;
+    bottom: 18vh;
     left: -1vw;
     width: 101vw;
     height: 33vh;    
@@ -143,7 +142,7 @@ body {
 .wrapper {
   margin-left: 6.5rem;
   margin-right: 2rem;
-  padding-bottom: 20rem;
+  padding-bottom: 25rem;
 }
 .content {
   display: flex;
@@ -186,35 +185,36 @@ body {
   background-clip: padding-box;
   background-color: var(--color-bg);
 }
-.my-masonry-grid_column .masonryItem {
-  cursor:pointer;
-  width: 100%;
+.masonryItem {
+  position: relative;
+  width: 100% !important;
+  background-color: var(--color-primary);
+}
+.masonryItem p {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+  z-index: 4;
+  color: var(--color-bg);
+}
+.masonryItem img {
+  display: block;
+  cursor: pointer;
   margin-bottom: 1rem;
-}
-.my-masonry-grid_column .masonryItem .imageWrapper {
-  height:100%;
   position: relative;
-}
-.my-masonry-grid_column .masonryItem .imageWrapper img {
-  position: relative;
-  transition: 500ms;
   width: 100%;
   object-fit: cover;
+  transition: 500ms;
   z-index: 5;
   display: block;
 }
-.my-masonry-grid_column .masonryItem .imageWrapper p {
-  color: #ffffff;
-  padding:10px;
-  position: absolute;
-  top:30%;  
-  z-index: 4;
+.masonryItem img:hover {
+  opacity: 0;
 }
-.my-masonry-grid_column .masonryItem .imageWrapper img:hover {
-  opacity: 0%;
-  width: 103%
-}
-
 /* Begin Media Section */
 @media only screen and (max-width: 800px) {
   .logomation{
@@ -245,7 +245,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     transition: 500ms;
     transform: translateY(-100vh);
     z-index: 3;
@@ -261,7 +261,6 @@ body {
   nav a {
     font-size: 1.5rem;
   }
-  
   .menu-btn {
     top: 50vh;
     right: 1rem;
@@ -281,7 +280,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     transition: 500ms;
     transform: translateX(100vw);
     z-index: 2;
@@ -301,4 +300,3 @@ body {
   gap: 1rem;
   }
 }
-/* End Media Section */
