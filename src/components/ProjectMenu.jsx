@@ -29,7 +29,7 @@ function ProjectMenu(props) {
       </button>
       <ul className="menu" ref={menuRef}>
         <li>
-          <button className="menu-btn menu-close-btn" onClick={showMenu}>
+          <button title="Close Filter Button" className="menu-btn menu-close-btn" onClick={showMenu}>
             <FaTimes />
           </button>
         </li>
