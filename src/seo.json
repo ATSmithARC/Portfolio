@@ -3,5 +3,6 @@
   "title": "Andrew_Smith",
   "description": "Andrew Smith is an experienced designer and developer working at the intersection of architecture, computation, and sustainability.",
   "url": "https://atsmitharc.com",
-  "image": "https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-react-social.png?v=1616712747908"
+  "image": "https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-react-social.png?v=1616712747908",
+  "font": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 }

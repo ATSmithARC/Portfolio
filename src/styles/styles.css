@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --color-bg: #ffffff;
   --color-text: #000000;
   --color-primary: #000000;
   --color-secondary: #ffffff;
+  --color-pl: #f7f7f7;
   --font-family: "Ubuntu Mono";
   --font-family-header: "Ubuntu Mono";
 }
@@ -26,8 +26,16 @@ html {
 ul {
   list-style: none;
 }
+h1 {
+  margin: 2rem 0 2rem 0 ;
+  text-align:center;
+}
+h2 {
+  margin: 1rem 0 1rem 0 ;
+  text-align:center;
+}
 a {
-  color: #000000;
+  color: var(--color-text);
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -41,21 +49,21 @@ header {
   color: var(--color-text);
 }
 canvas {
-    position: absolute;
-    bottom: 18vh;
-    left: -1vw;
-    width: 101vw;
-    height: 33vh;    
-    outline: none;
-    pointer-events: none;
-    background-color: var(--color-bg);
-    z-index: -1;
+  position: absolute;
+  bottom: 18vh;
+  left: -1vw;
+  width: 101vw;
+  height: 33vh;
+  outline: none;
+  pointer-events: none;
+  background-color: var(--color-bg);
+  z-index: -1;
 }
 .logomation {
   cursor: pointer;
-  position:fixed;
+  position: fixed;
   left: 2rem;
-  z-index:1;
+  z-index: 1;
 }
 nav a {
   margin: 0 2rem;
@@ -112,10 +120,10 @@ footer {
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-  color: #000000;
+  color: var(--color-text);
 }
-.row-cen-inview{
-  margin-bottom:1rem;
+.row-cen-inview {
+  margin-bottom: 1rem;
 }
 .social-footer ul {
   padding: 25px;
@@ -149,17 +157,16 @@ body {
   flex-direction: column;
 }
 .project-container {
-  display:flex;
+  display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   gap: 2.5rem;
 }
 .menu-container {
-  padding-top:4rem;
-  width: 8rem;
+  padding-right: 70px;
 }
-.menu li {
-  margin-bottom: 0.5rem;
+.menu {
+  position: fixed;
 }
 .menu-btn {
   padding: 5px;
@@ -171,6 +178,9 @@ body {
   visibility: hidden;
   opacity: 0;
   font-size: 1.5rem;
+}
+.menu li {
+  margin-bottom: 0.5rem;
 }
 .my-masonry-grid {
   display: -webkit-box;
@@ -188,6 +198,9 @@ body {
 .masonryItem {
   position: relative;
   width: 100% !important;
+  margin-bottom: 1rem;
+}
+.masonryItem:hover {
   background-color: var(--color-primary);
 }
 .masonryItem p {
@@ -204,7 +217,6 @@ body {
 .masonryItem img {
   display: block;
   cursor: pointer;
-  margin-bottom: 1rem;
   position: relative;
   width: 100%;
   object-fit: cover;
@@ -215,18 +227,56 @@ body {
 .masonryItem img:hover {
   opacity: 0;
 }
+
+.image-slider {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .image-bg {
+    position: relative;
+    margin: 0 auto;
+    width: 50vw;
+    max-width: 400px;
+    aspect-ratio: 0.942859;
+    background-size: cover;
+    z-index: 0;
+  }
+  .image-fg {
+    height: 100%;
+    background-image: url("https://storage.googleapis.com/atsmitharc-media/avatars/architect-1.svg");
+    background-size: cover;
+    z-index: 1;
+  }
+.parts-container {
+  position:relative;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+  width:75vw;
+  max-width: 50rem;
+  min-width: 18rem;
+}
+.about-container {
+  background-color: var(--color-bg);
+  z-index:1;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  font-size: clamp(10px, 2vw, 18px);
+}
+
 /* Begin Media Section */
 @media only screen and (max-width: 800px) {
-  .logomation{
+  .logomation {
     left: 1rem;
   }
   .wrapper {
-    margin-left: 1rem;
-    margin-right: 2rem;
+    margin: 0 0.5rem 0 0;
   }
   header {
-    padding: 0 1rem;
-    justify-content:right;
+    padding: 0 0.5rem;
+    justify-content: right;
   }
   header .nav-btn {
     position: fixed;
@@ -262,9 +312,8 @@ body {
     font-size: 1.5rem;
   }
   .menu-btn {
-    top: 50vh;
-    right: 1rem;
     position: fixed;
+    top: 50vh;
     width: auto;
     visibility: visible;
     opacity: 1;
@@ -285,6 +334,9 @@ body {
     transform: translateX(100vw);
     z-index: 2;
   }
+  .menu-container {
+    padding-right: 34px;
+  }
   .menu-container a {
     font-size: 1.5rem;
   }
@@ -297,6 +349,6 @@ body {
     right: 1rem;
   }
   .project-container {
-  gap: 1rem;
+    gap: 0.5rem;
   }
 }

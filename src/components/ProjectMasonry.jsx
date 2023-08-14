@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { Router, Link, useLocation } from "wouter";
 import projects from "../projects.json";
 import Masonry from "react-masonry-css";
-
 const breakpointColumnsObj = {
   default: 4,
   1400: 3,
   1000: 2,
   400: 1,
 };
-
 const api = "https://storage.googleapis.com/atsmitharc-media/thumb/";
 const ext = ".webp";
 function ProjectMasonry(props) {
@@ -53,5 +51,4 @@ function ProjectMasonry(props) {
     </Masonry>
   );
 }
-
 export default ProjectMasonry;
