@@ -5,7 +5,8 @@ export default function Home() {
 
 return (
       <div className="page">
-      <h1>Home</h1>
+      <h2>This site is still under construction.</h2>
+    <h2>...but please have a look around.</h2>
     </div>
   );
 }

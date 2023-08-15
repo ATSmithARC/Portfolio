@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/styles.css";
 
-const ImageSlider = () => {
+const Avatar = () => {
   const [cursorX, setCursorX] = useState(50);
   const handleMouseMove = (event) => {
     setCursorX(100 - (event.clientX / window.innerWidth) * 100);
@@ -26,4 +26,4 @@ const ImageSlider = () => {
     </section>
   );
 };
-export default ImageSlider;
+export default Avatar;
