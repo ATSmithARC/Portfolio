@@ -227,48 +227,61 @@ body {
 .masonryItem img:hover {
   opacity: 0;
 }
+.about-container {
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  font-size: clamp(10px, 2vw, 18px);
+  background-color: cyan;
+}
+
 .image-slider {
+  background-color: blue;
+  flex-grow: 3;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: 0 0 1rem 0;
 }
 .image-bg {
+  background-color:purple;
   position: relative;
   margin: 0 auto;
-  width: 300px;
+  width: 250px;
+  background-image: url("https://storage.googleapis.com/atsmitharc-media/avatars/architect-1.svg");
   aspect-ratio: 0.942859;
   background-size: cover;
   z-index: 0;
 }
 .image-mg {
-  position:absolute;
+  will-change: auto;
+  width: 0%;
+  transition: width 0.2s ease;
+  position: absolute;
   height: 100%;
-  background-image: url("https://storage.googleapis.com/atsmitharc-media/avatars/architect-1.svg");
-  background-size: 300px;
+  background-image: url("https://storage.googleapis.com/atsmitharc-media/avatars/coder-1.svg");
+  background-size: 250px;
   z-index: 1;
 }
 .image-fg {
-  position:absolute;
+  will-change: auto;
+  width: 0%;
+  transition: width 0.2s ease;
+  position: absolute;
   height: 100%;
   background-image: url("https://storage.googleapis.com/atsmitharc-media/avatars/human-1.svg");
-  background-size: 300px;
+  background-size: 250px;
   background-position: right top;
   z-index: 1;
   right: 0;
-}
-.about-container {
-  background-color: var(--color-bg);
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  font-size: 2vw;
-  font-size: clamp(10px, 2vw, 18px);
 }
 .three-columns-flex {
   position: relative;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
   justify-content: space-between;
   width: 75vw;
   max-width: 55rem;
@@ -276,13 +289,23 @@ body {
   gap: 0.5rem;
 }
 .about-column {
-  width:100%;
+  flex-grow: 1;
   background-color: var(--color-bg);
   border: 0.1vw solid var(--color-primary);
   box-shadow: 1.5vw 1.5vw var(--color-primary);
 }
+.about-column:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
 .about-column ul {
   text-align: center;
+}
+#left:hover ~ .image-slider .image-mg {
+  width: 100%;
+}
+#right:hover ~ .image-slider .image-fg {
+  width: 100%;
 }
 
 /* Begin Media Section */
@@ -374,6 +397,15 @@ body {
     margin-left: 0.5rem;
   }
   .three-columns-flex {
-  flex-direction: column;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  .image-mg {
+    -webkit-transition: width 0.2s ease;
+    -webkit-transform: translate3d(0,0,0);
+  }
+  .image-fg {
+    -webkit-transition: width 0.2s ease;
+    -webkit-transform: translate3d(0,0,0);
   }
 }
