@@ -4,6 +4,7 @@ import Avatar from "../components/Avatar.jsx";
 export default function About() {
   return (
     <React.Fragment>
+      
       <div className="about-container">
         <h1>Designer, Programmer, & Human</h1>
         <h2>I love to design, build, and program things.</h2>
