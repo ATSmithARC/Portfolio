@@ -16,7 +16,6 @@ const Waves = () => {
         lineStroke: 0.3,
         speed: 0.001
     };
-
     const setupCanvas = () => {
         const context = containerRef.current.getContext('2d');
         const pixelRatio = Math.min(window.devicePixelRatio, 1.5);
@@ -26,7 +25,6 @@ const Waves = () => {
 
         setCanvasDimensions({ width, height });
     };
-
     const setupRandomness = () => {
         const randomness = [];
         for (let i = 0, rand = 0; i < parameters.lines; i++, rand += parameters.factor) {
@@ -34,7 +32,6 @@ const Waves = () => {
         }
         return randomness;
     };
-
     const drawPaths = (context, width, height, randomness) => {
         context.lineWidth = parameters.lineStroke;
         for (let i = 0; i <= parameters.lines; i++) {
@@ -63,7 +60,6 @@ const Waves = () => {
         context.clearRect(0, 0, width, height);
         drawPaths(context, width, height, randomness);
     };
-
     useEffect(() => {
         const context = containerRef.current.getContext('2d');
         setupCanvas();
@@ -73,23 +69,19 @@ const Waves = () => {
             requestAnimationFrame(renderLoop);
         };
         renderLoop();
-
         const handleResize = () => {
             debounceResize();
         };
         const debounceResize = debounce(() => {
             resize();
         }, 300);
-
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
     return <canvas ref={containerRef} id="webgl" />;
 };
-
 function debounce(func, wait) {
     let timeout;
     return function (...args) {

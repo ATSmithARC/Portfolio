@@ -5,12 +5,12 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1>Computational Designer & Programmer</h1>
+        <h1>Designer, Programmer, & Human</h1>
         <h2>I love to design, build, and program things.</h2>
         <Avatar />
-        <div className="parts-container">
-          <div className="parts-left">
-            <h2>Part Designer</h2>
+        <div className="three-columns-flex">
+          <div className="about-column">
+            <h2>Designer</h2>
             <ul>
               <li>
                 <h3>Architecture</h3>
@@ -29,11 +29,9 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="parts-center"></div>
-          <div className="parts-right">
+          <div className="about-column">
             <h2>
-              {" "}
-              {"{"}Part Programmer{"}"}
+              {"{"}Programmer{"}"}
             </h2>
             <ul>
               <li>
@@ -52,6 +50,9 @@ export default function About() {
                 <h3>Algorithms</h3>
               </li>
             </ul>
+          </div>
+          <div className="about-column">
+            <h2> Human </h2>
           </div>
         </div>
       </div>
