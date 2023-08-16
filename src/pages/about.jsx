@@ -4,13 +4,14 @@ import Avatar from "../components/Avatar.jsx";
 export default function About() {
   return (
     <React.Fragment>
-      
       <div className="about-container">
         <h1>Designer, Programmer, & Human</h1>
         <h2>I love to design, build, and program things.</h2>
-        <Avatar />
         <div className="three-columns-flex">
-          <div className="about-column">
+          <div id="right" className="about-column">
+            <h2> Human </h2>
+          </div>
+          <div id="middle" className="about-column">
             <h2>Designer</h2>
             <ul>
               <li>
@@ -30,7 +31,7 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="about-column">
+          <div id="left" className="about-column">
             <h2>
               {"{"}Programmer{"}"}
             </h2>
@@ -52,9 +53,12 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="about-column">
-            <h2> Human </h2>
-          </div>
+          <div className="image-slider">
+              <div id="bg" className="image-bg">
+                <div id="mg" className="image-mg"></div>
+                <div id="fg" className="image-fg"></div>
+              </div>
+            </div>
         </div>
       </div>
     </React.Fragment>

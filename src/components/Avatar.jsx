@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/styles.css";
 
 const Avatar = () => {
+  /*
   const [cursor_mg, setCursor_mg] = useState(50);
   const [cursor_fg, setCursor_fg] = useState(50);
   // This function remaps the cursor's normalized 'x' position within the window using math operators.
@@ -29,19 +30,14 @@ const Avatar = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+  
+  <div className="image-mg" style={{ width: `${cursor_mg}%` }}></div>
+  <div className="image-fg" style={{ width: `${cursor_fg}%` }}></div>
+  
+  */
   return (
     <React.Fragment>
-      <section className="image-slider">
-        <div
-          className="image-bg"
-          style={{
-            backgroundImage: `url('https://storage.googleapis.com/atsmitharc-media/avatars/coder-1.svg')`,
-          }}
-        >
-          <div className="image-mg" style={{ width: `${cursor_mg}%` }}></div>
-          <div className="image-fg" style={{ width: `${cursor_fg}%` }}></div>
-        </div>
-      </section>
+      
     </React.Fragment>
   );
 };
