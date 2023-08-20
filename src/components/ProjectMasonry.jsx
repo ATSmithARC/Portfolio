@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Router, Link, useLocation } from "wouter";
-import projects from "../projects.json";
+import projects from "../data/project-data.json";
 import Masonry from "react-masonry-css";
 const breakpointColumnsObj = {
   default: 4,
