@@ -1,0 +1,33 @@
+{
+  "greetings": ["Hello", "Hi", "Hej", "Goddag"],
+  "designer": {
+    "tagline": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+    "skills": [
+      "Architectural Design",
+      "Digital Fabrication",
+      "Complex 3D Modeling",
+      "Graphic Design",
+      "UI/UX Design"
+    ]
+  },
+  "developer": {
+    "tagline": "I love to code things that increase the productivity, creativity, and impact of my designs.",
+    "skills": [
+      "Algorithmic Models",
+      "Software Plugins",
+      "Web Development",
+      "Mapping and GIS",
+      "Data Wrangling"
+    ]
+  },
+  "human": {
+    "tagline": "I genuinely care about people, and love helping fellow designers work on their craft.",
+    "skills": [
+      "Astrophotographer",
+      "iNaturalist Lover",
+      "Obsessive DIY-er",
+      "Needs 2.6 Earths",
+      "Is Human, I Swear"
+    ]
+  }
+}
