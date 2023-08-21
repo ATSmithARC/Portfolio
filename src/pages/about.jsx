@@ -4,8 +4,6 @@ import { useWiggle } from "../hooks/wiggle";
 import DropdownList from "../components/DropdownList";
 import a from "../data/about-data.json";
 
-
-
 function randomLanguage() {
   return a.greetings[Math.floor(Math.random() * a.greetings.length)];
 }
@@ -13,25 +11,6 @@ function randomLanguage() {
 export default function About() {
   const [hello, setHello] = React.useState(a.greetings[0]);
   const [style, trigger] = useWiggle({ x: 5, y: 5, scale: 1 });
-
-  const handleScroll = () => {
-    trigger();
-  };
-
-  React.useEffect(() => {
-    // Attach the onScroll event to the window object.
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts.
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleChangeHello = () => {
-    const newHello = randomLanguage();
-    setHello(newHello);
-  };
 
   return (
     <React.Fragment>
