@@ -1,5 +1,5 @@
 {
-  "greetings": ["Hello", "Hi", "Hej", "Goddag"],
+  "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
     "tagline": "I value simple content structure, clean design patterns, and thoughtful interactions.",
     "skills": [
@@ -11,7 +11,7 @@
     ]
   },
   "developer": {
-    "tagline": "I love to code things that increase the productivity, creativity, and impact of my designs.",
+    "tagline": "I love to code things that increase people's productivity, creativity, and accessibility.",
     "skills": [
       "Algorithmic Models",
       "Software Plugins",
@@ -21,13 +21,13 @@
     ]
   },
   "human": {
-    "tagline": "I genuinely care about people, and love helping fellow designers work on their craft.",
+    "tagline": "I recharge in the outdoors, and believe strongly in the need for more urban biodiversity.",
     "skills": [
       "Astrophotographer",
-      "iNaturalist Lover",
-      "Obsessive DIY-er",
-      "Needs 2.6 Earths",
-      "Is Human, I Swear"
+      "iNaturalist Observer",
+      "Hiker / Backpacker",
+      "Rock Climber",
+      "Needs 2.6 Earths"
     ]
   }
 }

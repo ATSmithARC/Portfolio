@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaA,
 } from "react-icons/fa6";
+import { Link, useLocation} from "wouter";
 import "../styles/styles.css";
 
 
@@ -16,7 +17,7 @@ function Footer() {
           <li>
             <a
               className="icon"
-              title="LinkedIn"
+              title="My LinkedIn"
               target="_blank"
               href="https://www.linkedin.com/in/atsmitharc/"
             >
@@ -26,7 +27,7 @@ function Footer() {
           <li>
             <a
               className="icon"
-              title="Github"
+              title="My Github"
               target="_blank"
               href="https://github.com/ATSmithARC"
             >
@@ -34,19 +35,21 @@ function Footer() {
             </a>
           </li>
           <li>
+            <Link href="./contact">
             <a
               className="icon"
-              title="Email"
+              title="Send Email"
               target="_blank"
               href="mailto:atsmitharc@gmail.com"
             >
               <FaEnvelope />
             </a>
+              </Link>
           </li>
           <li>
             <a
               className="icon"
-              title="YouTube"
+              title="My YouTube"
               target="_blank"
               href="https://www.youtube.com/channel/UCyatriboiXwvFkkuPRFMRxw"
             >
@@ -56,7 +59,7 @@ function Footer() {
           <li>
             <a
               className="icon ar"
-              title="Archinect"
+              title="My Archinect"
               target="_blank"
               href="https://archinect.com/atsmitharc"
             >
