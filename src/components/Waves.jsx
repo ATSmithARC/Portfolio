@@ -10,7 +10,7 @@ const Waves = () => {
     const parameters = {
         factor: 0.037,
         variation: 0.001,
-        amplitude: 300,
+        amplitude: height / 2.5,
         lines: 50,
         waveColor: { r: 225, g: 0, b: 0, a: 1 },
         lineStroke: 0.3,

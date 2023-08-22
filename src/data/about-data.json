@@ -1,19 +1,23 @@
 {
   "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
-    "tagline": "I value simple content structure, clean design patterns, and thoughtful interactions.",
+    "title": "Designer",
+    "tagline": "I value things that have a clean structure, purpose-driven elements, and thought-provoking interactions.",
+    "header": "I love building:",
     "skills": [
       "Architectural Design",
-      "Digital Fabrication",
-      "Complex 3D Modeling",
+      "Computational Design",
+      "UI/UX/Web Design",
       "Graphic Design",
-      "UI/UX Design"
+      "3D Modeling"
     ]
   },
   "developer": {
-    "tagline": "I love to code things that increase people's productivity, creativity, and accessibility.",
+    "title": "Developer",
+    "tagline": "I'm always trying to build things that enhance my productivity, creativity, and accessibility to useful information.",
+    "header": "I love building:",
     "skills": [
-      "Algorithmic Models",
+      "Algorithmic Modeling",
       "Software Plugins",
       "Web Development",
       "Mapping and GIS",
@@ -21,13 +25,15 @@
     ]
   },
   "human": {
-    "tagline": "I recharge in the outdoors, and believe strongly in the need for more urban biodiversity.",
+    "title": "Human",
+    "tagline": "I'm American, but currently living in Copenhagen, DK. When I'm not behind a screen, I try my best to be outside.",
+    "header": "I love doing:",
     "skills": [
-      "Astrophotographer",
+      "Architectural Pilgrim",
       "iNaturalist Observer",
       "Hiker / Backpacker",
-      "Rock Climber",
-      "Needs 2.6 Earths"
+      "Astrophotographer",
+      "Rock Climber"
     ]
   }
 }

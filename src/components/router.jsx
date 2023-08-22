@@ -5,8 +5,8 @@ import About from "../pages/about";
 import Contact from "../pages/contact";
 import Projects from "../pages/projects";
 import p from "../data/project-data.json";
+import NotFound from "../pages/notfound.jsx";
 
-// Dynamically import project components based on p (project-data) array
 const projectComponents = p.map((project, index) => {
   return {
     path: "/projects/" + project.href,
@@ -14,7 +14,7 @@ const projectComponents = p.map((project, index) => {
   };
 });
 
-export default () => (
+const App = () => (
   <Router>
     <Switch>
       <Route path="/" component={Home} />
@@ -26,13 +26,19 @@ export default () => (
       <Route path="/projects/graduate" component={() => <Projects filter="graduate" />} />
       <Route path="/projects/professional" component={() => <Projects filter="professional" />} />
       <Route path="/projects/pro-bono" component={() => <Projects filter="pro-bono" />} />
-      {projectComponents.map((projectComponent, index) => (
-        <Route
-          key={index}
-          path={projectComponent.path}
-          component={projectComponent.component}
-        />
-      ))}
+      {/* Use Suspense to handle lazy loading */}
+      <React.Suspense fallback={<div>Loading...</div>}>
+        {projectComponents.map((projectComponent, index) => (
+          <Route
+            key={index}
+            path={projectComponent.path}
+            component={projectComponent.component}
+          />
+        ))}
+      </React.Suspense>
+      <Route><NotFound /></Route>
     </Switch>
   </Router>
 );
+
+export default App;

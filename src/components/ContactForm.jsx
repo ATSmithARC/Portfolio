@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import ReactDOM from "react-dom";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const ContactForm = () => {
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [honeypotField1, setHoneypotField1] = useState("");
   const [honeypotField2, setHoneypotField2] = useState("");
-  const [pageLoadTime, setPageLoadTime] = useState(Date.now());
+  const [hasElapsed, setHasElapsed] = useState(false);
   const [submitClicked, setSubmitClicked] = useState(false);
 
   const handleNameChange = (event) => {
@@ -33,41 +34,63 @@ const ContactForm = () => {
     setHoneypotField2(event.target.value);
   };
   const handlePageLoad = () => {
-    setPageLoadTime(Date.now());
+    setTimeout(() => {
+      setHasElapsed(true);
+    }, 10000); // 10000 milliseconds = 10 seconds
   };
-
+  
+  useEffect(() => {
+    handlePageLoad();
+  }, []);
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Reset previous errors
     setNameError(!name);
     setEmailError(!email || !/\S+@\S+\.\S+/.test(email));
     setMessageError(!message);
-
     if (!recaptchaValue) {
       console.log("Please complete the reCAPTCHA validation.");
       return;
     }
-
     if (honeypotField1 || honeypotField2) {
       console.log("Potential spam detected.");
       return;
     }
-
     if (!submitClicked) {
-      const currentTime = Date.now();
-      const elapsedTime = (currentTime - pageLoadTime) / 1000; // Convert to seconds
-      if (elapsedTime < 10) {
-        console.log("Please wait for at least 10 seconds before submitting.");
+        if (!hasElapsed) {
+        console.log('Please wait for at least 10 seconds before submitting.');
         return;
       }
       setSubmitClicked(true);
       // Submit logic
       if (name && email && message && recaptchaValue) {
-        console.log("Form submitted:", name, email, message, recaptchaValue);
+        /* Not Supported by Github Pages
+        const formData = {
+          name: name,
+          email: email,
+          message: message
+        };
+        fetch("AKfycbxmLRaFkFnybmDxnzKsNGX1DRDPmkIzGxGOynArDCPNY63zNUMqJ60LB0EYvCTpzYaT", {
+          method: "POST",
+          body: new URLSearchParams(formData)
+        })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data); // Log the response from Google Apps Script
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+        */
+        var subject = 'An inquiry from '+ name;
+        var mailtoLink = 'mailto:atsmitharc@gmail.com' +
+                         '?subject=' + encodeURIComponent(subject) +
+                         '&body=' + encodeURIComponent(message);
+        window.location.href = mailtoLink;
       }
     }
   };
-
+  
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -92,27 +115,27 @@ const ContactForm = () => {
         </div>
         {/* Actual Fields */}
         <div>
-          <label>Name: {nameError && "*"}</label>
+          <label>Your Name: {nameError && "*"}</label>
           {nameError && <span className="error">Invalid Name</span>}
-          <input type="text" value={name} onChange={handleNameChange} />
+          <input maxLength="50" type="text" value={name} onChange={handleNameChange} />
         </div>
         <div>
-          <label>Email: {emailError && "*"}</label>
+          <label>Your Email: {emailError && "*"}</label>
           {emailError && ( <span className="error">Invalid email.</span>)}
-          <input type="email" value={email} onChange={handleEmailChange} />
+          <input maxLength="50" type="email" value={email} onChange={handleEmailChange} />
         </div>
         <div>
           <label>Message: {messageError && "*"}</label>
           {messageError && (<span className="error">Invalid message.</span>)}
-          <textarea value={message} onChange={handleMessageChange} />
+          <textarea maxLength="1500" value={message} onChange={handleMessageChange} />
         </div>
         <div>
           <ReCAPTCHA
-            sitekey="6Lc-u74nAAAAAKNb1pqllcp91-s6zog9lHI3u7bX"
+            sitekey="6LemA8QnAAAAAEo7ve5Fh7O3iVXxs8rtJF6O7Uty"
             onChange={handleRecaptchaChange}
           />
         </div>
-        <button title="Submit" type="submit" onClick={handlePageLoad}>
+        <button title="Submit" type="submit">
           Submit
         </button>
       </form>

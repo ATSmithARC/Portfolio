@@ -43,7 +43,6 @@ function ProjectMasonry(props) {
                        ${api}${project.href}-600${ext} 700w,
                        ${api}${project.href}-1000${ext} 1100w`}
               alt={project.name}
-              title={project.name}
             />
           </div>
         </Link>

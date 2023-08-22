@@ -8,18 +8,16 @@ function randomLanguage() {
 }
 export default function Contact() {
   const [hello, setHello] = React.useState(a.greetings[0]);
-  
-
   const handleChangeHello = () => {
     const newHello = randomLanguage();
     setHello(newHello);
   };
   
-  
   return (
     <div className="page">
-      <h1 className="hello" onClick={handleChangeHello}>Say {hello}...</h1>
+      <h1 className="hello" onClick={handleChangeHello}>Say {hello}!</h1>
       <DisplayEmail />
+      <p className="centered"> ...or use the form below:</p>
       <ContactForm />
     </div>
   );
