@@ -40,12 +40,12 @@ const DisplayEmail = () => {
   return (
     <div className="contact-header">
     <p className="contact-text">
-      Contact me directly at:{" "}
+      Email me directly:{" "}
       {showEmail ? ( <p>{email}</p> ) : (
         <a className="activeLink" title="Display Email" onClick={revealEmail}>
           Click to Show
         </a>
-      )}
+      )}{" "}
     </p>
     </div>
   );

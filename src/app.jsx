@@ -8,6 +8,13 @@ import Footer from './components/Footer.jsx';
 import Waves from  './components/Waves.jsx';
 
 export default function Home() {
+  const body = document.body;
+  const userPreference = localStorage.getItem('darkMode');
+  /*
+  if (userPreference === 'enabled') {
+    body.classList.add('dark-mode');
+  }
+  */
   return (
     <Router>
       <Seo />

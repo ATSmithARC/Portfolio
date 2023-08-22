@@ -16,17 +16,17 @@ export default function About() {
     <React.Fragment>
       <script src="https://www.google.com/recaptcha/api.js"></script>
       <div className="about-container">
-        <h1>Designer, Programmer, & Human</h1>
+        <h1>Developer, Designer, & Human</h1>
         <h2>I love to design, build, and program things.</h2>
         <div className="three-columns-flex">
           <div id="right" className="about-column">
-            <DropdownList title="Human" tagline={a.human.tagline} items={a.human.skills} />
+            <DropdownList profile={a.human}/>
           </div>
           <div id="middle" className="about-column">
-            <DropdownList title="Designer" tagline={a.designer.tagline}items={a.designer.skills} />
+            <DropdownList profile={a.designer} />
           </div>
           <div id="left" className="about-column">
-            <DropdownList title="Developer" tagline={a.developer.tagline} items={a.developer.skills} />
+            <DropdownList profile={a.developer} />
           </div>
           <div className="image-slider">
             <div id="bg" className="image-bg">

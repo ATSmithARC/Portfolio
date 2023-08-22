@@ -16,7 +16,7 @@ function ProjectMenu(props) {
   const ActiveLink = props => {
   const [isActive] = useRoute(props.href);
   return (
-    <Link {...props} className={isActive ? "menu-item activeLink" : "menu-item animatedLink"} onClick={handleFilterClick}>
+    <Link {...props} className={isActive ? "menu-item activeLink" : "menu-item animatedLinkLeft"} onClick={handleFilterClick}>
       {props.children}
     </Link>
   );
