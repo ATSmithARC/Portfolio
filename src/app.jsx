@@ -6,6 +6,7 @@ import Seo from './components/seo.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Waves from  './components/Waves.jsx';
+import ScrollToTopButton from  './components/ScrollToTopButton.jsx';
 
 export default function Home() {
   const body = document.body;
@@ -21,6 +22,7 @@ export default function Home() {
       <Navbar />
       <main role="main" className="wrapper">
         <Waves color={{r: 225, g: 0, b: 0, a: 1}}/>
+        <ScrollToTopButton />
         <div className="content">
           <PageRouter />
         </div>

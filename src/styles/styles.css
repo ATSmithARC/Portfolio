@@ -6,6 +6,22 @@
   --font-family-header: "Ubuntu Mono";
   --translate-m: translate(-5px, -5px);
 }
+.dusk {
+  --color-0: #FFDFDE;
+  --color-1: #6A7BA2;
+}
+.spearmint {
+  --color-0: #00203F;
+  --color-1: #ADEFD1;
+}
+.teacup {
+  --color-0: #FCF6F5;
+  --color-1: #7b9acc;
+}
+.rogue {
+  --color-0: #990011;
+  --color-1: #FCF6F5;
+}
 * {
   color: var(--color-0);
   padding: 0;
@@ -435,7 +451,29 @@ button[type="submit"]:hover {
 .hello {
   cursor: pointer;
 }
-
+.scroll-btn {
+  position: fixed;
+  bottom: 4.25rem;
+  right: 4.25rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 4;
+} 
+.scroll-btn.visible{
+  opacity:1;
+}
+.color-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.6rem;
+}
 /* BEGIN MOBILE */
 @media only screen and (max-width: 800px) {
   .logomation {
@@ -480,6 +518,13 @@ button[type="submit"]:hover {
   }
   nav a {
     font-size: 1.5rem;
+  }
+  footer {
+    width: 90%
+  }
+  .social-footer li {
+    display: inline-block;
+    margin: 0 0.5rem;
   }
   .menu-btn {
     position: fixed;
@@ -535,6 +580,10 @@ button[type="submit"]:hover {
     -webkit-transition: width 0.2s ease;
   }
   .about-column {
-  align-self: inherit; 
+    align-self: inherit; 
+  }
+  .scroll-btn {
+    bottom: 1.5rem;
+    right: 0.75rem;
   }
 }
