@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "collab": ["Heath May", "Jon Bailey", "James Warton", "Chad Porter"]
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P3() {
 return (
-      <div className="page">
-      <h1>FBI Innovation Center</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={3} details={details} sections={sections}/>     
   );
 }

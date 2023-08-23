@@ -8,8 +8,7 @@
     "site": "Sydney, AU",
     "yearStart": 2020,
     "yearEnd": 2020,
-    "desc": "a waterfront pavilion inspired by storytelling",
-    "collab": ["Lance Evans", "Mike Rogers", "Andrew Colling", "Bryan Rincon"]
+    "desc": "a waterfront pavilion inspired by storytelling"
   },
   {
     "id": 1,
@@ -20,8 +19,7 @@
     "site": "Inglewood, CA, US",
     "yearStart": 2017,
     "yearEnd": 2021,
-    "desc": "a global stage shaped by LA culture",
-    "collab": ["Lance Evans", "Mike Rogers", "Manzer Mirkar", "Bryan Rincon"]
+    "desc": "a global stage shaped by LA culture"
   },
   {
     "id": 2,
@@ -32,13 +30,7 @@
     "site": "Inglewood, CA, US",
     "yearStart": 2017,
     "yearEnd": 2021,
-    "desc": "a ship in a bottle",
-    "collab": [
-      "Lance Evans",
-      "Mike Rogers",
-      "Michelle Stevenson",
-      "Manzer Mirkar"
-    ]
+    "desc": "a ship in a bottle"
   },
   {
     "id": 3,
@@ -49,8 +41,7 @@
     "site": "Hunstville, AL, US",
     "yearStart": 2020,
     "yearEnd": 2020,
-    "desc": "an innovative integrated design process",
-    "collab": ["Heath May", "Jon Bailey", "James Warton", "Chad Porter"]
+    "desc": "an innovative integrated design process"
   },
   {
     "id": 4,
@@ -61,8 +52,7 @@
     "site": "Denton, TX, US",
     "yearStart": 2019,
     "yearEnd": 2020,
-    "desc": "a guide to hacking texas's fracking infrastructure",
-    "collab": ["Ryan Griffin (Co-Author)", "Julie Hiromoto", "Cory Brugger"]
+    "desc": "a guide to hacking texas's fracking infrastructure"
   },
   {
     "id": 5,
@@ -73,8 +63,7 @@
     "site": "Austin, TX, US",
     "yearStart": 2019,
     "yearEnd": 2019,
-    "desc": "a topology optimization stratgey for shell structures",
-    "collab": ["HKS Line", "Thorton Tomasetti", "Altair"]
+    "desc": "a topology optimization stratgey for shell structures"
   },
   {
     "id": 6,
@@ -85,8 +74,7 @@
     "site": "Mexico City, MX",
     "yearStart": 2018,
     "yearEnd": 2018,
-    "desc": "a cross-section optimization stratgey for lattice structures",
-    "collab": ["HKS Line", "Thorton Tomasetti"]
+    "desc": "a cross-section optimization stratgey for lattice structures"
   },
   {
     "id": 7,
@@ -97,8 +85,7 @@
     "site": "Los Angeles, CA, US",
     "yearStart": 2018,
     "yearEnd": 2017,
-    "desc": "a plan for the future of dodgers stadium",
-    "collab": ["Professor"]
+    "desc": "a plan for the future of dodgers stadium"
   },
   {
     "id": 8,
@@ -109,8 +96,7 @@
     "site": "Copenhagen, DK",
     "yearStart": 2022,
     "yearEnd": 2023,
-    "desc": "a computational framework for animal aided design",
-    "collab": ["Tom Svilans"]
+    "desc": "a computational framework for animal aided design"
   },
   {
     "id": 9,
@@ -121,8 +107,7 @@
     "site": "None",
     "yearStart": 2022,
     "yearEnd": 2023,
-    "desc": "an open-source library for modeling stadia geometries",
-    "collab": ["None"]
+    "desc": "an open-source library for modeling stadia geometries"
   },
   {
     "id": 10,
@@ -133,14 +118,7 @@
     "site": "None",
     "yearStart": 2022,
     "yearEnd": 2022,
-    "desc": "steering material differentiation by formal and structural inputs",
-    "collab": [
-      "Sandro Siefert",
-      "Søren Henning",
-      "Camila Alarcon",
-      "Daniel Bilesky",
-      "Yuliya Sinke"
-    ]
+    "desc": "steering material differentiation by formal and structural inputs"
   },
   {
     "id": 11,
@@ -151,8 +129,7 @@
     "site": "San Francisco, CA",
     "yearStart": 2016,
     "yearEnd": 2016,
-    "desc": "an exterior facade study of the SFMOMA",
-    "collab": ["None"]
+    "desc": "an exterior facade study of the SFMOMA"
   },
   {
     "id": 12,
@@ -163,8 +140,7 @@
     "site": "Copenhagen, DK",
     "yearStart": 2023,
     "yearEnd": 2023,
-    "desc": "boosting the usability of product data in the AEC industry",
-    "collab": ["Maximilian Vomhoff", "Christian Kongensgaard", "Tom Svilans"]
+    "desc": "boosting the usability of product data in the AEC industry"
   },
   {
     "id": 13,
@@ -175,8 +151,7 @@
     "site": "Los Angeles, CA",
     "yearStart": 2014,
     "yearEnd": 2014,
-    "desc": "a circulatory expression of the figure and the field",
-    "collab": ["Benjamin Smith"]
+    "desc": "a circulatory expression of the figure and the field"
   },
   {
     "id": 14,
@@ -187,8 +162,7 @@
     "site": "Los Angeles, CA",
     "yearStart": 2015,
     "yearEnd": 2015,
-    "desc": "an exercise in programming",
-    "collab": ["Mary-Ann Ray", "Robert Mangurian"]
+    "desc": "an exercise in programming"
   },
   {
     "id": 15,
@@ -199,8 +173,7 @@
     "site": "Los Angeles, CA",
     "yearStart": 2021,
     "yearEnd": 2021,
-    "desc": "exploring robotic methods for fabricating freeform structural timber elements",
-    "collab": ["TBD"]
+    "desc": "exploring robotic methods for fabricating freeform structural timber elements"
   },
   {
     "id": 16,
@@ -211,8 +184,7 @@
     "site": "New York, NY, US",
     "yearStart": 2015,
     "yearEnd": 2015,
-    "desc": "creating depth through a formal process of profiling",
-    "collab": ["Luciano Mengini"]
+    "desc": "creating depth through a formal process of profiling"
   },
   {
     "id": 17,
@@ -223,8 +195,7 @@
     "site": "Los Angeles, CA, US",
     "yearStart": 2019,
     "yearEnd": 2019,
-    "desc": "a multi-modal transportation plan for the 2028 LA Olympics",
-    "collab": ["TBD"]
+    "desc": "a multi-modal transportation plan for the 2028 LA Olympics"
   },
   {
     "id": 18,
@@ -235,8 +206,7 @@
     "site": "None",
     "yearStart": 2019,
     "yearEnd": 2020,
-    "desc": "a parametric approach to visualizing stadium program data",
-    "collab": ["Lance Evans", "Dan Trafford"]
+    "desc": "a parametric approach to visualizing stadium program data"
   },
   {
     "id": 19,
@@ -247,8 +217,7 @@
     "site": "Los Angeles, CA, US",
     "yearStart": 2013,
     "yearEnd": 2013,
-    "desc": "a parking-spot sized pavilion based on our personal measurements",
-    "collab": ["Mira Henry"]
+    "desc": "a parking-spot sized pavilion based on our personal measurements"
   },
   {
     "id": 20,
@@ -259,8 +228,7 @@
     "site": "Copenhagen, DK, US",
     "yearStart": 2021,
     "yearEnd": 2022,
-    "desc": "space frame structures that respond passivly to changes in temperature",
-    "collab": ["Claudia Colmo"]
+    "desc": "space frame structures that respond passivly to changes in temperature"
   },
   {
     "id": 21,
@@ -271,8 +239,7 @@
     "site": "Copenhagen, DK, US",
     "yearStart": 2016,
     "yearEnd": 2016,
-    "desc": "a spherical building typology for an expansion to the SCI-Arc Campus",
-    "collab": ["Sean Justin"]
+    "desc": "a spherical building typology for an expansion to the SCI-Arc Campus"
   },
   {
     "id": 22,

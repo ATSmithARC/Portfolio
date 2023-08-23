@@ -20,7 +20,7 @@ export default function Home() {
       <Seo />
       <Navbar />
       <main role="main" className="wrapper">
-        <Waves />
+        <Waves color={{r: 225, g: 0, b: 0, a: 1}}/>
         <div className="content">
           <PageRouter />
         </div>

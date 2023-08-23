@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "collab": ["HKS Line", "Thorton Tomasetti", "Altair"]
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P5() {
 return (
-      <div className="page">
-      <h1>Polyhedral Timber Structures</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={5} details={details} sections={sections}/>     
   );
 }
