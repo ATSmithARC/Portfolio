@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "year":"2022"
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P22() {
 return (
-      <div className="page">
-      <h1>Sietch House</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={22} details={details} sections={sections}/>     
   );
 }

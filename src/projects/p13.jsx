@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "collab": ["Benjamin Smith"]
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P13() {
 return (
-      <div className="page">
-      <h1>Hollywood Boys and Girls Club</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={13} details={details} sections={sections}/>     
   );
 }

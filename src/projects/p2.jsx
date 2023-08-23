@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "collab": ["Lance Evans","Mike Rogers","Michelle Stevenson","Manzer Mirkar"]
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P2() {
 return (
-      <div className="page">
-      <h1>Youtube Theater</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={2} details={details} sections={sections}/>     
   );
 }

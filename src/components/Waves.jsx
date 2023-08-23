@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createNoise3D } from 'simplex-noise';
 
-const Waves = () => {
+const Waves = (props) => {
     const containerRef = useRef(null);
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -12,7 +12,7 @@ const Waves = () => {
         variation: 0.001,
         amplitude: height / 2.5,
         lines: 50,
-        waveColor: { r: 225, g: 0, b: 0, a: 1 },
+        waveColor: props.color,
         lineStroke: 0.3,
         speed: 0.001
     };

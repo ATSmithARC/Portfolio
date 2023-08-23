@@ -1,8 +1,16 @@
+import ProjectTypical from "../pages/project-typical.jsx";
+
+const details = {
+  "collab": ["Lance Evans", "Mike Rogers", "Andrew Colling", "Bryan Rincon"]
+}
+
+const sections = [
+  <section>this is a test section</section>,
+  <section>this is also a test section</section>
+]
+
 export default function P0() {
 return (
-      <div className="page">
-      <h1>Barangaroo Pavilion</h1>
-      <p>Sorry, this project has not added to this site yet.</p>
-    </div>
+      <ProjectTypical i={0} details={details} sections={sections}/>     
   );
 }

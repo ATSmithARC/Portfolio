@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 import { Link, useLocation} from "wouter";
 import "../styles/styles.css";
-
+import ColorCycleButton from  '../components/ColorCycleButton.jsx';
 
 function Footer() {
   return (
@@ -68,7 +68,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p>Architect_MAA | Copenhagen_DK</p>
+      <p>Architect_MAA  {<ColorCycleButton />}  Copenhagen_DK</p>
     </footer>
   );
 }
