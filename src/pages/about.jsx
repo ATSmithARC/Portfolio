@@ -1,7 +1,8 @@
 import * as React from "react";
 import { animated } from "react-spring";
 import { useWiggle } from "../hooks/wiggle";
-import DropdownList from "../components/DropdownList";
+import DropdownList from "../components/DropdownList.jsx";
+import GridCV from "../components/GridCV.jsx";
 import a from "../data/about-data.json";
 
 function randomLanguage() {
@@ -35,6 +36,9 @@ export default function About() {
             </div>
           </div>
         </div>
+        
+        <GridCV /> 
+        
       </div>
     </React.Fragment>
   );
