@@ -3,7 +3,7 @@
   "designer": {
     "title": "Designer",
     "tagline": "I value things that have a clean structure, purpose-driven elements, and thought-provoking interactions.",
-    "header": "My skills:",
+    "header": "My experience:",
     "skills": [
       "Architectural Design",
       "Computational Design",
@@ -26,8 +26,8 @@
   },
   "human": {
     "title": "Human",
-    "tagline": "I'm American, but currently living in Copenhagen, DK. When I'm not behind a screen, I try my best to be outside.",
-    "header": "My skills:",
+    "tagline": "I'm American, but currently living in Copenhagen, DK. When I'm not behind a screen, you'll probably find me outside.",
+    "header": "My hobbies:",
     "skills": [
       "Architectural Pilgrim",
       "iNaturalist Observer",

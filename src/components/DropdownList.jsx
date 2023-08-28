@@ -3,7 +3,9 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const DropdownList = ({ profile }) => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 800);
-  const toggleDropdown = () => {
+  
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
   };
 
@@ -18,23 +20,25 @@ const DropdownList = ({ profile }) => {
   }, []);
 
   return (
-    <div className="dropdown-container" onClick={toggleDropdown}>
-      <div className="dropdown-header">
+    <div className={`dropdown-container ${isOpen ? "dropdown-open" :  "pointer"}`} onClick={isOpen ? null : toggleDropdown}>
+      <div className={`dropdown-header ${isOpen ? "dropdown-open pointer" : ""}`} onClick={isOpen ? toggleDropdown : null}>
         <h2>{profile.title}</h2>
         <button className="dropdown-button">
           {isOpen ? <FaMinus /> : <FaPlus />}
         </button>
       </div>
       {isOpen && (
-        <ul className="dropdown-list">
+        <React.Fragment>
           <p className="dropdown-tagline"> {profile.tagline} </p>
-          <p className="centered"> {profile.header} </p>  
-          {profile.skills.map((item, index) => (
-            <li key={index}>
-              <h3>{item}</h3>
-            </li>
-          ))}
-        </ul>
+          <p className="centered"> {profile.header} </p>    
+          <ul className="dropdown-list">
+            {profile.skills.map((item, index) => (
+              <li key={index}>
+                <h3>{item}</h3>
+              </li>
+            ))}
+          </ul>
+        </React.Fragment>
       )}
     </div>
   );

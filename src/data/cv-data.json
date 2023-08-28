@@ -19,55 +19,55 @@
         "employer":"Self-Employed",
         "dates":"06/2021- Present",
         "desc":"I am actively developing and maintaining two open-source projects: StadiumTools:  C# library & plug-in for parametrically modeling stadiums. Lepidoptera:  Web platform for architects to explore ecological datasets.",
-        "projects":[]
+        "projects":[8,9]
       },
       {
         "title":"Best Overall Project",
         "employer":"BLOXHUB AEC Hackathon",
         "dates":"03/2023",
         "desc":"OpenMaterialData was a team effort to prototype an open-source data framework to boost the usability of product information by introducing machine-readable open standards for declaring architectural products.",
-        "projects":[]
+        "projects":[12]
       },
       {
         "title":"CREATE Summer School",
         "employer":"Syddansk Universitet",
         "dates":"08/2021",
         "desc":"This Summer program focused on exploring data-driven tectonic construction, and the production of 1:1 scale prototypes that aimed at advancing wood architecture through the use of novel digital design-to-fabrication workflows. Concepts introduced included performance-driven aggregations, circular assemblies, and wood forming through programmed material behaviour.",
-        "projects":[]
+        "projects":[15]
       },
       {
         "title":"Architectural Designer",
-        "employer":"HKS Architects - Los Angeles",
+        "employer":"HKS Architects",
         "dates":"06/2017 - 06/2021",
         "desc":"Working across teams, I supported the design, documentation, and construction of several state-of-the-art entertainment venues.  I also participated in over two dozen design competitions across several sectors.  My work focused on parametric modeling, design, and interoperability solutions to improve the speed & quality of the design & documentation.",
-        "projects":[]
+        "projects":["professional"]
       },
       {
-        "title":"Teaching Assistant - Film",
+        "title":"Film History T.A.",
         "employer":"SCI-Arc",
         "dates":"08/2016 - 04/2017",
-        "desc":"",
+        "desc":"I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism and encouraging thoughtful communication.",
         "projects":[]
       }
     ]
   },
   "education": {
   "title": "My Education:",
-  "jobs": 
+  "degrees": 
     [
       {
         "title":"Master of Arts - Computation in Architecture",
         "employer":"Royal Danish Academy",
         "dates":"08/2021 - 07/2023",
         "desc":"I've developed a comprehensive knowledge of computational techniques (programming, digital fabrication, robotics), and gained practical skills in applying that knowledge to solve architectural design problems focused around reducing the ecological footprint of building methods & materials.",
-        "projects":[]
+        "projects":["graduate"]
       },
       {
         "title":"Bachelor of Architecture (B.Arch)",
         "employer":"SCI-Arc",
         "dates":"09/2013 - 05-2018",
         "desc":"In this program I've gained core competencies of the architectural design profession with an emphasis on innovation and experimentation within topics of architectural design theory, practice, technology, and research.",
-        "projects":[]
+        "projects":["undergraduate"]
       }
     ]
   }

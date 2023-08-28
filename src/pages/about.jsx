@@ -5,17 +5,11 @@ import DropdownList from "../components/DropdownList.jsx";
 import GridCV from "../components/GridCV.jsx";
 import a from "../data/about-data.json";
 
-function randomLanguage() {
-  return a.greetings[Math.floor(Math.random() * a.greetings.length)];
-}
-
 export default function About() {
-  const [hello, setHello] = React.useState(a.greetings[0]);
   const [style, trigger] = useWiggle({ x: 5, y: 5, scale: 1 });
 
   return (
     <React.Fragment>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
       <div className="about-container">
         <h1>Developer, Designer, & Human</h1>
         <h2>I love to design, build, and program things.</h2>
@@ -36,9 +30,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        
         <GridCV /> 
-        
       </div>
     </React.Fragment>
   );

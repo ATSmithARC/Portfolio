@@ -21,11 +21,11 @@ export default function Home() {
       <Seo />
       <Navbar />
       <main role="main" className="wrapper">
-        <Waves color={{r: 225, g: 0, b: 0, a: 1}}/>
-        <ScrollToTopButton />
         <div className="content">
           <PageRouter />
         </div>
+        <Waves color={{r: 225, g: 0, b: 0, a: 1}}/>
+        <ScrollToTopButton />
       </main>
       <Footer />
     </Router>
