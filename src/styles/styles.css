@@ -1,11 +1,13 @@
 :root {
   --color-0: #000000;
   --color-1: #ffffff;
-  --shadow-m: 0.75rem;
+  --shadow-m: 0.5rem;
+  --radius-s: 5px;
   --font-family: "Ubuntu Mono";
   --font-family-header: "Ubuntu Mono";
-  --translate-m: translate(-5px, -5px);
+  --translate-m: scale(1.04);
   --border-m: 0.05rem solid var(--color-0);
+  --ti-cursor-color: var(--color-0);
 }
 * {
   color: var(--color-0);
@@ -226,6 +228,7 @@ body {
   background-color: var(--color-1);
   box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
   border: var(--border-m);
+  border-radius: var(--radius-s);
   transform: var(--translate-m);
   z-index:2;
 }
@@ -249,6 +252,8 @@ body {
   transition: 500ms;
   z-index: 5;
   display: block;
+  border:none;
+  border-radius: var(--radius-s);
 }
 .masonryItem img:hover {
   opacity: 0;
@@ -267,6 +272,7 @@ body {
   flex-wrap: wrap-reverse;
   flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: stretch;
   width: 80vw;
   max-width: 80rem;
   min-width: 16rem;
@@ -274,11 +280,7 @@ body {
 }
 .about-column {
   flex: 1 1 0px;
-  align-self: flex-end;
-  height: 100%;
-  flex-direction: column;
-  background-color: var(--color-1);  
-  text-align: center;
+  align-self: stretch;
 }
 .image-slider {
   flex-grow: 3;
@@ -333,25 +335,40 @@ body {
 }
 .dropdown-container {
   border: var(--border-m);
-  cursor:pointer;
+  border-radius: var(--radius-s);
   padding:1rem;
-  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-1);
 }
 .dropdown-container:hover {
   box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
   transform: var(--translate-m);
-  border-radius: 5px;
+  border-radius: var(--radius-s);
 }
 .dropdown-header {
   display: flex;
   justify-content: space-between;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: content;
+}
+.dropdown-header ul {
+  margin: 0;
+}
+.dropdown-header li {
+  margin-bottom:0.2rem;
 }
 .dropdown-header h2 {
   margin: 0;
   flex: 1;
 }
-.dropdown-header li {
-  margin-bottom:0.2rem;
+.dropdown-open {
+  height: 100%;
+  cursor: default;
+}
+.pointer {
+  cursor: pointer;
 }
 .dropdown-list {
   text-align: center;
@@ -362,11 +379,11 @@ body {
 .dropdown-button {
   background: none;
   border: none;
-  cursor: pointer;
   font-size: 24px;
 }
 .dropdown-tagline {
-  margin: 2rem 0;
+  padding: 1.5rem 0;
+  flex-grow: 1;
 }
 .dropdown-list li {
   margin: 5px 0;
@@ -378,6 +395,7 @@ body {
   margin: 2rem auto 0 auto;
   padding: 20px;
   border: var(--border-m);
+  border-radius: var(--radius-s);
   box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
   background-color: var(--color-1);
 }
@@ -388,7 +406,7 @@ textarea {
   padding: 10px;
   margin-bottom: 15px;
   border: var(--border-m);
-  border-radius: 3px;
+  border-radius: var(--radius-s);
 }
 textarea {
   min-height: 10rem;
@@ -403,7 +421,7 @@ button[type="submit"] {
   color: var(--color-1);
   border: none;
   padding: 10px 15px;
-  border-radius: 3px;
+  border-radius: var(--radius-s);
   cursor: pointer;
   transition: background-color 0.5s;
 }
@@ -432,9 +450,6 @@ button[type="submit"]:hover {
 .contact-text p {
   display: inline-block;
   font-weight: bold;
-}
-.hello {
-  cursor: pointer;
 }
 .scroll-btn {
   position: fixed;
@@ -471,20 +486,20 @@ button[type="submit"]:hover {
 }
 .grid-item {  
   width: 100%;  
-  
 }
 .grid-item p {
   text-indent: 2rem;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 .profile {
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
   line-height: 1.3rem;
   font-weight: bold;
   grid-column: 1 / span 3;
+  text-align: center;
 }
 .profile p {
-margin: 0 auto;
+  margin: 2rem auto 0 auto;
 }
 .experience-grid {
   display: grid;
@@ -494,10 +509,11 @@ margin: 0 auto;
   padding: 1rem 0;
 }
 .experience-expanded {
-  min-height:13rem;
+  min-height:30vh;
 }
 .experience-desc {
-  padding-top:0.5rem;
+  padding: 1.5rem 0; 
+  flex-grow: 1;
 }
 .exp-title {
   grid-column: 1 / span 3;
@@ -507,6 +523,7 @@ margin: 0 auto;
 .it-skills {
   grid-column: span 1;
 }
+
 
 .masonryItem:hover > p {
   display: block;  
@@ -627,6 +644,7 @@ margin: 0 auto;
     grid-template-columns: 1fr;
   }
   .profile {
+    text-align: left;
     grid-column: 1;
   }
   .experience-grid {

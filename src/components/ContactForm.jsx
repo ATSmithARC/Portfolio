@@ -64,24 +64,6 @@ const ContactForm = () => {
       setSubmitClicked(true);
       // Submit logic
       if (name && email && message && recaptchaValue) {
-        /* Not Supported by Github Pages
-        const formData = {
-          name: name,
-          email: email,
-          message: message
-        };
-        fetch("AKfycbxmLRaFkFnybmDxnzKsNGX1DRDPmkIzGxGOynArDCPNY63zNUMqJ60LB0EYvCTpzYaT", {
-          method: "POST",
-          body: new URLSearchParams(formData)
-        })
-        .then(response => response.text())
-        .then(data => {
-          console.log(data); // Log the response from Google Apps Script
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
-        */
         var subject = 'An inquiry from '+ name;
         var mailtoLink = 'mailto:atsmitharc@gmail.com' +
                          '?subject=' + encodeURIComponent(subject) +

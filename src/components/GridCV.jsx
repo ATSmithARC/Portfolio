@@ -17,8 +17,10 @@ const GridCV = () => {
           ))}
       </div>
       <div className="grid-item education">
-        {/* Education section */}
-        {/* Your education content */}
+         <h2 className="exp-title">{data.education.title}</h2>
+          {data.education.degrees.map((experience, index) => (
+            <Experience key={index} experience={experience} />
+          ))}
       </div>
       <div className="grid-item competencies" colSpan={1}>
       </div>
