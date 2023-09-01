@@ -1,8 +1,9 @@
 {
   "homepage": "http://atsmitharc.com",
-  "name": "glitch-hello-react",
+  "name": "atsmitharchitecture",
   "version": "0.0.5",
-  "description": "A simple React single page app, built with Vite and React.",
+  "description": "A simple React single page portfolio, built with Vite and React.",
+  "private": true,
   "scripts": {
     "start": "vite",
     "predeploy": "npm run build",
@@ -35,7 +36,7 @@
     "node": "14.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-react"
+    "url": "https://github.com/ATSmithARC/Portfolio"
   },
   "glitch": {
     "projectType": "generated_static"

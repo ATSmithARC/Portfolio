@@ -42,6 +42,7 @@ h2 {
   margin: 1rem 0 1rem 0;
   text-align: center;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -61,7 +62,7 @@ header {
 }
 canvas {
   position: absolute;
-  bottom: 18vh;
+  bottom: 12vh;
   left: -1vw;
   width: 101vw;
   height: 33vh;
@@ -177,7 +178,7 @@ body {
 .wrapper {
   margin-left: 6.5rem;
   margin-right: 2rem;
-  padding-bottom: 25rem;
+  padding-bottom: 10rem;
 }
 .content {
   display: flex;
@@ -204,6 +205,22 @@ body {
   visibility: hidden;
   opacity: 0;
   font-size: 1.5rem;
+}
+.home-header {
+  display:block;
+  position:relative;
+  margin-top: 5rem;
+  width:23rem;
+  
+}
+.home-header h1, h2 {
+  text-align:left;
+  line-height:2rem;
+  margin: 2rem 0;
+}
+.home-intro p {
+  display:inline;
+  line-height:1.75rem;
 }
 .my-masonry-grid {
   display: -webkit-box;
@@ -416,7 +433,7 @@ textarea {
   font-size: 12px;
   margin-top: 5px;
 }
-button[type="submit"] {
+.contrast-btn {
   background-color: var(--color-0);
   color: var(--color-1);
   border: none;
@@ -425,7 +442,7 @@ button[type="submit"] {
   cursor: pointer;
   transition: background-color 0.5s;
 }
-button[type="submit"]:hover {
+.contrast-btn:hover {
   background-color: #5e5e5e;
 }
 #honeypotField1,
@@ -654,5 +671,4 @@ button[type="submit"]:hover {
   .exp-title {
     grid-column: 1;
   }
-
 }

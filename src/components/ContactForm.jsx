@@ -117,7 +117,7 @@ const ContactForm = () => {
             onChange={handleRecaptchaChange}
           />
         </div>
-        <button title="Submit" type="submit">
+        <button className="contrast-btn" title="Submit" type="submit">
           Submit
         </button>
       </form>
