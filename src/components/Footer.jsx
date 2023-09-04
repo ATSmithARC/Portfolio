@@ -68,7 +68,7 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p>Architect_MAA  {<ColorCycleButton />}  Copenhagen_DK</p>
+      <p>Architect_MAA  |  Copenhagen_DK</p>
     </footer>
   );
 }

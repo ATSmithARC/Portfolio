@@ -36,13 +36,11 @@ li {
 h1 {
   margin: 2rem 0 2rem 0;
   text-align: center;
-  
 }
 h2 {
   margin: 1rem 0 1rem 0;
   text-align: center;
 }
-
 a {
   text-decoration: none;
   cursor: pointer;
@@ -70,12 +68,20 @@ canvas {
   pointer-events: none;
   z-index: -1;
 }
+.custom-underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
 .logomation {
   cursor: pointer;
   position: fixed;
   left: 2rem;
   z-index: 1;
 }
+nav {
+    padding-left: 5rem;
+  }
 nav a {
   margin: 1rem 2rem;
 }
@@ -207,26 +213,38 @@ body {
   font-size: 1.5rem;
 }
 .home-header {
-  display:block;
-  position:relative;
-  margin-top: 5rem;
-  width:23rem;
-  
+  margin-left: 1rem;
+  margin-top: 3rem;
+  max-width: 90vw;
 }
-.home-header h1, h2 {
+.home-header h1 {
   text-align:left;
   line-height:2rem;
   margin: 2rem 0;
+  font-size: min(max(16px, 2.5rem), 9vw);
 }
-.home-intro p {
+.home-header h2 {
+  text-align:left;
+  line-height:2rem;
+  margin: 2rem 0;
+  font-size: min(max(16px, 2rem), 5vw);
+}
+
+.home-intro {
+  width:27rem;
+  max-width: 80vw;
+}
+.home-intro p {  
   display:inline;
   line-height:1.75rem;
+  font-size: min(max(12px, 1rem), 4vw);
 }
 .my-masonry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: -1rem;
+  margin-bottom: 10rem;
   width: auto;
   z-index: 1;
 }
@@ -449,6 +467,10 @@ textarea {
 #honeypotField2 {
   display: none;
 }
+iframe {
+  transform: scale(0.8);
+  transform-origin: 0 0;
+}
 .g-recaptcha {
   margin-top: 15px;
 }
@@ -508,40 +530,110 @@ textarea {
   text-indent: 2rem;
   max-width: 50rem;
 }
-.profile {
-  padding: 4rem 0rem;
-  line-height: 1.3rem;
-  font-weight: bold;
-  grid-column: 1 / span 3;
-  text-align: center;
+.about-bio {
+  margin: 0 auto;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 80vw;
+  max-width: 80rem;
+  min-width: 16rem;
+  gap: 1rem;
 }
-.profile p {
+.about-bio-text {
+  min-width:20rem;
+  text-align: left;
+  background-color: var(--color-1);
+  line-height: 1.75rem;
+  text-indent: 2rem;
+  flex:2;
+}
+.about-bio-text p {
   margin: 2rem auto 0 auto;
 }
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  grid-column: 1 / span 3;
-  padding: 1rem 0;
+.about-bio-image {
+  display: flex;
+  flex-direction: column;
+  padding: 0vw 7vw 0vw 2vw;
+  flex:1;
+  justify-content: center;
+  align-items:center;
 }
-.experience-expanded {
-  min-height:30vh;
+.about-bio-image img {
+  width:100%;
+  max-width: 300px;
+  min-width: 15vw;
+  border: none;
+  border-radius: var(--radius-s);
 }
-.experience-desc {
-  padding: 1.5rem 0; 
+.experience-section {
+  width:100%
+}
+.experience-gallery {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 80vw;
+  max-width: 80rem;
+  min-width: 16rem;
+  gap: 2rem;
+}
+.experience-column-list {
+  max-width: 25rem;
+  flex: 1;
+}
+.experience-column-details {
+  max-width: 50rem;
+  flex: 2;
+}
+.experience-list li {
+  margin-bottom: 0.25rem;
+}
+.experience-job {
+  display: flex;
   flex-grow: 1;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  border: var(--border-m);
+  border-radius: var(--radius-s);
+  transition: background-color 200ms ease-in-out;
 }
-.exp-title {
-  grid-column: 1 / span 3;
+.experience-job:hover {
+  box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
+  transform: var(--translate-m);
 }
-.education,
-.competencies,
-.it-skills {
-  grid-column: span 1;
+.experience-job.selected {
+  box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
+  transform: var(--translate-m);
 }
-
-
+.experience-job b {
+  display: block;
+}
+.experience-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.experience-details {
+  padding: 20px;
+}
+.experience-details h4 {
+  margin-top: 10px;
+}
+.experience-details ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.experience-job.selected .experience-btn {
+  color: #e74c3c; /* Red color for minus icon when selected */
+}
 .masonryItem:hover > p {
   display: block;  
 }
@@ -552,6 +644,9 @@ textarea {
   }
   .wrapper {
     margin: 0 0.5rem 0 0;
+  }
+  nav {
+    padding-left: 0rem;
   }
   header {
     padding: 0 0.5rem;
@@ -664,11 +759,36 @@ textarea {
     text-align: left;
     grid-column: 1;
   }
-  .experience-grid {
-    grid-column: 1;
-    grid-template-columns: 1fr;
+  .home-header {
+    align-items:center;
+    justify-content: center;
+    text-align:center;
   }
-  .exp-title {
-    grid-column: 1;
+  .home-header h1 {
+    text-align: center;
   }
+  .home-header h2 {
+    text-align: center;
+  }
+  .home-intro  {
+    display:inline-block;
+  }
+  .my-masonry-grid {
+    margin-left: -0.75rem;
+  }
+  .about-bio {
+    flex-wrap: wrap;
+  }
+  .about-bio-text {
+   min-width: 100%; 
+  }
+  .about-bio-image {
+    padding: 5rem 0 0 0;
+  }
+  .about-bio-image img {
+    height:400px;
+    border: none;
+    border-radius: var(--radius-s);
+    padding:0;
+}
 }

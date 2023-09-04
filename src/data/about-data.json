@@ -2,7 +2,7 @@
   "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
     "title": "Designer",
-    "tagline": "I value things that have a clean structure, purpose-driven elements, and thought-provoking interactions.",
+    "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
     "header": "My experience:",
     "skills": [
       "Architectural Design",
@@ -14,14 +14,14 @@
   },
   "developer": {
     "title": "Developer",
-    "tagline": "I'm always trying to build things that enhance my productivity, creativity, and accessibility to useful information.",
+    "tagline": "I'm always trying to build things that enhance productivity, creativity, and accessibility to important information.",
     "header": "My skills:",
     "skills": [
       "Algorithmic Modeling",
       "Software Plugins",
-      "Web Development",
+      "Web Applications",
       "Mapping and GIS",
-      "Data Wrangling"
+      "Data Management"
     ]
   },
   "human": {
@@ -34,6 +34,89 @@
       "Hiker / Backpacker",
       "Astrophotographer",
       "Rock Climber"
+    ]
+  },
+  "profile": {
+    "title": "About Me:",
+    "text": [
+      "Hi, I'm Andrew Smith. I’m a multidisciplinary designer who bridges between the practice of architecture, computation, and application development. I have a decade of academic and professional experience in architecture, in which I hold a B.Arch & MA degree. I'm passionate about design, technology, the outdoors, and just about anything to do with putting things together (or taking them apart!).",
+      "10 years ago, while studying architecture in Los Angeles, I found a passion for using programming and scripting as design tools. Later, in practice at HKS Architects, I discovered the value of applying computational thinking toward tackling more complex, process-based challenges on projects like Sofi Stadium and YouTube Theater. In that role, I worked with teams of all shapes and sizes on dozens of projects primarily in the sports/venues sector. These projects spanned anything from quick single-week design proposals to multi-year construction administration assistance.",
+      "Now, having recently graduated from the two-year Computation in Architecture program at the Royal Danish Academy, I’m actively developing several closed and open-source projects including StadiumTools, PLANimal, and Dailog. I find balancing these projects to be super helpful in sharpening my development skills and keeping me up with new tools, libraries, and frameworks.",
+      "I'm seeking a full-time position to leverage my computational and development skills on innovative projects. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, feel free to reach out, and let's put something amazing together!"
+    ]
+  },
+  "experience": {
+    "title": "My Recent Work:",
+    "jobs": [
+      {
+        "title": "Open-Source Developer",
+        "employer": "Self-Employed",
+        "dates": "06/2021- Present",
+        "desc": "I am actively developing and maintaining two open-source projects: StadiumTools:  C# library & plug-in for parametrically modeling stadiums. Lepidoptera:  Web platform for architects to explore ecological datasets.",
+        "skills": ["reading","writing","math"],
+        "projects": [8, 9]
+      },
+      {
+        "title": "Metal Workshop Tutor",
+        "employer": "Royal Danish Academy",
+        "dates": "08/2021 - 07/2023",
+        "desc": "I maintained after-hours operation of the academy's metal shop. In this role, I assisted students with the fabrication of academic projects as they related to pipe bending, sheet metal forming, laser-cutting, and casting.",
+        "skills": ["reading","writing","math"],
+        "projects": []
+      },
+      {
+        "title": "BLOXHUB AEC Hackathon",
+        "employer": "Best Overall Project",
+        "dates": "03/2023",
+        "desc": "OpenMaterialData was a team effort to prototype an open-source data framework to boost the usability of product information by introducing machine-readable open standards for declaring architectural products.",
+        "skills": ["reading","writing","math"],
+        "projects": [12]
+      },
+      {
+        "title": "Architectural Designer",
+        "employer": "HKS Architects",
+        "dates": "06/2017 - 06/2021",
+        "desc": "Working across teams, I supported the design, documentation, and construction of several state-of-the-art entertainment venues.  I also participated in over two dozen design competitions across several sectors.  My work focused on parametric modeling, design, and interoperability solutions to improve the speed & quality of the design & documentation.",
+        "skills": ["reading","writing","math"],
+        "projects": ["professional"]
+      },
+      {
+        "title": "Film History T.A.",
+        "employer": "SCI-Arc",
+        "dates": "08/2016 - 04/2017",
+        "desc": "I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism and encouraging thoughtful communication.",
+        "skills": ["reading","writing","math"],
+        "projects": []
+      }
+    ]
+  },
+  "education": {
+    "title": "My Education:",
+    "degrees": [
+      {
+        "title": "Master of Arts - Computation in Architecture",
+        "employer": "Royal Danish Academy",
+        "dates": "08/2021 - 07/2023",
+        "desc": "I've developed a comprehensive knowledge of computational techniques (programming, digital fabrication, robotics), and gained practical skills in applying that knowledge to solve architectural design problems focused around reducing the ecological footprint of building methods & materials.",
+        "skills": ["reading","writing","math"],
+        "projects": ["graduate"]
+      },
+      {
+        "title": "CREATE Summer School",
+        "employer": "Syddansk Universitet",
+        "dates": "08/2021",
+        "desc": "This Summer program focused on exploring data-driven tectonic construction, and the production of 1:1 scale prototypes that aimed at advancing wood architecture through the use of novel digital design-to-fabrication workflows. Concepts introduced included performance-driven aggregations, circular assemblies, and wood forming through programmed material behaviour.",
+        "skills": ["reading","writing","math"],
+        "projects": [15]
+      },
+      {
+        "title": "Bachelor of Architecture (B.Arch)",
+        "employer": "SCI-Arc",
+        "dates": "09/2013 - 05-2018",
+        "desc": "In this program I've gained core competencies of the architectural design profession with an emphasis on innovation and experimentation within topics of architectural design theory, practice, technology, and research.",
+        "skills": ["reading","writing","math"],
+        "projects": ["undergraduate"]
+      }
     ]
   }
 }
