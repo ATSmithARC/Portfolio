@@ -18,9 +18,9 @@
     "header": "My skills:",
     "skills": [
       "Algorithmic Modeling",
+      "Web Mapping and GIS",
       "Software Plugins",
       "Web Applications",
-      "Mapping and GIS",
       "Data Management"
     ]
   },
@@ -31,9 +31,9 @@
     "skills": [
       "Architectural Pilgrim",
       "iNaturalist Observer",
-      "Hiker / Backpacker",
       "Astrophotographer",
-      "Rock Climber"
+      "Rock Climber",
+      "Backpacker"
     ]
   },
   "profile": {
@@ -45,9 +45,9 @@
       "I'm seeking a full-time position to leverage my computational and development skills on innovative projects. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, feel free to reach out, and let's put something amazing together!"
     ]
   },
-  "experience": {
+  "professional": {
     "title": "My Recent Work:",
-    "jobs": [
+    "entries": [
       {
         "title": "Open-Source Developer",
         "employer": "Self-Employed",
@@ -90,11 +90,11 @@
       }
     ]
   },
-  "education": {
+  "academic": {
     "title": "My Education:",
-    "degrees": [
+    "entries": [
       {
-        "title": "Master of Arts - Computation in Architecture",
+        "title": "Computation in Architecture (M.A.A)",
         "employer": "Royal Danish Academy",
         "dates": "08/2021 - 07/2023",
         "desc": "I've developed a comprehensive knowledge of computational techniques (programming, digital fabrication, robotics), and gained practical skills in applying that knowledge to solve architectural design problems focused around reducing the ecological footprint of building methods & materials.",

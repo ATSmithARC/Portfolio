@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa6";
 import { Link, useLocation} from "wouter";
 import "../styles/styles.css";
-import ColorCycleButton from  '../components/ColorCycleButton.jsx';
 
 function Footer() {
   return (

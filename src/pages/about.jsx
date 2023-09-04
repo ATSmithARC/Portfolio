@@ -13,7 +13,7 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1>Developer, Designer, & Human</h1>
+        <h1>Developer, Designer, Human</h1>
         <h2>I love to design, build, and program things.</h2>
         <div className="three-columns-flex">
           <div id="right" className="about-column">
@@ -32,15 +32,9 @@ export default function About() {
             </div>
           </div>
         </div>
-        <h1><br/><br/>{a.profile.title}</h1>
-        <section className="about-bio">
-          <div className="about-bio-text">
-            <p>{a.profile.text[0]}</p>
-            <p>{a.profile.text[1]}</p>
-            <p>{a.profile.text[2]}</p>
-            <p>{a.profile.text[3]}</p>
-          </div>
-          <div className="about-bio-image">
+        <h1 className="about-section-header">{a.profile.title}</h1>
+        <section className="three-columns-flex">
+          <div className="about-column img-column">
             <img
               src={api + "-800" + ext}
               srcSet={`${api}-400${ext} 500w,
@@ -49,9 +43,17 @@ export default function About() {
               alt={"Andrew Smith holding degree"}
             />
           </div>
+          <div className="about-column bio-column">
+            <p>{a.profile.text[0]}</p>
+            <p>{a.profile.text[1]}</p>
+            <p>{a.profile.text[2]}</p>
+            <p>{a.profile.text[3]}</p>
+          </div>
         </section>
-        <h1><br/><br/>My Experience:</h1>
-        <ExperienceSection/>
+        <h1 className="about-section-header">My Experience:</h1>
+        <ExperienceSection experienceType={a.professional}/>
+        <h1 className="about-section-header">My Education:</h1>
+        <ExperienceSection experienceType={a.academic}/>
       </div>
     </React.Fragment>
   );
