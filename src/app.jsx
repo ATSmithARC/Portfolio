@@ -6,6 +6,7 @@ import Seo from './components/seo.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Waves from  './components/Waves.jsx';
+import ThemeSwitcher from "./components/ThemeSwitcher.jsx"
 import ScrollToTopButton from  './components/ScrollToTopButton.jsx';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <Router>
       <Seo />
       <Navbar />
+      <ThemeSwitcher/>
       <main role="main" className="wrapper">
         <div className="content">
           <PageRouter />

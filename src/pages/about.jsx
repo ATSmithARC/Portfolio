@@ -2,16 +2,18 @@ import * as React from "react";
 import { animated } from "react-spring";
 import { useWiggle } from "../hooks/wiggle";
 import DropdownList from "../components/DropdownList.jsx";
-import GridCV from "../components/GridCV.jsx";
 import a from "../data/about-data.json";
+import ExperienceSection from "../components/ExperienceSection.jsx";
 
 export default function About() {
   const [style, trigger] = useWiggle({ x: 5, y: 5, scale: 1 });
-
+  const api = "https://storage.googleapis.com/atsmitharc-media/thumb/degree";
+  const ext = ".webp";
+  
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1>Developer, Designer, & Human</h1>
+        <h1>Developer, Designer, Human</h1>
         <h2>I love to design, build, and program things.</h2>
         <div className="three-columns-flex">
           <div id="right" className="about-column">
@@ -30,7 +32,28 @@ export default function About() {
             </div>
           </div>
         </div>
-        <GridCV /> 
+        <h1 className="about-section-header">{a.profile.title}</h1>
+        <section className="three-columns-flex">
+          <div className="about-column img-column">
+            <img
+              src={api + "-800" + ext}
+              srcSet={`${api}-400${ext} 500w,
+                       ${api}-600${ext} 700w,
+                       ${api}-1000${ext} 1100w`}
+              alt={"Andrew Smith holding degree"}
+            />
+          </div>
+          <div className="about-column bio-column">
+            <p>{a.profile.text[0]}</p>
+            <p>{a.profile.text[1]}</p>
+            <p>{a.profile.text[2]}</p>
+            <p>{a.profile.text[3]}</p>
+          </div>
+        </section>
+        <h1 className="about-section-header">My Experience:</h1>
+        <ExperienceSection experienceType={a.professional}/>
+        <h1 className="about-section-header">My Education:</h1>
+        <ExperienceSection experienceType={a.academic}/>
       </div>
     </React.Fragment>
   );
