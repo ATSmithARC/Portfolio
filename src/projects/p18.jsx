@@ -1,7 +1,7 @@
 import ProjectTypical from "../pages/project-typical.jsx";
 
 const details = {
-  "collab": ["Lance Evans", "Dan Trafford"]
+  "collab": ["Jacob Riiber","Claudia Colmo"]
 }
 
 const sections = [

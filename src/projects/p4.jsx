@@ -1,7 +1,7 @@
 import ProjectTypical from "../pages/project-typical.jsx";
 
 const details = {
-  "collab": ["Ryan Griffin (Co-Author)", "Julie Hiromoto", "Cory Brugger"]
+  "collab": ["None"]
 }
 
 const sections = [

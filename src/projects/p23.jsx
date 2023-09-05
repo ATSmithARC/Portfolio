@@ -1,7 +1,7 @@
 import ProjectTypical from "../pages/project-typical.jsx";
 
 const details = {
-  "collab": ["Dwayne Oyler"]
+  "collab": ["Tom Svilans"]
 }
 
 const sections = [
@@ -9,8 +9,8 @@ const sections = [
   <section>this is also a test section</section>
 ]
 
-export default function P6() {
+export default function P23() {
 return (
-      <ProjectTypical i={6} details={details} sections={sections}/>     
+      <ProjectTypical i={23} details={details} sections={sections}/>     
   );
 }

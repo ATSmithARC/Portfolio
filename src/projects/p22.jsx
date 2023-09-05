@@ -1,7 +1,7 @@
 import ProjectTypical from "../pages/project-typical.jsx";
 
 const details = {
-  "year":"2022"
+  "collab": ["None"]
 }
 
 const sections = [

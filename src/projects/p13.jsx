@@ -1,7 +1,8 @@
 import ProjectTypical from "../pages/project-typical.jsx";
+import ContentSection from "../components/ContentSection.jsx";
 
 const details = {
-  "collab": ["Benjamin Smith"]
+  "collab": ["Heath May", "Jon Bailey", "James Warton", "Chad Porter"]
 }
 
 const sections = [

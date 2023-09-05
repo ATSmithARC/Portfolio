@@ -1,13 +1,8 @@
 import ProjectTypical from "../pages/project-typical.jsx";
+import ContentSection from "../components/ContentSection.jsx";
 
 const details = {
-  "collab": [
-      "Sandro Siefert",
-      "Søren Henning",
-      "Camila Alarcon",
-      "Daniel Bilesky",
-      "Yuliya Sinke"
-    ]
+  "collab": ["Ryan Griffin (Co-Author)", "Julie Hiromoto", "Cory Brugger"]
 }
 
 const sections = [

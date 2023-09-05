@@ -1,4 +1,4 @@
-import projects from "../data/project-data.json";
+import projectList from "../data/project-list.json";
 
 const ContentSection = (props) => {
   const { template, projectID, imgID, alt, className } = props.content;
@@ -6,11 +6,11 @@ const ContentSection = (props) => {
   const api = "https://storage.googleapis.com/atsmitharc-media/img/";
   "sofi-stadium/01/image-1000"
 
-  const src = `${api}${projects[projectID].href}/${imgID}/image-2000.webp`;
+  const src = `${api}${projectList[projectID].href}/${imgID}/image-2000.webp`;
   const srcset = [
-    `${api}${projects[projectID].href}/${imgID}/image-3000.webp 3200w`,
-    `${api}${projects[projectID].href}/${imgID}/image-1000.webp 1200w`,
-    `${api}${projects[projectID].href}/${imgID}/image-500.webp 600w`,
+    `${api}${projectList[projectID].href}/${imgID}/image-3000.webp 3200w`,
+    `${api}${projectList[projectID].href}/${imgID}/image-1000.webp 1200w`,
+    `${api}${projectList[projectID].href}/${imgID}/image-500.webp 600w`,
   ]
   
   if (template === 'img') {
@@ -20,7 +20,7 @@ const ContentSection = (props) => {
 
   return (
     <section>
-      {contentElement}
+      
     </section>
   );
 };

@@ -1,30 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-const ExperienceSection = ({experienceType}) => {
+import RelatedProjectLinks from "../components/RelatedProjectLinks.jsx";
+const ExperienceSection = ({ experienceType }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [selectedEntry, setSelectedEntry] = useState(experienceType.entries[0]);
+  const [selectedEntryIndex, setSelectedEntryIndex] = useState(0);
+  const [resetKey, setResetKey] = useState(0); // Add a reset key
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
-    window.addEventListener('resize', handleResize);
-
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
-  const handleEntryClick = (entry) => {
-    setSelectedEntry(entry);
+
+  useEffect(() => {
+    // Resets the key when selectedEntryIndex changes
+    setResetKey(selectedEntryIndex);
+  }, [selectedEntryIndex]);
+
+  const handleEntryClick = (index) => {
+    setSelectedEntryIndex(index);
   };
 
-  const isEntrySelected = (entry) => {
-    return entry === selectedEntry;
+  const isEntrySelected = (index) => {
+    return index === selectedEntryIndex;
   };
-
   return (
     <section className="experience-section">
       <div className="experience-gallery">
@@ -34,10 +37,10 @@ const ExperienceSection = ({experienceType}) => {
               {experienceType.entries.map((entry, index) => (
                 <div
                   className={`experience-job ${
-                    isEntrySelected(entry) ? "selected" : ""
+                    isEntrySelected(index) ? "selected" : ""
                   }`}
                   key={index}
-                  onClick={() => handleEntryClick(entry)}
+                  onClick={() => handleEntryClick(index)}
                 >
                   <div className="experience-job-header">
                     <ul>
@@ -49,25 +52,30 @@ const ExperienceSection = ({experienceType}) => {
                       </li>
                     </ul>
                     <button className="dropdown-button">
-                      {isEntrySelected(entry) ? <FaMinus /> : <FaPlus />}
+                      {isEntrySelected(index) ? <FaMinus /> : <FaPlus />}
                     </button>
                   </div>
-                  {isEntrySelected(entry) && (
+                  {isEntrySelected(index) && (
                     <div className="experience-details">
                       <h4>Description:</h4>
-                      <p>{selectedEntry.desc}</p>
-                      <h4>Skills:</h4>
-                      <ul>
-                        {selectedEntry.skills.map((skill, index) => (
-                          <li key={index}>{skill}</li>
-                        ))}
-                      </ul>
-                      <h4>Related Projects:</h4>
-                      <ul>
-                        {selectedEntry.projects.map((projectIndex, index) => (
-                          <li key={index}>Hello</li>
-                        ))}
-                      </ul>
+                      <p>{entry.desc}</p>
+                      <div className="experience-stats">
+                        <div className="experience-skills">
+                          <h4>Related Skills:</h4>
+                          <ul>
+                            {entry.skills.map((skill, index) => (
+                              <li key={index}>{skill}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="experience-projects">
+                          <h4>Related Projects:</h4>
+                          <RelatedProjectLinks
+                            projectIds={entry.projects}
+                            key={resetKey}
+                          />
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -78,25 +86,25 @@ const ExperienceSection = ({experienceType}) => {
           <>
             <div className="experience-column-list">
               <ul className="experience-list">
-                {experienceType.entries.map((job, index) => (
+                {experienceType.entries.map((entry, index) => (
                   <div
                     className={`experience-job ${
-                      isEntrySelected(job) ? "selected" : ""
+                      isEntrySelected(index) ? "selected" : ""
                     }`}
                     key={index}
-                    onClick={() => handleEntryClick(job)}
+                    onClick={() => handleEntryClick(index)}
                   >
                     <div className="experience-job-header">
                       <ul>
                         <li>
-                          <h3>{job.title}</h3>
+                          <h3>{entry.title}</h3>
                         </li>
                         <li>
-                          <b>{job.dates}</b>
+                          <b>{entry.dates}</b>
                         </li>
                       </ul>
                       <button className="dropdown-button">
-                        {isEntrySelected(job) ? <FaMinus /> : <FaPlus />}
+                        {isEntrySelected(index) ? <FaMinus /> : <FaPlus />}
                       </button>
                     </div>
                   </div>
@@ -104,24 +112,31 @@ const ExperienceSection = ({experienceType}) => {
               </ul>
             </div>
             <div className="experience-column-details">
-              {isEntrySelected(selectedEntry) && (
-                <div className="experience-details">
-                  <h4>Description:</h4>
-                  <p>{selectedEntry.desc}</p>
-                  <h4>Skills:</h4>
-                  <ul>
-                    {selectedEntry.skills.map((skill, index) => (
-                      <li key={index}>{skill}</li>
-                    ))}
-                  </ul>
-                  <h4>Related Projects:</h4>
-                  <ul>
-                    {selectedEntry.projects.map((projectIndex, index) => (
-                      <li key={index}>Hello</li>
-                    ))}
-                  </ul>
+              <div className="experience-details">
+                <h4>Description:</h4>
+                <p>{experienceType.entries[selectedEntryIndex].desc}</p>
+                <div className="experience-stats">
+                  <div className="experience-skills">
+                    <h4>Related Skills:</h4>
+                    <ul>
+                      {experienceType.entries[selectedEntryIndex].skills.map(
+                        (skill, index) => (
+                          <li key={index}>{skill}</li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                  <div className="experience-projects">
+                    <h4>Related Projects:</h4>
+                    <RelatedProjectLinks
+                      projectIds={
+                        experienceType.entries[selectedEntryIndex].projects
+                      }
+                      key={resetKey}
+                    />
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           </>
         )}
@@ -129,5 +144,4 @@ const ExperienceSection = ({experienceType}) => {
     </section>
   );
 };
-
 export default ExperienceSection;
