@@ -1,30 +1,8 @@
 import ProjectTypical from "../pages/project-typical.jsx";
+import ContentSection from "../components/ContentSection.jsx";
 
 const details = {
-  "collab": ["Roberto Naboni",
-             "Anja Kunic",
-             "Alessandro Zomparelli",
-             "Luca Breseghello",
-             "Sandro Sanin",
-             "Aina Radovan",
-             "Andreas Nielsen",
-             "Angelina Garipova",
-             "Anne Beyer",
-             "Asger Pedersen",
-             "Aske Kiehn",
-             "Averina Annisa",
-             "Cyril Novotny",
-             "Guijia Zhao",
-             "Ilya Lebedev",
-             "Jonathan Nielsen",
-             "Juraj Stetiar",
-             "Mathilde Eriksen",
-             "Maxime Fouillat",
-             "Robin Petersen",
-             "Veranika Sidorka",
-             "Xan Browne",
-             "Vojtech Vrtal"
-            ]
+  "collab": ["Lance Evans","Mike Rogers","Michelle Stevenson","Manzer Mirkar","Bryan Rincon","Niel Prunier","Austin Ash","Zac Potts"]
 }
 
 const sections = [

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Router, Link, useLocation } from "wouter";
-import projects from "../data/project-data.json";
+import projectList from "../data/project-list.json";
 import Masonry from "react-masonry-css";
 const breakpointColumnsObj = {
   default: 4,
@@ -12,9 +12,12 @@ const api = "https://storage.googleapis.com/atsmitharc-media/thumb/";
 const ext = ".webp";
 function ProjectMasonry(props) {
   const [location] = useLocation();
+  // Reverse the projectList array
+  const reversedProjectList = [...projectList].reverse();
+
   return (
     <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
-      {projects
+      {reversedProjectList
         .filter((project) => {
           switch (props.category) {
             case "all":

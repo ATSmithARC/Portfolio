@@ -1,7 +1,7 @@
 import ProjectTypical from "../pages/project-typical.jsx";
-
+// Candle Holder
 const details = {
-  "collab": ["Mira Henry"]
+  "collab": ["None"]
 }
 
 const sections = [

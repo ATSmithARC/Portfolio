@@ -1,6 +1,7 @@
 import * as React from "react";
 import { animated } from "react-spring";
 import { useWiggle } from "../hooks/wiggle";
+import ReactHtmlParser from 'react-html-parser';
 import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";
 import ExperienceSection from "../components/ExperienceSection.jsx";
@@ -44,16 +45,16 @@ export default function About() {
             />
           </div>
           <div className="about-column bio-column">
-            <p>{a.profile.text[0]}</p>
-            <p>{a.profile.text[1]}</p>
-            <p>{a.profile.text[2]}</p>
-            <p>{a.profile.text[3]}</p>
+            <p>{ReactHtmlParser(a.profile.text[0])}</p>
+            <p>{ReactHtmlParser(a.profile.text[1])}</p>
+            <p>{ReactHtmlParser(a.profile.text[2])}</p>
+            <p>{ReactHtmlParser(a.profile.text[3])}</p>
           </div>
         </section>
         <h1 className="about-section-header">My Experience:</h1>
-        <ExperienceSection experienceType={a.professional}/>
+        <ExperienceSection key={0} experienceType={a.professional}/>
         <h1 className="about-section-header">My Education:</h1>
-        <ExperienceSection experienceType={a.academic}/>
+        <ExperienceSection key={1} experienceType={a.academic}/>
       </div>
     </React.Fragment>
   );

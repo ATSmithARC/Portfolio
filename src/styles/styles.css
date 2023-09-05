@@ -634,6 +634,18 @@ iframe {
   list-style-type: disc;
   margin-left: 20px;
 }
+.experience-stats {
+  display:flex;
+  gap:1rem;
+}
+.experience-skills {
+  display:block;
+  flex:1;
+}
+.experience-projects {
+  display:block;
+  flex:1;
+}
 
 .masonryItem:hover > p {
   display: block;  
@@ -811,5 +823,8 @@ iframe {
     width: 100%;
     flex-direction: column;
     margin: 1.25rem 0rem;
+  }
+  .experience-details {
+    padding: 1rem 0;
   }
 }
