@@ -31,7 +31,7 @@ ul {
   list-style: none;
 }
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 h1 {
@@ -43,7 +43,7 @@ h2 {
   text-align: center;
 }
 h4 {
-  margin: 0.5rem 0;
+  margin: 0.6rem 0;
 }
 a {
   text-decoration: none;
@@ -64,7 +64,7 @@ header {
 }
 canvas {
   position: absolute;
-  bottom: 12vh;
+  bottom: 13vh;
   left: -1vw;
   width: 101vw;
   height: 33vh;
@@ -199,6 +199,9 @@ footer {
 }
 .icon:hover {
   font-size: 1.8rem;
+}
+.copyright svg {
+  font-size: 0.7rem;
 }
 body {
   background-color: var(--color-1);
@@ -570,7 +573,7 @@ iframe {
   flex-basis: content;
 }
 .experience-job-header ul {
-  display:block;
+  display: block;
   flex: 1;
 }
 .experience-gallery {
@@ -632,7 +635,7 @@ iframe {
 }
 .experience-details ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 .experience-stats {
   display:flex;
@@ -646,7 +649,14 @@ iframe {
   display:block;
   flex:1;
 }
-
+.spacer-column {
+  flex:1.13;
+  padding-left:1rem;
+}
+.skills ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
 .masonryItem:hover > p {
   display: block;  
 }
@@ -826,5 +836,15 @@ iframe {
   }
   .experience-details {
     padding: 1rem 0;
+  }
+  .skills {
+    justify-content: center;
+    align-items: center;
+  }
+  .skills h4 {
+    text-align:center;
+  }
+  .skills ul {
+    margin-left:4rem;
   }
 }
