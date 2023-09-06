@@ -1,7 +1,7 @@
 {
   "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
-    "title": "Designer",
+    "title": "Part Designer",
     "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
     "header": "My experience:",
     "skills": [
@@ -13,7 +13,7 @@
     ]
   },
   "developer": {
-    "title": "Developer",
+    "title": "Part Developer",
     "tagline": "I'm always trying to build things that enhance productivity, creativity, and accessibility to important information.",
     "header": "My skills:",
     "skills": [
@@ -25,8 +25,8 @@
     ]
   },
   "human": {
-    "title": "Human",
-    "tagline": "I'm American, but currently living in Copenhagen, DK. When I'm not behind a screen, you'll probably find me outside.",
+    "title": "Part Human",
+    "tagline": "I'm American, but currently living in Copenhagen. When I'm not behind a screen, hopefully I'm outside.",
     "header": "My hobbies:",
     "skills": [
       "Architectural Pilgrim",
@@ -37,16 +37,16 @@
     ]
   },
   "profile": {
-    "title": "About Me:",
+    "title": "Profile:",
     "text": [
-      "Hi, I'm Andrew Smith. I’m a multidisciplinary designer who bridges between the practice of architecture, computation, and application development. I have a decade of academic and professional experience in architecture, in which I hold a B.Arch & MA degree. I'm passionate about design, technology, the outdoors, and just about anything to do with putting things together (or taking them apart!).",
-      "10 years ago, while studying architecture in Los Angeles, I found a passion for using programming and scripting as design tools. Later, in practice at HKS Architects, I discovered the value of applying computational thinking toward tackling more complex, process-based challenges on projects like Sofi Stadium and YouTube Theater. In that role, I worked with teams of all shapes and sizes on dozens of projects primarily in the sports/venues sector. These projects spanned anything from quick single-week design proposals to multi-year construction administration assistance.",
-      "Now, having recently graduated from the two-year Computation in Architecture program at the Royal Danish Academy, I’m actively developing several apps and plugins including StadiumTools, PLANimal, and Dailog. These projects help keep me up-to-date with new tools, libraries, and frameworks.",
+      "Hi, I'm Andrew Smith. I’m a multidisciplinary designer who bridges between the practice of architecture, computation, and application development. I have a decade of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, the outdoors, and just about anything to do with putting things together (or taking them apart!).",
+      "10 years ago, while studying architecture in Los Angeles, I found a passion for using programming and scripting as design tools. Later, in practice at HKS Architects, I discovered the value of applying computational thinking toward solving more process-based challenges on projects like <a title='See Project' class='custom-underline' href='./projects/sofi-stadium'>Sofi Stadium</a> and <a title='See Project' class='custom-underline' href='./projects/youtube-theater'>YouTube Theater</a>. In that role, I worked with teams of all shapes and sizes on dozens of projects primarily in the sports/venues sector. These projects spanned anything from quick single-week design proposals to multi-year construction administration assistance.",
+      "Now, having recently graduated from the two-year Computation in Architecture program at the Royal Danish Academy, I’m actively developing several apps and plugins including <a title='See Project' class='custom-underline' href='./projects/stadiumtools'>StadiumTools</a>, and <a title='See Project' class='custom-underline' href='./projects/planimal'>PLANimal</a>. These projects help keep me up-to-date with new tools, libraries, and frameworks.",
       "I'm seeking a full-time position to leverage my computational and development skills on innovative projects. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, feel free to reach out, and let's put something amazing together!"
     ]
   },
   "professional": {
-    "title": "My Recent Work:",
+    "title": "Experience:",
     "entries": [
       {
         "id": 0,
@@ -140,7 +140,7 @@
     ]
   },
   "academic": {
-    "title": "My Education:",
+    "title": "Education:",
     "entries": [
       {
         "id": 0,
@@ -193,6 +193,72 @@
         ],
         "projects": ["undergraduate"]
       }
+    ]
+  },
+  "skills": {
+    "title": "Skills:",
+    "architectural": [
+      "Design Experimentation",
+      "Design Communication",
+      "Design Documentation",
+      "Construction Documentation",
+      "Construction Administration",
+      "Presenting/Public Speaking",
+      "Computational Design",
+      "Building Information Modeling",
+      "Life Cycle Assessment",
+      "Venue / Stadium Design",
+      "Material Programming"
+    ],
+    "development": [
+      "Plugin Development",
+      "Web Development",
+      "UI / UX Design",
+      "Git Version Control",
+      "Algorithmic Modeling",
+      "RESTful APIs",
+      "Data Structures"
+    ],
+    "applications": [
+      "Autodesk Revit",
+      "Autodesk BIM 360",
+      "Rhino 3D",
+      "Grasshopper",
+      "Enscape",
+      "Lumion",
+      "Autodesk Maya",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe InDesign",
+      "Adobe Permiere Pro",
+      "Adobe Acrobat",
+      "Bluebeam Studio",
+      "Autodesk Navisworks",
+      "Autodesk BIM 360",
+      "QGIS",
+      "Microsoft Excel",
+      "Microsoft OneNote",
+      "Microsoft Teams",
+      "Microsoft Visual Studio",
+      "Microsoft VS Code"
+    ],
+    "languages": ["C#", "Python", "JavaScript", "TypeScript", "C++"],
+    "libraries": [
+      "React",
+      "OpenNurbs",
+      "RhinoCommon",
+      "Mapbox",
+      "Express",
+      "CytoscapeJS",
+      "Rhino.Inside"
+    ],
+    "other": [
+      "GIT & Github",
+      "RESTful APIs",
+      "WMS (Web Mapping Service)",
+      "SQLite",
+      "Google S3",
+      "Earth Engine"
     ]
   }
 }

@@ -4,6 +4,7 @@ import {
   FaEnvelope,
   FaYoutube,
   FaA,
+  FaCreativeCommonsZero
 } from "react-icons/fa6";
 import { Link, useLocation} from "wouter";
 import "../styles/styles.css";
@@ -67,7 +68,9 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <p>Architect_MAA  |  Copenhagen_DK</p>
+      <a className="copyright" href="https://github.com/ATSmithARC/Portfolio" title="See Source">
+      Andrew_Smith | <FaCreativeCommonsZero/>_2023 | Copenhagen_DK 
+      </a>
     </footer>
   );
 }
