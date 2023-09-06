@@ -11,4 +11,3 @@ You can visit the built site here: [atsmitharc.com](https://www.atsmitharc.com)
 The media content for the webpage is self-hosted on my own Google S3 Bucket.
 
 There are many things I'd like to improve, but for now it works :)
-

@@ -13,7 +13,7 @@ const Waves = (props) => {
         amplitude: height / 2.5,
         lines: 50,
         waveColor: props.color,
-        lineStroke: 0.3,
+        lineStroke: 0.5,
         speed: 0.001
     };
     const setupCanvas = () => {

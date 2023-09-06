@@ -3,37 +3,34 @@
   "designer": {
     "title": "Part Designer",
     "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
-    "header": "My experience:",
+    "header": "My designer skills:",
     "skills": [
       "Architectural Design",
       "Computational Design",
       "UI/UX/Web Design",
-      "Graphic Design",
-      "3D Modeling"
+      "Graphic Design"
     ]
   },
   "developer": {
     "title": "Part Developer",
     "tagline": "I'm always trying to build things that enhance productivity, creativity, and accessibility to important information.",
-    "header": "My skills:",
+    "header": "My developer skills:",
     "skills": [
-      "Algorithmic Modeling",
-      "Web Mapping and GIS",
+      "Geometry Libraries",
       "Software Plugins",
-      "Web Applications",
-      "Data Management"
+      "Data Management",
+      "Fullstack Web"
     ]
   },
   "human": {
     "title": "Part Human",
-    "tagline": "I'm American, but currently living in Copenhagen. When I'm not behind a screen, hopefully I'm outside.",
-    "header": "My hobbies:",
+    "tagline": "I'm an American currently living in Copenhagen. If I'm not behind my screen, I'm probably outside exploring the city.",
+    "header": "My human skills:",
     "skills": [
-      "Architectural Pilgrim",
-      "iNaturalist Observer",
-      "Astrophotographer",
-      "Rock Climber",
-      "Backpacker"
+      "Cycling in the Rain",
+      "Astrophotography",
+      "Rock Climbing",
+      "Backpacking"
     ]
   },
   "profile": {
