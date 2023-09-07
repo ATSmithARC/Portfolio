@@ -24,7 +24,7 @@ const RelatedProjectLinks = (props) => {
             return (
               <li>
                 <Link className={classNames} href="/projects/undergraduate">
-                  See Undergraduate Projects
+                  See B.Arch Projects
                 </Link>
               </li>
             );

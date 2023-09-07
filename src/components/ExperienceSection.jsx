@@ -57,7 +57,6 @@ const ExperienceSection = ({ experienceType }) => {
                   </div>
                   {isEntrySelected(index) && (
                     <div className="experience-details">
-                      <h4>Description:</h4>
                       <p>{entry.desc}</p>
                       <div className="experience-stats">
                         <div className="experience-skills">

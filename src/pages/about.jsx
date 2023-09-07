@@ -1,16 +1,13 @@
 import * as React from "react";
-import { animated } from "react-spring";
-import { useWiggle } from "../hooks/wiggle";
+import { animated } from "react-spring";;
 import ReactHtmlParser from "react-html-parser";
 import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";
 import ExperienceSection from "../components/ExperienceSection.jsx";
 
 export default function About() {
-  const [style, trigger] = useWiggle({ x: 5, y: 5, scale: 1 });
   const api = "https://storage.googleapis.com/atsmitharc-media/thumb/degree";
   const ext = ".webp";
-
   return (
     <React.Fragment>
       <div className="about-container">

@@ -53,8 +53,8 @@ function Navbar() {
       <nav ref={navRef}>
         <ActiveLink href="/">Home</ActiveLink>
         <ActiveLink href="/projects">Projects</ActiveLink>
-        <ActiveLink href="/contact">Contact</ActiveLink>
         <ActiveLink href="/about">About</ActiveLink>
+        <ActiveLink href="/contact">Contact</ActiveLink>
         <button title="Close Menu Button" className="nav-btn nav-close-btn" onClick={handleNavClick}>
           <FaTimes />
         </button>

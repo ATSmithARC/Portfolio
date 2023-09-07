@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPalette, FaSun, FaMoon } from 'react-icons/fa';
+import { FaPalette, FaLightbulb, FaSun, FaMoon } from 'react-icons/fa';
 import colorData from '../data/color-data.json';
 
 const ThemeSwitcher = () => {
@@ -41,7 +41,7 @@ const ThemeSwitcher = () => {
       </button>
       /
       <button className="theme-btn" onClick={toggleDarkMode}>
-        {theme.darkMode ? <FaMoon /> : <FaSun />}
+        {theme.darkMode ? <FaMoon /> : <FaLightbulb />}
       </button>
     </div>
   );
