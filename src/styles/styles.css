@@ -139,9 +139,8 @@ nav a {
   left: 0;
 }
 .theme-buttons {
-  display: block;
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   top: 2rem;
   right: var(--corner-w);
 }
@@ -199,8 +198,11 @@ footer {
 .icon:hover {
   font-size: 1.8rem;
 }
-.copyright svg {
+.copyright {
   font-size: 0.7rem;
+}
+.copyright svg {
+  font-size: 0.5rem;
 }
 body {
   background-color: var(--color-1);
@@ -212,28 +214,6 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-}
-.project-container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  gap: 2.5rem;
-}
-.menu-container {
-  padding-right: 70px;
-}
-.menu {
-  position: fixed;
-}
-.menu-btn {
-  padding: 5px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.5rem;
 }
 @keyframes slideIn {
   from {
@@ -262,7 +242,6 @@ body {
   margin: 2rem 0;
   font-size: min(max(16px, 2rem), 5vw);
 }
-
 .home-intro {
   width: 27rem;
   max-width: 80vw;
@@ -271,6 +250,32 @@ body {
   display: inline;
   line-height: 1.75rem;
   font-size: min(max(12px, 1rem), 4vw);
+}
+.project-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.menu-container {
+  width:34px;
+  padding-right:4rem;
+}
+.menu {
+  position: fixed;
+}
+.menu li {
+  margin-bottom:1rem;
+}
+.menu-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
 }
 .my-masonry-grid {
   display: -webkit-box;
@@ -680,7 +685,7 @@ iframe {
   header .nav-btn {
     width: 0;
     top: 1.6rem;
-    right: 1.6rem;
+    right: 2rem;
     position: fixed;
     visibility: visible;
     opacity: 1;
@@ -698,7 +703,7 @@ iframe {
     position: absolute;
     display: flex;
     top: 1.8rem;
-    right: 2.5rem;
+    right: 3rem;
   }
   header nav {
     position: fixed;
@@ -726,21 +731,21 @@ iframe {
   nav .nav-close-btn {
     position: absolute;
     top: 1.6rem;
-    right: 1.6rem;
+    right: 2rem;
   }
   nav a {
     font-size: 1.5rem;
   }
   .social-footer li {
     display: inline-block;
-    margin: 0 0.5rem;
+    margin: 0 0.3rem;
   }
   .menu-btn {
     position: fixed;
-    top: 50vh;
-    width: auto;
+    top: 48vh;
     visibility: visible;
     opacity: 1;
+    right: 0.5rem;
   }
   .menu {
     position: fixed;
@@ -773,24 +778,11 @@ iframe {
     right: 1rem;
   }
   .project-container {
-    gap: 0.5rem;
+    gap: 1rem;
   }
-  .three-columns-flex {
-    flex-direction: column-reverse;
-    flex-wrap: nowrap;
-  }
-  .image-mg {
-    -webkit-transition: width 0.2s ease;
-  }
-  .image-fg {
-    -webkit-transition: width 0.2s ease;
-  }
-  .about-column {
-    align-self: inherit;
-  }
-  .scroll-btn {
+    .scroll-btn {
     bottom: 1.5rem;
-    right: 0.4rem;
+    right: 0.8rem;
   }
   .resume-grid {
     grid-template-columns: 1fr;
@@ -814,8 +806,38 @@ iframe {
   .my-masonry-grid {
     margin-left: -0.75rem;
   }
+  .about-container {
+    background-color: var(--color-1);
+    margin-right: max(3.3rem, 12vw);
+    margin-left: 2vw;
+    z-index: 1;
+    font-size:15px;
+  }
+  .about-column {
+    align-self: inherit;
+  }
+  .three-columns-flex {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+  .image-mg {
+    -webkit-transition: width 0.2s ease;
+  }
+  .image-fg {
+    -webkit-transition: width 0.2s ease;
+  }
+  .about-section-header {
+    margin: 4rem 0rem 1rem 0;
+    text-align: center;
+  }
   .about-bio {
     flex-wrap: wrap;
+  }
+  .bio-column {
+    line-height: 1.5;
+    padding: 0;
+    max-width: 35rem;
+    margin: 0 auto;
   }
   .about-bio-text {
     min-width: 100%;
@@ -824,21 +846,11 @@ iframe {
     padding: 5rem 0 0 0;
   }
   .img-column img {
-    width: 70%;
-    height: 45vh;
+    width: 60%;
+    height: 300px;
     border: none;
     object-fit: cover;
     border-radius: var(--radius-s);
-    padding: 0;
-  }
-  .about-container {
-    background-color: var(--color-1);
-    margin: 0 2.5rem 0 2vw;
-    z-index: 1;
-  }
-  .about-section-header {
-    margin: 4rem 0rem 1rem 0;
-    text-align: center;
   }
   .experience-column-list {
     min-width: 100%;
@@ -849,7 +861,14 @@ iframe {
     margin: 1.25rem 0rem;
   }
   .experience-details {
-    padding: 1rem 0;
+    padding: 0rem 0;
+  }
+  .experience-stats {
+   flex-direction: column; 
+   gap: 0;
+  }
+  .experience-stats ul {
+    margin-left: 0.8rem;
   }
   .skills {
     justify-content: center;
