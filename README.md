@@ -1,8 +1,8 @@
 # A Static Portfolio App Built w/ React
 
-This project contains source code for my personal web portfolio.
+This repo contains source code for my personal web portfolio.
 
-It'd developed with the React library and built with Vite.
+It's developed with the React library and built with Vite.
 
 The build files are hosted from the gh-pages branch of this repo on a custom domain.
 
