@@ -1,27 +1,72 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation} from "wouter";
+import { Link, useLocation } from "wouter";
 import TypeIt from "typeit-react";
 import "../styles/styles.css";
+import projectList from "../data/project-list.json";
 
 function Navbar() {
   function normalize(path) {
     let arr = path.split("/");
+    let dir = arr[arr.length - 1];
     let sliced = arr.slice(0, 2);
-    let normPath = sliced.join("/");
-    return normPath;
+    let root = sliced.join("/");
+    return [root, dir];
   }
+
+  function IsProjectPage(root, dir, projectList) {
+    if (root === "/projects" && window.innerWidth > 800) {
+      for (const project of projectList) {
+        if (project.href === dir) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   const navRef = useRef();
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [location] = useLocation();
-  const root = normalize(location);
-  const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
-  };
-  const handleNavClick = (event) => {
-    showNavbar();
-  };
+  const [root, dir] = normalize(location);
+  const [isProjectPage, setIsProjectPage] = useState(IsProjectPage(root, dir, projectList));
+
+  useEffect(() => {
+    function updateIsProjectPage() {
+      const [newRoot, newDir] = normalize(location);
+      setIsProjectPage(IsProjectPage(newRoot, newDir, projectList));
+    }
+
+    // Initial call to updateIsProjectPage
+    updateIsProjectPage();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateIsProjectPage);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateIsProjectPage);
+    };
+  }, [location, projectList]);
+
+  useEffect(() => {
+    if (isNavOpen) {
+      navRef.current.classList.add("responsive_nav");
+    } else {
+      navRef.current.classList.remove("responsive_nav");
+    }
+  }, [isNavOpen]);
+
+  function toggleNav() {
+    setIsNavOpen(!isNavOpen);
+  }
+
+  function handleNavClick() {
+    setIsNavOpen(false);
+  }
+
   const ActiveLink = (props) => {
-    const isActive = (root === props.href)
+    const isActive = root === props.href;
     return (
       <Link
         {...props}
@@ -34,7 +79,7 @@ function Navbar() {
   };
 
   return (
-    <header>
+    <header className={isProjectPage ? "project-header" : ""}>
       <div title="Andrew_Smith" className="logomation">
         <Link href="./">
           <TypeIt
@@ -59,7 +104,7 @@ function Navbar() {
           <FaTimes />
         </button>
       </nav>
-      <button title="Menu Button" className="nav-btn" onClick={showNavbar}>
+      <button title="Menu Button" className="nav-btn" onClick={toggleNav}>
         <FaBars />
       </button>
     </header>

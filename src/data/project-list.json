@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "name": "Downtown Los Angeles Culinary School",
+    "name": "Downtown LA Culinary School",
     "href": "dtla-culinary-school",
     "style": {"aspectRatio": 0.7825},
     "category": 2,
@@ -156,8 +156,8 @@
   },
   {
     "id": 14,
-    "href": "barangaroo-pier-pavilion",
     "name": "Barangaroo Pier Pavilion",
+    "href": "barangaroo-pier-pavilion",
     "style": {"aspectRatio": 0.8013},
     "category": 0,
     "site": "Sydney, AU",
@@ -189,7 +189,7 @@
   },
   {
     "id": 17,
-    "name": "CREATE Summer School: Advanced Robotic Timber Fabrication",
+    "name": "Robotic Timber Fabrication",
     "href": "create-summer-school",
     "style": {"aspectRatio": 1.2954},
     "category": 1,
@@ -200,7 +200,7 @@
   },
   {
     "id": 18,
-    "name": "Passive Thermally Actuated Space Frames",
+    "name": "Passive Actuated Space Frames",
     "href": "ptasf",
     "style": {"aspectRatio": 0.9542},
     "category": 3,

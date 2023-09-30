@@ -1,8 +1,11 @@
 import projectList from "../data/project-list.json";
+import ProjectSplash from "../components/ProjectSplash.jsx"
+import RelatedProjectGallery from "../components/RelatedProjectGallery.jsx"
 
-export default function ProjectTypical(props) {
-  const project = projectList[props.i];
 
+export default function ProjectTypical({i, details, sections}) {
+const project = projectList[i];
+  
   if (!project) {
     return (
       <div className="page">
@@ -14,12 +17,15 @@ export default function ProjectTypical(props) {
   }
 
   return (
-    <div className="page">
-      <h2>Project Pages are in Development</h2>
-      <h2>{project.name}</h2>
-      <p>{project.desc}</p>
-      {props.sections}
-      <p>Details: {JSON.stringify(props.details)}</p>
+    <div className="project-container">
+      <ProjectSplash project={project} details={details}/>
+      <div className="wrapper">
+      <h2>Sorry, project page content is under construction.</h2>
+      <h1 className="about-section-header">See more...</h1>
+      {sections}
+      <RelatedProjectGallery projectIds={[0,1,2,3]}/>
+      </div>
+      
     </div>
   );
 }

@@ -4,6 +4,7 @@ import ReactHtmlParser from "react-html-parser";
 import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";
 import ExperienceSection from "../components/ExperienceSection.jsx";
+import {Link} from "wouter";
 
 export default function About() {
   const api = "https://storage.googleapis.com/atsmitharc-media/thumb/degree";
@@ -11,8 +12,6 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        {/*<h1>Developer, Designer, Human</h1>
-        <h2>I love to design, build, and program things.</h2> */}
         <div className="three-columns-flex">
           <div id="right" className="about-column">
             <DropdownList profile={a.human} />
@@ -42,10 +41,27 @@ export default function About() {
             />
           </div>
           <div className="about-column bio-column">
+            {/* <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/sofi-stadium'>Sofi Stadium</a> and <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/youtube-theater'>YouTube Theater</a>*/}
+            {/* <Link title='See Project' class='custom-underline' href='./projects/stadiumtools'>StadiumTools</Link>, and <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/planimal'>PLANimal</a>*/}
             <p>{ReactHtmlParser(a.profile.text[0])}</p>
-            <p>{ReactHtmlParser(a.profile.text[1])}</p>
-            <p>{ReactHtmlParser(a.profile.text[2])}</p>
-            <p>{ReactHtmlParser(a.profile.text[3])}</p>
+            
+            <p>
+              {ReactHtmlParser(a.profile.text[1])}
+                <Link title="See Project" href="./projects/sofi-stadium" className="custom-underline">Sofi Stadium</Link> 
+                {" and "} 
+                <Link  title="See Project" href="./projects/youtube-theater" className="custom-underline">YouTube Theater</Link>
+              {ReactHtmlParser(a.profile.text[2])}
+            </p>
+            
+            <p>
+              {ReactHtmlParser(a.profile.text[3])}
+              <Link title="See Project" href="./projects/stadiumtools" className="custom-underline">StadiumTools</Link> 
+                {" and "} 
+                <Link  title="See Project" href="./projects/planimal" className="custom-underline">PLANimal</Link>
+              {ReactHtmlParser(a.profile.text[4])}
+            </p>
+            
+            <p>{ReactHtmlParser(a.profile.text[5])}</p>
           </div>
         </section>
         <h1 className="about-section-header">{a.professional.title}</h1>

@@ -30,7 +30,7 @@ const DropdownList = ({ profile }) => {
       {isOpen && (
         <React.Fragment>
           <p className="dropdown-tagline"> {profile.tagline} </p>
-          <p className="centered"> {profile.header} </p>    
+          <h5 className="centered"> {profile.header} </h5>    
           <ul className="dropdown-list">
             {profile.skills.map((item, index) => (
               <li key={index}>
