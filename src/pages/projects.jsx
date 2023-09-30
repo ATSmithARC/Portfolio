@@ -5,7 +5,7 @@ import ProjectMasonry from "../components/ProjectMasonry.jsx";
 export default function Projects(props) {
   return (
     <React.Fragment>
-      <div className="project-container">
+      <div className="projects-container">
         <ProjectMenu filter={props.filter}/>
         <ProjectMasonry category={props.filter}/>
       </div>

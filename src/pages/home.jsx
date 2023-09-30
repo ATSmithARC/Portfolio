@@ -10,7 +10,7 @@ export default function Home() {
         <div className="home-intro">
         <p>I want to empower architects, engineers, and designers
            to accomplish more with less by integrating digital 
-           technology and sustainability into their work.</p>
+           technology and sustainability into the way we work.</p>
         </div>
       </div>
     </div>

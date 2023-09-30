@@ -9,10 +9,8 @@ const breakpointColumnsObj = {
   400: 1,
 };
 const api = "https://storage.googleapis.com/atsmitharc-media/thumb/";
-const ext = ".webp";
 function ProjectMasonry(props) {
-  const [location] = useLocation();
-  // Reverse the projectList array
+  // Reverse the projectList so newest entries appear first
   const reversedProjectList = [...projectList].reverse();
 
   return (
@@ -35,18 +33,19 @@ function ProjectMasonry(props) {
           }
         })
         .map((project) => (
-          <Link rel="preload" as="image" key={project.id} href={"projects/" + project.href}>
+          <Link rel="preload" as="image" key={project.id} href={"/projects/" + project.href} className="masonryLink">
           <div className="masonryItem" style={project.style}>
             <p>{project.desc}</p>
             <img
               rel="preload"
               key={project.id}
-              src={api + project.href + "-800" + ext}
-              srcSet={`${api}${project.href}-400${ext} 500w,
-                       ${api}${project.href}-600${ext} 700w,
-                       ${api}${project.href}-1000${ext} 1100w`}
+              src={api + project.href + "-800.webp"}
+              srcSet={`${api}${project.href}-400.webp 500w,
+                       ${api}${project.href}-600.webp 700w,
+                       ${api}${project.href}-1000.webp 1100w`}
               alt={project.name}
             />
+            <h5>{project.name}</h5>
           </div>
         </Link>
         ))}
