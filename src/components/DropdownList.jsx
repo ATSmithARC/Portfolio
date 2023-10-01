@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 const DropdownList = ({ profile }) => {
   const [isOpen, setIsOpen] = useState(window.innerWidth > 800);
@@ -24,7 +25,7 @@ const DropdownList = ({ profile }) => {
       <div className={`dropdown-header ${isOpen ? "dropdown-open pointer" : ""}`} onClick={isOpen ? toggleDropdown : null}>
         <h2>{profile.title}</h2>
         <button className="dropdown-button">
-          {isOpen ? <FaMinus /> : <FaPlus />}
+          {isOpen ? <FontAwesomeIcon icon={faPlus} /> : <FontAwesomeIcon icon={faMinus} />}
         </button>
       </div>
       {isOpen && (

@@ -7,8 +7,7 @@ const details = {
 }
 
 const sections = [
-  <section key={1}>this is a test section</section>,
-  <section key={2}>this is also a test section</section>
+  <section>Content Section Coming Soon...</section>,
 ]
 
 export default function P21() {

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { animated } from "react-spring";;
 import ReactHtmlParser from "react-html-parser";
 import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";

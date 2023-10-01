@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRef } from "react";
-import { FaFilter, FaTimes } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilter, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Router, Link, useRoute } from "wouter";
 import ProjectMasonry from "../components/ProjectMasonry.jsx";
 import "../styles/styles.css";
@@ -25,12 +26,12 @@ function ProjectMenu(props) {
     <React.Fragment>
     <div className="menu-container">
       <button title="Filter Button" className="menu-btn" onClick={showMenu}>
-        <FaFilter />
+        <FontAwesomeIcon icon={faFilter} />
       </button>
       <ul className="menu" ref={menuRef}>
         <li>
           <button title="Close Filter Button" className="menu-btn menu-close-btn" onClick={showMenu}>
-            <FaTimes />
+            <FontAwesomeIcon icon={faTimes} />
           </button>
         </li>
         <li>

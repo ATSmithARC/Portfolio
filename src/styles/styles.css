@@ -102,7 +102,7 @@ canvas {
   cursor: pointer;
   position: fixed;
   left: var(--corner-w);
-  z-index: 1;
+  z-index: -1;
 }
 .logomation span {
   z-index:4;
@@ -117,51 +117,6 @@ canvas {
 }
 nav {
   padding-left: 1.5rem;
-}
-.project-header {
-  justify-content: right;
-}
-.project-header .nav-btn {
-    width: 0;
-    visibility: visible;
-    opacity: 1;
-    position:fixed;
-}
-.project-header ~ .theme-buttons {
-    position: absolute;
-    display: none;
-    top: 1.8rem;
-    right: 3rem;
-}
-.project-header nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 24.25rem;
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    background-color: var(--color-1);
-    transform: translateY(-100vh);
-    z-index: 3;
-}
-.project-header .responsive_nav {
-    transform: none;
-    transition: 200ms;
-}
-.project-header .responsive_nav ~ .theme-buttons {
-    opacity: 1;
-}
-.project-header .nav-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-}
-.project-header a {
-    font-size: 1.5rem;
 }
 nav a {
   margin: 1rem 2rem;
@@ -277,7 +232,7 @@ body {
   background-color: var(--color-1);
 }
 .wrapper {
-  margin: 0 10vw;
+  margin: 0 8vw;
   padding-bottom: 19rem;
 }
 .content {
@@ -386,7 +341,6 @@ body {
 .masonryItem h5 {
  padding: 0 0 0rem 0.25rem;
  transition: 200ms;
- opacity:1;
  font-weight:600;
 }
 .masonryItem img {
@@ -409,12 +363,10 @@ body {
 }
 .masonryItem:hover h5 {
   transform:translateY(-1rem);
-  opacity:1;
 }
 .masonryItem:hover p {
   opacity:1;
 }
-
 .about-container {
   position: relative;
   align-items: center;
@@ -665,6 +617,7 @@ iframe {
 }
 .experience-section {
   width: 100%;
+  min-height:32rem;
 }
 .experience-job-header {
   display: flex;
@@ -758,64 +711,87 @@ iframe {
   list-style-type: disc;
   margin-left: 2rem;
 }
-.project-container {
-  width:100vw;
-  position:relative;
-  left:-10vw;
+.project-container::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--color-1));
 }
 .project-splash {
-  position:relative;
   display:flex;
-  flex-direction:row;
-  flex-wrap: wrap-reverse;
-  width:100vw;
-  height:100vh;
-  top:-10vh;
+  flex-wrap:wrap;
+  width:100%;
+  gap:0.5rem;
+  margin-bottom:10vh;
 }
 .splash-image {
-  display:flex;
   flex:1;
   width:100%;
-  height:100%;
+  height:80vh;
+  min-width:35rem;
 }
 .splashimg {
-  max-width:100%;
-  max-height:100%;
+  width:100%;
+  height:100%;
   flex:1;
   object-fit: cover;
 }  
 .splash-info {
+  margin:0 auto;
   font-size:0.9rem;
-  padding-right:3rem;
   display:flex;
+  align-items:center;
   flex-direction:column;
-  width:25rem;
+  gap:1.5rem;
+  width:23.5rem;
+  padding:1rem; 
 }
 .splash-title {
+  font-size: 2rem;
   margin:0;
-  padding:3.5rem 0 1rem 1.5rem;
-  text-align:left;
-}
-.splash-desc {
-  padding:1.5rem;
 }
 .splash-details {
-  flex:1;
+  flex:1; 
   display:flex;
   justify-content:space-between;
+  gap:2rem;
 }
 .splash-stats {
-  padding: 1.5rem;
+  min-width:8rem;
+  text-align:right;
+  flex:1
 }
 .splash-collab {
-  flex:1;
-  max-width:20rem;
-  padding:1.5rem 0 1.5rem 0;
+  flex: 1;
+  min-width:8rem;
+  max-height: 10rem;
+  overflow: hidden;
+  position: relative;
 }
-.splash-collab p {
-  display: inline;
+.splash-collab ::-webkit-scrollbar{
+  width:8px;
 }
-
+.splash-collab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: linear-gradient(transparent, var(--color-1));
+}
+.collab-content {
+  overflow-y: scroll;
+  max-height: 10rem;
+  padding:0 0.5rem 3rem 0;
+}
+.splash-desc {
+  text-align:justify;
+  hyphens: auto;
+}
 .related-section {
   width:100%;
 }
@@ -824,20 +800,48 @@ iframe {
   gap:1vw;
   justify-content:center;
   height:15rem;
+  margin-bottom:5rem;
 }
 .related-card {
-  background-color: lightgrey;
-  width:20vw;
-  flex:1;
+  width:15rem;
+  position:relative;
+}
+.related-card h5 {
+  position:relative;
+ padding: 0 0 0rem 0.25rem;
+ transition: 200ms;
+ font-weight:600;
+ z-index:-1;
+}
+.related-card img {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  transition: 200ms;
+  border: none;
+  border-radius: var(--radius-s);
+}
+.related-card:hover img {
+  box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
+  border: var(--border-m);
+  border-radius: var(--radius-s);
+  transform: var(--translate-m);
+}
+.related-card:hover h5 {
+  transform:translateY(-1rem);
+  z-index:-1;
+}
+.related-card:hover p {
+  opacity:1;
 }
 .masonryItem:hover > p {
   display: block;
 }
 
-
-
-
-/* BEGIN MOBILE */
+/* BEGIN 800 BREAKPOINT */
 @media only screen and (max-width: 800px) {
   header {
     justify-content: right;
@@ -887,7 +891,6 @@ iframe {
   .responsive_nav ~ .theme-buttons {
     opacity: 1;
   }
-
   nav .nav-close-btn {
     position: absolute;
     top: 1.6rem;
@@ -940,7 +943,7 @@ iframe {
   .projects-container {
     gap: 1rem;
   }
-    .scroll-btn {
+  .scroll-btn {
     bottom: 1.5rem;
     right: 0.8rem;
   }
@@ -952,12 +955,11 @@ iframe {
     grid-column: 1;
   }
   .home-header {
-    margin: 0 auto;
-    text-align: center;
+    margin-left: 2rem;
   }
   .home-header h1,
   .home-header h2 {
-    text-align: center;
+    margin:1rem 0 1rem 0;
   }
   .home-intro {
     display: inline-block;
@@ -1047,42 +1049,10 @@ iframe {
     margin-left: 2rem;
   }
   .project-container {
-    width: 100vw;
-    left: 0;
-    top:-10vh;
-}
-  .project-splash {
-    flex-direction: column;
-    height:200vh;
-    width:100%;
-    align-items:center;
-    top:0;
+   margin-right: max(3.3rem, 12vw);
   }
   .splash-image {
-    position:relative;
-    width:100%;
-    height:100vh;
-  }
-  .splashimg {
-    min-height:85vh;
-  }
-  .splash-info {
-    width:100%;
-    z-index:2;
-    align-items:center;
-  }
-  .splash-info h1 {
-    margin-top:3rem;
-  }
-  .splash-details {
-    width:min(35rem,100vw);
-  }
-  .splash-desc {
-    width: min(35rem,100vw);
-    padding:1rem;
-  }
-  .splash-stats {
-    padding: 1rem;
+    min-width:100%;
   }
   .related-gallery {
     padding:1vw;

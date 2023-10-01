@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Link, useLocation } from "wouter";
 import TypeIt from "typeit-react";
 import "../styles/styles.css";
@@ -101,11 +102,11 @@ function Navbar() {
         <ActiveLink href="/about">About</ActiveLink>
         <ActiveLink href="/contact">Contact</ActiveLink>
         <button title="Close Menu Button" className="nav-btn nav-close-btn" onClick={handleNavClick}>
-          <FaTimes />
+           <FontAwesomeIcon icon={faTimes} />
         </button>
       </nav>
       <button title="Menu Button" className="nav-btn" onClick={toggleNav}>
-        <FaBars />
+         <FontAwesomeIcon icon={faBars} />
       </button>
     </header>
   );
