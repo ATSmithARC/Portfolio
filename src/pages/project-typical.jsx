@@ -1,7 +1,7 @@
 import projectList from "../data/project-list.json";
 import ProjectSplash from "../components/ProjectSplash.jsx"
 import RelatedProjectGallery from "../components/RelatedProjectGallery.jsx"
-
+import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 
 export default function ProjectTypical({i, details, sections}) {
 const project = projectList[i];
@@ -33,6 +33,7 @@ function getRelatedProjects(i){
       {sections}
       <h2>See more...</h2>
       <RelatedProjectGallery projectIds={getRelatedProjects(i)}/>
+      <ScrollToTopButton/>
     </div>
   );
 }

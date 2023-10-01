@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (document.body.scrollHeight > 800) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -15,24 +15,33 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility();
+    window.addEventListener("resize", toggleVisibility);
+
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("resize", toggleVisibility);
     };
   }, []);
 
-  return (
-      <button className={`scroll-btn ${isVisible ? 'visible' : ''}`}
-              title="Scroll To Top"
-              onClick={scrollToTop}>
-        <FontAwesomeIcon icon={faArrowUp} />
-      </button>
-  );
+  if (isVisible) {
+    return (
+      <div className="scroll-btn-container">
+        <button
+          className={`scroll-btn`}
+          title="Scroll To Top"
+          onClick={scrollToTop}
+        >
+          <FontAwesomeIcon icon={faChevronUp} />
+        </button>
+      </div>
+    );
+  }
+  return null;
 };
 
 export default ScrollToTopButton;

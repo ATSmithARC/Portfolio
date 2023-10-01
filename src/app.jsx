@@ -7,16 +7,9 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Waves from  './components/Waves.jsx';
 import ThemeSwitcher from "./components/ThemeSwitcher.jsx"
-import ScrollToTopButton from  './components/ScrollToTopButton.jsx';
 
 export default function Home() {
   const body = document.body;
-  const userPreference = localStorage.getItem('darkMode');
-  /*
-  if (userPreference === 'enabled') {
-    body.classList.add('dark-mode');
-  }
-  */
   return (
     <Router>
       <Seo />
@@ -27,7 +20,6 @@ export default function Home() {
           <PageRouter />
         </div>
         <Waves color={{r: 225, g: 0, b: 0, a: 1}}/>
-        <ScrollToTopButton />
       </main>
       <Footer />
     </Router>

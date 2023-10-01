@@ -3,6 +3,7 @@ import ReactHtmlParser from "react-html-parser";
 import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";
 import ExperienceSection from "../components/ExperienceSection.jsx";
+import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
 import {Link} from "wouter";
 
 export default function About() {
@@ -113,6 +114,7 @@ export default function About() {
           </div>
         </section>
       </div>
+      <ScrollToTopButton />
     </React.Fragment>
   );
 }

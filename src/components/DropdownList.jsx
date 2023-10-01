@@ -25,7 +25,7 @@ const DropdownList = ({ profile }) => {
       <div className={`dropdown-header ${isOpen ? "dropdown-open pointer" : ""}`} onClick={isOpen ? toggleDropdown : null}>
         <h2>{profile.title}</h2>
         <button className="dropdown-button">
-          {isOpen ? <FontAwesomeIcon icon={faPlus} /> : <FontAwesomeIcon icon={faMinus} />}
+          {isOpen ? <FontAwesomeIcon icon={faMinus} /> : <FontAwesomeIcon icon={faPlus} />}
         </button>
       </div>
       {isOpen && (
