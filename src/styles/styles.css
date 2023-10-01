@@ -8,21 +8,6 @@
   --border-m: 0.05rem solid var(--color-0);
   --ti-cursor-color: var(--color-0);
 }
-/* Change default scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  cursor: pointer;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-0);
-  border-radius: 16px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: grey;
-}
 * {
   color: var(--color-0);
   padding: 0;
@@ -44,6 +29,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+  background-color:var(--color-1);
 }
 ul {
   list-style: none;
@@ -77,6 +63,7 @@ label {
   font-weight: bold;
 }
 header {
+  width:100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,6 +95,7 @@ canvas {
   z-index:4;
   font-size: 1.5rem;
   font-weight: 600;
+  padding-bottom:0.3rem;
 }
 .theme-buttons {
   position: absolute;
@@ -171,7 +159,6 @@ nav a {
   width: 100%;
   left: 0;
 }
-
 .theme-btn {
   padding: 5px;
   cursor: pointer;
@@ -192,16 +179,12 @@ header .nav-btn {
   font-size: 1.5rem;
   z-index: 2;
 }
-
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-}
-.row-cen-inview {
-  margin-bottom: 1rem;
 }
 .social-footer ul {
   padding: 25px;
@@ -228,9 +211,6 @@ footer {
 .copyright svg {
   font-size: 0.5rem;
 }
-body {
-  background-color: var(--color-1);
-}
 .wrapper {
   margin: 0 8vw;
   padding-bottom: 19rem;
@@ -255,13 +235,11 @@ body {
 }
 .home-header h1 {
   text-align: left;
-  line-height: 2rem;
   margin: 2rem 0;
   font-size: min(max(16px, 2.5rem), 9vw);
 }
 .home-header h2 {
   text-align: left;
-  line-height: 2rem;
   margin: 2rem 0;
   font-size: min(max(16px, 2rem), 5vw);
 }
@@ -271,7 +249,6 @@ body {
 }
 .home-intro p {
   display: inline;
-  line-height: 1.75rem;
   font-size: min(max(12px, 1rem), 4vw);
 }
 .projects-container {
@@ -344,6 +321,7 @@ body {
  font-weight:600;
 }
 .masonryItem img {
+  background-color:#f2f2f2;
   display: block;
   position: relative;
   cursor: pointer;
@@ -500,9 +478,9 @@ body {
 }
 .form-container {
   width: 30rem;
-  max-width: 80vw;
+  max-width: 90vw;
   min-width: 30vw;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 5rem auto;
   padding: 20px;
   border: var(--border-m);
   border-radius: var(--radius-s);
@@ -564,21 +542,25 @@ iframe {
   display: inline-block;
   font-weight: bold;
 }
+.scroll-btn-container {
+  display:flex;
+  width:100%;
+  margin: 2rem 0 10rem 0;
+  justify-content:center;
+  align-items:center;
+}
 .scroll-btn {
-  position: fixed;
-  bottom: 4.25rem;
-  right: 2rem;
   cursor: pointer;
   background: transparent;
-  border: none;
-  outline: none;
+  width:3rem;
+  height:3rem;
+  border:solid 2px;
+  border-radius:50%;
   font-size: 1.5rem;
-  opacity: 0;
-  transition: opacity 500ms;
   z-index: 4;
 }
-.scroll-btn.visible {
-  opacity: 1;
+.scroll-btn:hover {
+  font-size: 1.8rem;
 }
 .color-btn {
   cursor: pointer;
@@ -711,15 +693,6 @@ iframe {
   list-style-type: disc;
   margin-left: 2rem;
 }
-.project-container::after {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2rem;
-  background: linear-gradient(rgba(255, 255, 255, 0), var(--color-1));
-}
 .project-splash {
   display:flex;
   flex-wrap:wrap;
@@ -734,10 +707,13 @@ iframe {
   min-width:35rem;
 }
 .splashimg {
+  background-color:#f2f2f2;
   width:100%;
   height:100%;
   flex:1;
   object-fit: cover;
+  border: none;
+  border-radius: var(--radius-s);
 }  
 .splash-info {
   margin:0 auto;
@@ -774,6 +750,10 @@ iframe {
 .splash-collab ::-webkit-scrollbar{
   width:8px;
 }
+.splash-collab ::-webkit-scrollbar-thumb {
+  background: var(--color-0);
+  border-radius: 16px;
+}
 .splash-collab::after {
   content: "";
   position: absolute;
@@ -784,6 +764,7 @@ iframe {
   background: linear-gradient(transparent, var(--color-1));
 }
 .collab-content {
+  position: relative;
   overflow-y: scroll;
   max-height: 10rem;
   padding:0 0.5rem 3rem 0;
@@ -845,17 +826,18 @@ iframe {
 @media only screen and (max-width: 800px) {
   header {
     justify-content: right;
+    height:7vh;
+    z-index:3;
   }
   header .nav-btn {
     width: 0;
-    top: 1.6rem;
-    right: 2rem;
-    position: fixed;
     visibility: visible;
     opacity: 1;
   }
   .logomation {
     left: 2rem;
+    z-index:1;
+    position:absolute;
   }
   .wrapper {
     margin: 0;
@@ -893,7 +875,7 @@ iframe {
   }
   nav .nav-close-btn {
     position: absolute;
-    top: 1.6rem;
+    top: 0.5rem;
     right: 2rem;
   }
   nav a {
@@ -935,11 +917,6 @@ iframe {
   .responsive_menu {
     transform: none;
   }
-  .menu-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
   .projects-container {
     gap: 1rem;
   }
@@ -965,12 +942,11 @@ iframe {
     display: inline-block;
   }
   .my-masonry-grid {
-    margin-left: -0.75rem;
+    margin: 0;
   }
   .about-container {
     background-color: var(--color-1);
-    margin-right: max(3.3rem, 12vw);
-    margin-left: 2vw;
+    margin: 0 5vw 0 5vw;
     z-index: 1;
     font-size:15px;
   }
@@ -1045,13 +1021,17 @@ iframe {
   .three-columns-flex.skills .about-column {
     min-width: 11rem;
   }
+  .project-container{
+    margin: 0 2vw;
+  }
   .skills ul {
     margin-left: 2rem;
   }
-  .project-container {
-   margin-right: max(3.3rem, 12vw);
+  .splash-info {
+    padding:1vw;
   }
   .splash-image {
+    height:60vw;
     min-width:100%;
   }
   .related-gallery {
