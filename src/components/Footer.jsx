@@ -1,11 +1,9 @@
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaEnvelope,
-  FaYoutube,
-  FaA,
-  FaCreativeCommonsZero
-} from "react-icons/fa6";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faA } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, 
+         faGithub, 
+         faYoutube, 
+         faCreativeCommonsZero } from '@fortawesome/free-brands-svg-icons'
 import { Link, useLocation} from "wouter";
 import "../styles/styles.css";
 
@@ -21,7 +19,7 @@ function Footer() {
               target="_blank"
               href="https://www.linkedin.com/in/atsmitharc/"
             >
-              <FaLinkedinIn />
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </li>
           <li>
@@ -31,7 +29,7 @@ function Footer() {
               target="_blank"
               href="https://github.com/ATSmithARC"
             >
-              <FaGithub />
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
           <li>
@@ -42,7 +40,7 @@ function Footer() {
               target="_blank"
               href="mailto:atsmitharc@gmail.com"
             >
-              <FaEnvelope />
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
               </Link>
           </li>
@@ -53,7 +51,7 @@ function Footer() {
               target="_blank"
               href="https://www.youtube.com/channel/UCyatriboiXwvFkkuPRFMRxw"
             >
-              <FaYoutube />
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
           <li>
@@ -63,13 +61,13 @@ function Footer() {
               target="_blank"
               href="https://archinect.com/atsmitharc"
             >
-              <FaA />
+              <FontAwesomeIcon icon={faA} />
             </a>
           </li>
         </ul>
       </div>
       <a className="copyright" href="https://github.com/ATSmithARC/Portfolio" title="See Source">
-      Andrew_Smith | <FaCreativeCommonsZero/>_2023 | Copenhagen_DK 
+      Andrew_Smith | <FontAwesomeIcon icon={faCreativeCommonsZero} />_2023 | Copenhagen_DK 
       </a>
     </footer>
   );

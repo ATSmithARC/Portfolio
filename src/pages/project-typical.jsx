@@ -6,6 +6,17 @@ import RelatedProjectGallery from "../components/RelatedProjectGallery.jsx"
 export default function ProjectTypical({i, details, sections}) {
 const project = projectList[i];
   
+function getRelatedProjects(i){
+  let last = projectList.length - 1; 
+  if (i === 0) {
+    return [last, last - 1];
+  } else if (i === last){
+    return [last - 1, last - 2];
+  } else {
+    return [i + 1, i - 1];
+  } 
+}
+  
   if (!project) {
     return (
       <div className="page">
@@ -19,13 +30,9 @@ const project = projectList[i];
   return (
     <div className="project-container">
       <ProjectSplash project={project} details={details}/>
-      <div className="wrapper">
-      <h2>Sorry, project page content is under construction.</h2>
-      <h1 className="about-section-header">See more...</h1>
       {sections}
-      <RelatedProjectGallery projectIds={[0,1,2,3]}/>
-      </div>
-      
+      <h2>See more...</h2>
+      <RelatedProjectGallery projectIds={getRelatedProjects(i)}/>
     </div>
   );
 }

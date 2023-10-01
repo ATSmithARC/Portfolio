@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaPalette, FaLightbulb, FaSun, FaMoon } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPalette, faLightbulb, faMoon } from '@fortawesome/free-solid-svg-icons'
 import colorData from '../data/color-data.json';
 
 const ThemeSwitcher = () => {
@@ -37,11 +38,11 @@ const ThemeSwitcher = () => {
   return (
     <div className="theme-buttons">
       <button className="theme-btn" onClick={toggleColorScheme}>
-        <FaPalette />
+        <FontAwesomeIcon icon={faPalette} />
       </button>
       /
       <button className="theme-btn" onClick={toggleDarkMode}>
-        {theme.darkMode ? <FaMoon /> : <FaLightbulb />}
+        {theme.darkMode ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faLightbulb} />}
       </button>
     </div>
   );

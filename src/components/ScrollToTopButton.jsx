@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +30,7 @@ const ScrollToTopButton = () => {
       <button className={`scroll-btn ${isVisible ? 'visible' : ''}`}
               title="Scroll To Top"
               onClick={scrollToTop}>
-        <FaArrowUp />
+        <FontAwesomeIcon icon={faArrowUp} />
       </button>
   );
 };

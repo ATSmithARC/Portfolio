@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import RelatedProjectLinks from "../components/RelatedProjectLinks.jsx";
+
 const ExperienceSection = ({ experienceType }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedEntryIndex, setSelectedEntryIndex] = useState(0);
@@ -52,7 +54,7 @@ const ExperienceSection = ({ experienceType }) => {
                       </li>
                     </ul>
                     <button className="dropdown-button">
-                      {isEntrySelected(index) ? <FaMinus /> : <FaPlus />}
+                      {isEntrySelected(index) ? null : <FontAwesomeIcon icon={faPlus} />}
                     </button>
                   </div>
                   {isEntrySelected(index) && (
@@ -103,7 +105,7 @@ const ExperienceSection = ({ experienceType }) => {
                         </li>
                       </ul>
                       <button className="dropdown-button">
-                        {isEntrySelected(index) ? <FaMinus /> : <FaPlus />}
+                        {isEntrySelected(index) ? null : <FontAwesomeIcon icon={faPlus} />}
                       </button>
                     </div>
                   </div>
