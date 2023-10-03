@@ -34,7 +34,7 @@
     ]
   },
   "profile": {
-    "title": "Profile:",
+    "title": "Profile",
     "text": [
       "Hi, I'm Andrew Smith. I’m a multidisciplinary designer bridging the fields of architecture, computation, and application development. I have a combined 10 years of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, and anything to do with putting things together (or taking them apart!).",
       "During my B.Arch, I developed a deep interest in scripting and programming as a way to create and control architectural geometry. Later, as a designer at HKS Architects, I found programming and computational thinking instrumental in overcoming project-delivery challenges on complex projects like ",
@@ -45,7 +45,7 @@
     ]
   },
   "professional": {
-    "title": "Experience:",
+    "title": "Experience",
     "entries": [
       {
         "id": 0,
@@ -139,7 +139,7 @@
     ]
   },
   "academic": {
-    "title": "Education:",
+    "title": "Education",
     "entries": [
       {
         "id": 0,
@@ -195,7 +195,7 @@
     ]
   },
   "skills": {
-    "title": "Skills:",
+    "title": "Skills",
     "architectural": [
       "Conceptual Design",
       "Design Documentation",

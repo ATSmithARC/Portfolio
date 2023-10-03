@@ -15,7 +15,7 @@ const Seo = () => {
       <meta property="og:url" content={url} />
       <meta property="og:description" content={SEO.description} />
       <meta property="og:image" content={SEO.image} />
-      <link rel="stylesheet" href={SEO.font} />
+      <link rel="preload" href={SEO.font} as="font" type="font/woff2" crossorigin/>
     </Helmet>
   );
 };
