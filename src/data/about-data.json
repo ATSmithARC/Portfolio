@@ -3,7 +3,7 @@
   "designer": {
     "title": "Part Designer",
     "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
-    "header": "My designer skills:",
+    "header": "My design skills:",
     "skills": [
       "Architectural Design",
       "Computational Design",
@@ -12,9 +12,9 @@
     ]
   },
   "developer": {
-    "title": "Part Developer",
-    "tagline": "I'm always trying to build things that enhance productivity, creativity, and accessibility to important information.",
-    "header": "My developer skills:",
+    "title": "Part Coder",
+    "tagline": "I love to write code and build apps that enhance productivity, creativity, and accessibility to information.",
+    "header": "My coding skills:",
     "skills": [
       "OOP Libraries",
       "CAD/BIM Plugins",
@@ -36,12 +36,12 @@
   "profile": {
     "title": "Profile:",
     "text": [
-      "Hi, I'm Andrew Smith. I’m a multidisciplinary designer bridging between the fields of architecture, computation, and application development. I have a combined 10 years of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, and really anything to do with putting things together.",
-      "Early in my studies, I grew a passion for using programming and scripting as design tools. Later, in practice, I found immense value in applying these tools (and computational thinking in general) toward solving process-based challenges on projects like ",
-      ". At HKS Architects, I worked with teams of all shapes and sizes on dozens of projects primarily in the sports/venues sector. These projects ranged from quick week-long design proposals to multi-year construction administration assistance.",
-      "Now, having recently graduated from the Computation in Architecture MA program at the Royal Danish Academy, I’m actively developing several applications including ",
-      ". These projects help keep me up-to-date with new tools, libraries, and frameworks.",
-      "I'm also seeking a full-time position to leverage my computational and development skills on innovative projects. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, feel free to reach out, and let's put something amazing together!"
+      "Hi, I'm Andrew Smith. I’m a multidisciplinary designer bridging the fields of architecture, computation, and application development. I have a combined 10 years of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, and anything to do with putting things together (or taking them apart!).",
+      "During my B.Arch, I developed a deep interest in scripting and programming as a way to create and control architectural geometry. Later, as a designer at HKS Architects, I found programming and computational thinking instrumental in overcoming project-delivery challenges on complex projects like ",
+      ". Professionally, I've helped teams of all sizes deliver dozens of competition proposals, construction document sets, and construction administration services within tight deadlines using computational techniques to automate tasks and manage project complexities.",
+      "Seeking academic foundation for my computational interests, I left practice in 2021 to pursue my MA in Computation in Architecture, which I have recently completed. Several applications developed in and around Master's studies like ",
+      " are open-sourced on my Github.",
+      "Currently, I'm seeking full-time employment where my experience and skills can contribute to innovative and sustainability-focused projects and initiatives. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, please reach out, and let's start putting something amazing together!"
     ]
   },
   "professional": {
@@ -197,67 +197,58 @@
   "skills": {
     "title": "Skills:",
     "architectural": [
-      "Design Experimentation",
-      "Design Communication",
+      "Conceptual Design",
       "Design Documentation",
       "Construction Documentation",
-      "Construction Administration",
-      "Presenting/Public Speaking",
+      "Constructi on Administration",
+      "Presentation",
       "Computational Design",
       "Building Information Modeling",
       "Life Cycle Assessment",
-      "Venue / Stadium Design",
-      "Material Programming"
+      "Venue / Stadium Design"
     ],
     "development": [
       "Plugin Development",
       "Web Development",
       "UI / UX Design",
-      "Git Version Control",
-      "Algorithmic Modeling",
-      "RESTful APIs",
-      "Data Structures"
+      "Object Oriented Programming",
+      "RESTful APIs"
     ],
     "applications": [
-      "Autodesk Revit",
-      "Autodesk BIM 360",
-      "Rhino 3D",
+      "Rhinocerous 3D",
       "Grasshopper",
+      "Autodesk Revit",
+      "Rhino.Inside.Revit",
       "Enscape",
-      "Lumion",
-      "Autodesk Maya",
       "Adobe Photoshop",
       "Adobe Illustrator",
       "Adobe InDesign",
       "Adobe Permiere Pro",
-      "Adobe Acrobat",
       "Bluebeam Studio",
       "Autodesk Navisworks",
       "Autodesk BIM 360",
-      "QGIS",
-      "Microsoft Excel",
-      "Microsoft OneNote",
-      "Microsoft Teams",
+      "Microsoft VS Code",
       "Microsoft Visual Studio",
-      "Microsoft VS Code"
+      "Autodesk Maya",
+      "QGIS"
     ],
-    "languages": ["C#", "Python", "JavaScript", "TypeScript", "C++"],
+    "languages": [
+      "C#",
+      "JavaScript", 
+      "Python"],
     "libraries": [
       "React",
-      "OpenNurbs",
-      "RhinoCommon",
-      "Mapbox",
       "Express",
-      "CytoscapeJS",
-      "Rhino.Inside"
+      "Mapbox",
+      "RhinoCommon",
+      "OpenNURBS",
+      "Flask"
     ],
     "other": [
-      "GIT & Github",
       "RESTful APIs",
-      "WMS (Web Mapping Service)",
       "SQLite",
       "Google S3",
-      "Earth Engine"
+      "Google Earth Engine"
     ]
   }
 }

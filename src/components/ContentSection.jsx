@@ -1,13 +1,8 @@
 import projectList from "../data/project-list.json";
 
-const ContentSection = ({properties}) => {
-  const { templateType, 
-          title, 
-          text, 
-          projectID, 
-          imgID, 
-          alt, 
-          addClassNames } = properties;
+const ContentSection = ({ properties }) => {
+  const { templateType, title, text, projectID, imgID, alt, addClassNames } =
+    properties;
   let templateElements;
   if (templateType === "img") {
     const api = "https://storage.googleapis.com/atsmitharc-media/img/";
@@ -40,16 +35,10 @@ const ContentSection = ({properties}) => {
   }
   if (templateType === "quote") {
     const classNames = "content-section quote";
-    templateElements = (
-    <h2></h2>  
-    );
+    templateElements = <h2></h2>;
   }
 
-  return (
-    <section className="content-section">
-    {templateElements}
-    </section>
-  );
+  return <section className="content-section">{templateElements}</section>;
 };
 
 export default ContentSection;

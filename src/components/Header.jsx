@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "wouter";
 import TypeIt from "typeit-react";
-import "../styles/styles.css";
+import ThemeSwitcher from "../components/ThemeSwitcher.jsx";
 import projectList from "../data/project-list.json";
 
-function Navbar() {
+export default function Header() {
   function normalize(path) {
     let arr = path.split("/");
     let dir = arr[arr.length - 1];
@@ -30,23 +30,19 @@ function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [location] = useLocation();
   const [root, dir] = normalize(location);
-  const [isProjectPage, setIsProjectPage] = useState(IsProjectPage(root, dir, projectList));
+  const [isProjectPage, setIsProjectPage] = useState(
+    IsProjectPage(root, dir, projectList)
+  );
 
   useEffect(() => {
     function updateIsProjectPage() {
       const [newRoot, newDir] = normalize(location);
       setIsProjectPage(IsProjectPage(newRoot, newDir, projectList));
     }
-
-    // Initial call to updateIsProjectPage
     updateIsProjectPage();
-
-    // Add event listener for window resize
-    window.addEventListener('resize', updateIsProjectPage);
-
-    // Cleanup the event listener on component unmount
+    window.addEventListener("resize", updateIsProjectPage);
     return () => {
-      window.removeEventListener('resize', updateIsProjectPage);
+      window.removeEventListener("resize", updateIsProjectPage);
     };
   }, [location, projectList]);
 
@@ -66,23 +62,25 @@ function Navbar() {
     setIsNavOpen(false);
   }
 
-  const ActiveLink = (props) => {
-    const isActive = root === props.href;
+  const ActiveLink = ({ href, children }) => {
+    const isActive = root === href;
+
     return (
-      <Link
-        {...props}
+      <a
+        href={href}
         className={isActive ? "activeLink" : "animatedLink"}
         onClick={handleNavClick}
+        aria-current={isActive ? "page" : null}
       >
-        {props.children}
-      </Link>
+        {children}
+      </a>
     );
   };
 
   return (
     <header className={isProjectPage ? "project-header" : ""}>
-      <div title="Andrew_Smith" className="logomation">
-        <Link href="./">
+      <div aria-label="Andrew Smith Logo" className="logomation">
+        <a href="./">
           <TypeIt
             getBeforeInit={(instance) => {
               instance
@@ -94,22 +92,31 @@ function Navbar() {
               return instance;
             }}
           />
-        </Link>
+        </a>
       </div>
       <nav ref={navRef}>
         <ActiveLink href="/">Home</ActiveLink>
         <ActiveLink href="/projects">Projects</ActiveLink>
         <ActiveLink href="/about">About</ActiveLink>
         <ActiveLink href="/contact">Contact</ActiveLink>
-        <button title="Close Menu Button" className="nav-btn nav-close-btn" onClick={handleNavClick}>
-           <FontAwesomeIcon icon={faTimes} />
+        <ThemeSwitcher />
+        <button
+          title="Close Menu Button"
+          className="nav-btn nav-close-btn"
+          onClick={handleNavClick}
+          aria-label="Close Menu Button"
+        >
+          <FontAwesomeIcon icon={faTimes} />
         </button>
       </nav>
-      <button title="Menu Button" className="nav-btn" onClick={toggleNav}>
-         <FontAwesomeIcon icon={faBars} />
+      <button
+        title="Menu Button"
+        className="nav-btn"
+        onClick={toggleNav}
+        aria-label="Menu Button"
+      >
+        <FontAwesomeIcon icon={faBars} />
       </button>
     </header>
   );
 }
-
-export default Navbar;

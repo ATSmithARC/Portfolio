@@ -39,14 +39,20 @@ const DisplayEmail = () => {
 
   return (
     <div className="contact-header">
-    <p className="contact-text">
-      Email me directly:{" "}
-      {showEmail ? ( <p>{email}</p> ) : (
-        <a className="custom-underline" title="Display Email" onClick={revealEmail}>
-          Click to Show
-        </a>
-      )}{" "}
-    </p>
+      <p className="contact-text">
+        Email me directly:{" "}
+        {showEmail ? (
+          <p>{email}</p>
+        ) : (
+          <a
+            className="custom-underline"
+            title="Display Email"
+            onClick={revealEmail}
+          >
+            Click to Show
+          </a>
+        )}{" "}
+      </p>
     </div>
   );
 };
