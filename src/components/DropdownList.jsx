@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 const DropdownList = ({ profile }) => {
-  const [isOpen, setIsOpen] = useState(window.innerWidth > 800);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = (event) => {
     event.preventDefault();
@@ -11,6 +11,7 @@ const DropdownList = ({ profile }) => {
     setIsOpen(!isOpen);
   };
 
+  /*
   useEffect(() => {
     const handleResize = () => {
       setIsOpen(window.innerWidth > 800);
@@ -20,7 +21,8 @@ const DropdownList = ({ profile }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+*/
+  
   return (
     <div
       className={`dropdown-container ${isOpen ? "dropdown-open" : "pointer"}`}

@@ -8,6 +8,7 @@
   --font-tiny: 0.6em;
   --font-small: 0.8em;
   --font-reduced: 15px;
+  --font-expanded:1.25rem;
   --font-large: 1.5em;
   --translate-m: scale(1.04);
   --border-m: 0.05rem solid var(--color-0);
@@ -47,9 +48,6 @@ h2 {
 }
 h4 {
   margin: 0.6rem 0;
-}
-h5 {
-  font-weight: 100;
 }
 a {
   text-decoration: none;
@@ -103,7 +101,7 @@ canvas {
   justify-content: center;
   width: 40px;
   height: 40px;
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
 }
 .icon:hover {
   font-size: 1.8rem;
@@ -219,7 +217,7 @@ header nav a {
   background: transparent;
   border: none;
   outline: none;
-  font-size: var(--font-small);
+  font-size: var(--font-reduced);
 }
 /* FOOTER */
 footer {
@@ -396,10 +394,11 @@ footer li {
 .about-column {
   flex: 1 1 0px;
   align-self: stretch;
+  max-width: 70rem;
 }
 .about-section-header {
-  margin: 4rem 0rem 1rem 1rem;
-  text-align: left;
+  text-align: center;
+  margin: 14rem 0rem 2rem 0rem;
 }
 .image-slider {
   flex-grow: 3;
@@ -478,6 +477,7 @@ footer li {
   margin-bottom: 0.2rem;
 }
 .dropdown-header h2 {
+  padding: 0 0.1rem;
   margin: 0;
   flex: 1;
 }
@@ -800,9 +800,6 @@ footer li {
 
 /* BEGIN MOBILE BREAKPOINT */
 @media only screen and (max-width: 800px) {
-  html {
-    font-size:var(--font-reduced);
-  }
   header {
     justify-content: right;
     height: 7vh;
@@ -816,10 +813,10 @@ footer li {
     outline: none;
     font-size: var(--font-large);
     z-index: 2;
-    width: 0;
+    width: 0.2rem;
   }
   .logomation {
-    left: 2rem;
+    left: 5vw;
     z-index: 1;
     position: absolute;
   }
@@ -891,7 +888,7 @@ footer li {
     display:block;
     position: fixed;
     bottom: 50vh;
-    right: 0.5rem;
+    right: 0.6rem;
   }
   .menu {
     position: fixed;

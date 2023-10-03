@@ -62,18 +62,16 @@ export default function Header() {
     setIsNavOpen(false);
   }
 
-  const ActiveLink = ({ href, children }) => {
-    const isActive = root === href;
-
+   const ActiveLink = (props) => {
+    const isActive = root === props.href;
     return (
-      <a
-        href={href}
+      <Link
+        {...props}
         className={isActive ? "activeLink" : "animatedLink"}
         onClick={handleNavClick}
-        aria-current={isActive ? "page" : null}
       >
-        {children}
-      </a>
+        {props.children}
+      </Link>
     );
   };
 
