@@ -12,25 +12,31 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1 className="heading-primary">Andrew Smith</h1>
-        <div className="three-columns-flex">
-          <div id="right" className="about-column">
-            <DropdownList profile={a.human} />
-          </div>
-          <div id="middle" className="about-column">
-            <DropdownList profile={a.designer} />
-          </div>
-          <div id="left" className="about-column">
-            <DropdownList profile={a.developer} />
-          </div>
-          <div className="image-slider">
-            <div id="bg" className="image-bg">
-              <div id="mg" className="image-mg"></div>
-              <div id="fg" className="image-fg"></div>
+        <h1 className="heading-primary" role="heading" aria-level="1">
+          Andrew Smith
+        </h1>
+        <section>
+          <div className="three-columns-flex">
+            <div id="right" className="about-column">
+              <DropdownList profile={a.human} />
+            </div>
+            <div id="middle" className="about-column">
+              <DropdownList profile={a.designer} />
+            </div>
+            <div id="left" className="about-column">
+              <DropdownList profile={a.developer} />
+            </div>
+            <div className="image-slider">
+              <div id="bg" className="image-bg">
+                <div id="mg" className="image-mg"></div>
+                <div id="fg" className="image-fg"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <h1 className="about-section-header">{a.profile.title}</h1>
+        </section>
+        <h2 className="about-section-header" role="heading" aria-level="2">
+          {a.profile.title}
+        </h2>
         <section className="three-columns-flex about-me">
           <div className="about-column img-column">
             <img
@@ -43,7 +49,6 @@ export default function About() {
           </div>
           <div className="about-column bio-column">
             <p>{ReactHtmlParser(a.profile.text[0])}</p>
-
             <p>
               {ReactHtmlParser(a.profile.text[1])}
               <Link
@@ -63,7 +68,6 @@ export default function About() {
               </Link>
               {ReactHtmlParser(a.profile.text[2])}
             </p>
-
             <p>
               {ReactHtmlParser(a.profile.text[3])}
               <Link
@@ -83,52 +87,69 @@ export default function About() {
               </Link>
               {ReactHtmlParser(a.profile.text[4])}
             </p>
-
             <p>{ReactHtmlParser(a.profile.text[5])}</p>
           </div>
         </section>
-        <h1 className="about-section-header">{a.professional.title}</h1>
+        <h2 className="about-section-header" role="heading" aria-level="2">
+          {a.professional.title}
+        </h2>
         <ExperienceSection key={0} experienceType={a.professional} />
-        <h1 className="about-section-header">{a.academic.title}</h1>
+        <h2 className="about-section-header" role="heading" aria-level="2">
+          {a.academic.title}
+        </h2>
         <ExperienceSection key={1} experienceType={a.academic} />
-        <h1 className="about-section-header">{a.skills.title}</h1>
+        <h2 className="about-section-header" role="heading" aria-level="2">
+          {a.skills.title}
+        </h2>
         <section className="three-columns-flex skills">
-          <div className="about-column dev-column">
-            <h4>Languages:</h4>
+          <div className="about-column">
+            <h3 role="heading" aria-level="3">
+              Languages:
+            </h3>
             <ul>
               {a.skills.languages.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-            <h4>Libraries:</h4>
+            <h3 role="heading" aria-level="3">
+              Libraries:
+            </h3>
             <ul>
               {a.skills.libraries.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-            <h4>Other:</h4>
+            <h3 role="heading" aria-level="3">
+              Other:
+            </h3>
             <ul>
               {a.skills.other.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
-          <div className="about-column arch-column">
-            <h4>Applications:</h4>
+          <div className="about-column">
+            <h3 role="heading" aria-level="3">
+              Applications:
+            </h3>
             <ul>
               {a.skills.applications.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
-          <div className="about-column spacer-column">
-            <h4>Architectural:</h4>
+          <div className="about-column">
+            <h3 role="heading" aria-level="3">
+              Architectural:
+            </h3>
             <ul>
               {a.skills.architectural.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-            <h4>Development:</h4>
+            <h3 role="heading" aria-level="3">
+              Development:
+            </h3>
             <ul>
               {a.skills.development.map((item, index) => (
                 <li key={index}>{item}</li>

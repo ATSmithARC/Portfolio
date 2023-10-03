@@ -7,7 +7,7 @@ const details = {
 }
 
 const sections = [
- <section>Content Section Coming Soon...</section>,
+ <section></section>,
 ]
 
 export default function P15() {

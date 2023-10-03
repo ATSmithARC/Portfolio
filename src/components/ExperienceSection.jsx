@@ -47,13 +47,19 @@ const ExperienceSection = ({ experienceType }) => {
                   <div className="experience-job-header">
                     <ul>
                       <li>
-                        <h3>{entry.title}</h3>
+                        <h3 role="heading" aria-level="3">{entry.title}</h3>
                       </li>
                       <li>
                         <b>{entry.dates}</b>
                       </li>
                     </ul>
-                    <button className="dropdown-button">
+                    <button
+                      role="button"
+                      aria-pressed="false"
+                      title="Expand Dropdown"
+                      aria-label="Expand Dropdown"
+                      className="dropdown-button"
+                    >
                       {isEntrySelected(index) ? null : (
                         <FontAwesomeIcon icon={faPlus} />
                       )}
@@ -64,7 +70,7 @@ const ExperienceSection = ({ experienceType }) => {
                       <p>{entry.desc}</p>
                       <div className="experience-stats">
                         <div className="experience-skills">
-                          <h4>Related Skills:</h4>
+                          <h4 role="heading" aria-level="4">Related Skills:</h4>
                           <ul>
                             {entry.skills.map((skill, index) => (
                               <li key={index}>{skill}</li>
@@ -72,7 +78,7 @@ const ExperienceSection = ({ experienceType }) => {
                           </ul>
                         </div>
                         <div className="experience-projects">
-                          <h4>Related Projects:</h4>
+                          <h4 role="heading" aria-level="4">Related Projects:</h4>
                           <RelatedProjectLinks
                             projectIds={entry.projects}
                             key={resetKey}
@@ -100,13 +106,19 @@ const ExperienceSection = ({ experienceType }) => {
                     <div className="experience-job-header">
                       <ul>
                         <li>
-                          <h3>{entry.title}</h3>
+                          <h3 role="heading" aria-level="3">{entry.title}</h3>
                         </li>
                         <li>
                           <b>{entry.dates}</b>
                         </li>
                       </ul>
-                      <button className="dropdown-button">
+                      <button
+                        role="button"
+                        aria-pressed="false"
+                        title="Expand Dropdown"
+                        aria-label="Expand Dropdown"
+                        className="dropdown-button"
+                      >
                         {isEntrySelected(index) ? null : (
                           <FontAwesomeIcon icon={faPlus} />
                         )}
@@ -118,11 +130,11 @@ const ExperienceSection = ({ experienceType }) => {
             </div>
             <div className="experience-column-details">
               <div className="experience-details">
-                <h4>Description:</h4>
+                <h4 role="heading" aria-level="4">Description:</h4>
                 <p>{experienceType.entries[selectedEntryIndex].desc}</p>
                 <div className="experience-stats">
                   <div className="experience-skills">
-                    <h4>Related Skills:</h4>
+                    <h4 role="heading" aria-level="4">Related Skills:</h4>
                     <ul>
                       {experienceType.entries[selectedEntryIndex].skills.map(
                         (skill, index) => (
@@ -132,7 +144,7 @@ const ExperienceSection = ({ experienceType }) => {
                     </ul>
                   </div>
                   <div className="experience-projects">
-                    <h4>Related Projects:</h4>
+                    <h4 role="heading" aria-level="4">Related Projects:</h4>
                     <RelatedProjectLinks
                       projectIds={
                         experienceType.entries[selectedEntryIndex].projects

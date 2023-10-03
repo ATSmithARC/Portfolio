@@ -50,7 +50,7 @@ const ThemeSwitcher = () => {
       >
         <FontAwesomeIcon icon={faPalette} />
       </button>
-      <span> / </span>
+      <span>/</span>
       <button
         role="button"
         aria-pressed="false"

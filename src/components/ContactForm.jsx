@@ -78,7 +78,7 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmit}>
+      <form role="form" aria-label="Send Me An Email" onSubmit={handleSubmit}>
         {/* Honeypot Fields */}
         <div style={{ display: "none" }}>
           <label htmlFor="honeypotField">Do not fill this out</label>
@@ -100,7 +100,7 @@ const ContactForm = () => {
         </div>
         {/* Actual Fields */}
         <div>
-          <label>Your Name: {nameError && "*"}</label>
+          <label for="your name">Your Name: {nameError && "*"}</label>
           {nameError && <span className="error">Invalid Name</span>}
           <input
             maxLength="50"
@@ -110,17 +110,21 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <label>Your Email: {emailError && "*"}</label>
+          <label for="your email">Your Email: {emailError && "*"}</label>
           {emailError && <span className="error">Invalid email.</span>}
           <input
+            autocomplete="email"
+            autocapitalize="off"
+            autocorrect="off"
             maxLength="50"
+            spellcheck="false"
             type="email"
             value={email}
             onChange={handleEmailChange}
           />
         </div>
         <div>
-          <label>Message: {messageError && "*"}</label>
+          <label for="your message">Message: {messageError && "*"}</label>
           {messageError && <span className="error">Invalid message.</span>}
           <textarea
             maxLength="1500"
@@ -134,7 +138,7 @@ const ContactForm = () => {
             onChange={handleRecaptchaChange}
           />
         </div>
-        <button className="contrast-btn" title="Submit" type="submit">
+        <button role="button" className="contrast-btn" title="Submit" type="submit">
           Submit
         </button>
       </form>

@@ -20,7 +20,11 @@ export default function Projects(props) {
   };
   return (
     <React.Fragment>
-      <h1 className="heading-primary">{`${category()} Projects`}</h1>
+      <h1
+        className="heading-primary"
+        role="heading"
+        aria-level="1"
+      >{`${category()} Projects`}</h1>
       <div className="projects-container">
         <ProjectMenu filter={props.filter} />
         <ProjectMasonry category={props.filter} />

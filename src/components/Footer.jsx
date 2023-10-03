@@ -14,6 +14,7 @@ export default function Footer() {
       <ul>
         <li>
           <a
+            role="link"
             className="icon"
             title="My LinkedIn"
             href="https://www.linkedin.com/in/atsmitharc/"
@@ -26,6 +27,7 @@ export default function Footer() {
         </li>
         <li>
           <a
+            role="link"
             className="icon"
             title="My Github"
             href="https://github.com/ATSmithARC"
@@ -39,6 +41,7 @@ export default function Footer() {
         <li>
           <Link href="./contact">
             <a
+              role="link"
               className="icon"
               title="Send Email"
               href="mailto:atsmitharc@gmail.com"
@@ -50,6 +53,7 @@ export default function Footer() {
         </li>
         <li>
           <a
+            role="link"
             className="icon"
             title="My YouTube"
             href="https://www.youtube.com/channel/UCyatriboiXwvFkkuPRFMRxw"
@@ -62,6 +66,7 @@ export default function Footer() {
         </li>
         <li>
           <a
+            role="link"
             className="icon ar"
             title="My Archinect"
             href="https://archinect.com/atsmitharc"
@@ -75,9 +80,10 @@ export default function Footer() {
       </ul>
       <p className="text-small">
         <a
+          role="link"
           href="https://github.com/ATSmithARC/Portfolio"
-          title="See Source"
-          aria-label="View Source Code on GitHub"
+          title="Design By Andrew_Smith (See Source)"
+          aria-label="Design By Andrew_Smith (See Source)"
         >
           Andrew_Smith | <FontAwesomeIcon icon={faCreativeCommonsZero} />
           _2023 | Copenhagen_DK

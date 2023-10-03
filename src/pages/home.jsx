@@ -5,8 +5,10 @@ export default function Home() {
   return (
     <div className="page">
       <div className="home-header">
-        <h1 className="heading-primary">Hi, I'm Andrew</h1>
-        <h2>
+        <h1 className="heading-primary" role="heading" aria-level="1">
+          Hi, I'm Andrew
+        </h1>
+        <h2 role="heading" aria-level="2">
           I'm a computational designer <br /> and part-time developer.
         </h2>
         <div className="home-intro">

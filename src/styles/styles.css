@@ -209,7 +209,7 @@ header nav a {
   align-items: center;
   top:0;
   height:10vh;
-  gap:0.25em;
+  gap:0.5em;
   right: var(--corner-w);
 }
 .theme-btn {
@@ -597,19 +597,17 @@ footer li {
   display: flex;
   gap: 1rem;
 }
-.experience-skills {
+.experience-stats div {
   flex: 1;
 }
-.experience-projects {
-  flex: 1;
+.three-columns-flex.skills {
+  flex-direction:row;
 }
-.spacer-column {
-  flex: 1.13;
-  padding-left: 1rem;
+.skills h3 {
+  text-align:center;
 }
 .skills ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+  text-align: center;
 }
 /* CONTACT PAGE */
 .form-container {
@@ -797,7 +795,6 @@ footer li {
 .masonryItem:hover > p {
   display: block;
 }
-
 /* BEGIN MOBILE BREAKPOINT */
 @media only screen and (max-width: 800px) {
   header {
@@ -820,13 +817,6 @@ footer li {
     z-index: 1;
     position: absolute;
   }
-  .theme-buttons {
-    position:relative;
-  }
-  nav {
-    padding-left: 0rem;
-    font-size: var(--font-large);
-  }
   header nav {
     position: fixed;
     top: 0;
@@ -841,31 +831,32 @@ footer li {
     background-color: var(--color-1);
     transition: 200ms;
     transform: translateY(-100vh);
+    font-size: var(--font-large);
     z-index: 3;
   }
   header .responsive_nav {
     transform: none;
   }
-  .responsive_nav ~ .theme-buttons {
-    opacity: 1;
+  nav {
+    padding-left: 0rem;
+  }
+  nav .theme-buttons {
+    position:static;
+  }
+  nav .theme-buttons svg {
+    font-size:var(--font-large);
   }
   .nav-close-btn {
     height:7vh;
     position: absolute;
-    font-size: var(--font-large);
     top: 0;
     right: 2.2rem;
   }
-  .social-footer li {
-    display: inline-block;
-    margin: 0 0.3rem;
+  footer li {
+    margin: 0.75rem;
   }
   .wrapper {
     margin: 0 5vw;
-  }
-  .scroll-btn {
-    bottom: 1.5rem;
-    right: 0.8rem;
   }
   .home-header {
     text-align: center;
@@ -977,22 +968,14 @@ footer li {
     flex-direction: column;
     gap: 0;
   }
-  .spacer-column {
-    padding: 0;
-  }
   .experience-stats ul {
     margin-left: 0.8rem;
   }
+  .experience-projects li {
+    margin: 1.25rem 0;
+  }
   .three-columns-flex.skills {
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    margin-left: 0.5rem;
-  }
-  .three-columns-flex.skills .about-column {
-    min-width: 11rem;
-  }
-  .skills ul {
-    margin-left: 2rem;
+    flex-direction:column;
   }
   .splash-info {
     padding: 1vw;
@@ -1000,8 +983,5 @@ footer li {
   .splash-image {
     height: 60vw;
     min-width: 100%;
-  }
-  .related-gallery {
-    padding: 1vw;
   }
 }

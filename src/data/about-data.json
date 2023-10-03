@@ -39,7 +39,7 @@
       "Hi, I'm Andrew Smith. I’m a multidisciplinary designer bridging the fields of architecture, computation, and application development. I have a combined 10 years of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, and anything to do with putting things together (or taking them apart!).",
       "During my B.Arch, I developed a deep interest in scripting and programming as a way to create and control architectural geometry. Later, as a designer at HKS Architects, I found programming and computational thinking instrumental in overcoming project-delivery challenges on complex projects like ",
       ". Professionally, I've helped teams of all sizes deliver dozens of competition proposals, construction document sets, and construction administration services within tight deadlines using computational techniques to automate tasks and manage project complexities.",
-      "Seeking academic foundation for my computational interests, I left practice in 2021 to pursue my MA in Computation in Architecture, which I have recently completed. Several applications developed in and around Master's studies like ",
+      "Seeking an academic foundation for my computational interests, I left practice in 2021 to pursue my MA in Computation in Architecture, which I have recently completed. Several applications developed in and around Master's studies like ",
       " are open-sourced on my Github.",
       "Currently, I'm seeking full-time employment where my experience and skills can contribute to innovative and sustainability-focused projects and initiatives. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, please reach out, and let's start putting something amazing together!"
     ]
@@ -123,7 +123,7 @@
         "title": "Film History T.A.",
         "employer": "SCI-Arc",
         "dates": "08/2016 - 04/2017",
-        "desc": "I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism and encouraging thoughtful communication.",
+        "desc": "I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism, and encouraging thoughtful communication.",
         "skills": [
           "Teaching Assistance",
           "Film Analysis",
@@ -197,25 +197,25 @@
   "skills": {
     "title": "Skills",
     "architectural": [
-      "Conceptual Design",
-      "Design Documentation",
-      "Construction Documentation",
-      "Constructi on Administration",
-      "Presentation",
       "Computational Design",
-      "Building Information Modeling",
-      "Life Cycle Assessment",
-      "Venue / Stadium Design"
+      "Sports Venue Design",
+      "Presentations",
+      "Conceptual Design",
+      "Design Documents",
+      "Construction Documents",
+      "Construction Admin",
+      "BIM Coordination",
+      "Life Cycle Assessment"
     ],
     "development": [
       "Plugin Development",
       "Web Development",
       "UI / UX Design",
-      "Object Oriented Programming",
+      "Object Libraries",
       "RESTful APIs"
     ],
     "applications": [
-      "Rhinocerous 3D",
+      "Rhinoceros 3D",
       "Grasshopper",
       "Autodesk Revit",
       "Rhino.Inside.Revit",
