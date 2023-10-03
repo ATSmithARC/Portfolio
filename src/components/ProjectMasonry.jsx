@@ -14,7 +14,11 @@ function ProjectMasonry(props) {
   const reversedProjectList = [...projectList].reverse();
 
   return (
-    <Masonry breakpointCols={breakpointColumnsObj} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
+    <Masonry
+      breakpointCols={breakpointColumnsObj}
+      className="my-masonry-grid"
+      columnClassName="my-masonry-grid_column"
+    >
       {reversedProjectList
         .filter((project) => {
           switch (props.category) {
@@ -33,21 +37,35 @@ function ProjectMasonry(props) {
           }
         })
         .map((project) => (
-          <Link rel="preload" as="image" key={project.id} href={"/projects/" + project.href} className="masonryLink">
-          <div className="masonryItem" style={project.style}>
-            <p>{project.desc}</p>
-            <img
-              rel="preload"
-              key={project.id}
-              src={api + project.href + "-800.webp"}
-              srcSet={`${api}${project.href}-400.webp 500w,
+          <Link
+            rel="preload"
+            as="image"
+            key={project.id}
+            href={"/projects/" + project.href}
+            className="masonryLink"
+          >
+            <div className="masonryItem" style={project.style}>
+              <h2
+                className="heading-small bold t200 left"
+                role="cheading"
+                aria-level="2"
+              >
+                {project.name}
+              </h2>
+              <img
+                role="img"
+                rel="preload"
+                key={project.id}
+                src={api + project.href + "-800.webp"}
+                srcSet={`${api}${project.href}-400.webp 500w,
                        ${api}${project.href}-600.webp 700w,
                        ${api}${project.href}-1000.webp 1100w`}
-              alt={project.name}
-            />
-            <h5>{project.name}</h5>
-          </div>
-        </Link>
+                alt={project.name}
+                aria-label={`Project thumbnail image of ${project.name}`}
+              />
+              <p>{project.desc}</p>
+            </div>
+          </Link>
         ))}
     </Masonry>
   );

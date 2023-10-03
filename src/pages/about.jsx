@@ -4,7 +4,7 @@ import DropdownList from "../components/DropdownList.jsx";
 import a from "../data/about-data.json";
 import ExperienceSection from "../components/ExperienceSection.jsx";
 import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
-import {Link} from "wouter";
+import { Link } from "wouter";
 
 export default function About() {
   const api = "https://storage.googleapis.com/atsmitharc-media/thumb/degree";
@@ -12,6 +12,7 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
+        <h1 className="heading-primary">Andrew Smith</h1>
         <div className="three-columns-flex">
           <div id="right" className="about-column">
             <DropdownList profile={a.human} />
@@ -41,26 +42,48 @@ export default function About() {
             />
           </div>
           <div className="about-column bio-column">
-            {/* <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/sofi-stadium'>Sofi Stadium</a> and <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/youtube-theater'>YouTube Theater</a>*/}
-            {/* <Link title='See Project' class='custom-underline' href='./projects/stadiumtools'>StadiumTools</Link>, and <a title='See Project' class='custom-underline' href='https://www.atsmitharc.com/?/projects/planimal'>PLANimal</a>*/}
             <p>{ReactHtmlParser(a.profile.text[0])}</p>
-            
+
             <p>
               {ReactHtmlParser(a.profile.text[1])}
-                <Link title="See Project" href="./projects/sofi-stadium" className="custom-underline">Sofi Stadium</Link> 
-                {" and "} 
-                <Link  title="See Project" href="./projects/youtube-theater" className="custom-underline">YouTube Theater</Link>
+              <Link
+                title="See Project"
+                href="./projects/sofi-stadium"
+                className="custom-underline"
+              >
+                Sofi Stadium
+              </Link>
+              {" and "}
+              <Link
+                title="See Project"
+                href="./projects/youtube-theater"
+                className="custom-underline"
+              >
+                YouTube Theater
+              </Link>
               {ReactHtmlParser(a.profile.text[2])}
             </p>
-            
+
             <p>
               {ReactHtmlParser(a.profile.text[3])}
-              <Link title="See Project" href="./projects/stadiumtools" className="custom-underline">StadiumTools</Link> 
-                {" and "} 
-                <Link  title="See Project" href="./projects/planimal" className="custom-underline">PLANimal</Link>
+              <Link
+                title="See Project"
+                href="./projects/stadiumtools"
+                className="custom-underline"
+              >
+                StadiumTools
+              </Link>
+              {" and "}
+              <Link
+                title="See Project"
+                href="./projects/planimal"
+                className="custom-underline"
+              >
+                PLANimal
+              </Link>
               {ReactHtmlParser(a.profile.text[4])}
             </p>
-            
+
             <p>{ReactHtmlParser(a.profile.text[5])}</p>
           </div>
         </section>
@@ -99,7 +122,7 @@ export default function About() {
             </ul>
           </div>
           <div className="about-column spacer-column">
-          <h4>Architectural:</h4>
+            <h4>Architectural:</h4>
             <ul>
               {a.skills.architectural.map((item, index) => (
                 <li key={index}>{item}</li>

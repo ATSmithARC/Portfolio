@@ -67,7 +67,7 @@ const RelatedProjectLinks = (props) => {
         </>
       );
     } else {
-      return(<li>None Yet</li>)
+      return <li>None Yet</li>;
     }
   }
 

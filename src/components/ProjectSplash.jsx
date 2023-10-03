@@ -2,7 +2,7 @@ const ProjectSplash = ({ project, details }) => {
   const { href, category, title, site, yearStart, yearEnd } = project;
   const { collab, description } = details;
   const api = "https://storage.googleapis.com/atsmitharc-media/img/";
-  const endpt = `${href}/01/image-`
+  const endpt = `${href}/01/image-`;
   const getCategory = () => {
     switch (project.category) {
       case 0:
@@ -18,60 +18,54 @@ const ProjectSplash = ({ project, details }) => {
   console.log(`${api}${endpt}2000.webp`);
   return (
     <section className="project-splash">
-      
       <div className="splash-image">
-        <img 
-          rel="preload" 
-          className="splashimg" 
+        <img
+          rel="preload"
+          className="splashimg"
           src={`${api}${endpt}2000.webp`}
           srcSet={`${api}${endpt}3000.webp 3100w,
                    ${api}${endpt}1000.webp 1100w,
                    ${api}${endpt}500.webp 600w`}
-          alt="Placeholder Splash Image"/>
+          alt="Placeholder Splash Image"
+        />
       </div>
-      
       <div className="splash-info">
-        
-        <h1 className="splash-title">{project.name}</h1>
-        
+        <h1 className="heading-primary">{project.name}</h1>
         <div className="splash-details">
           <div className="splash-stats">
-          <ul>
-            <li>
-              <h5>Category</h5>
-              <p>{getCategory()}</p>
-            </li>
-            <li>
-              <h5>Location</h5>
-              <p>{site}</p>
-            </li>
-            <li>
-              <h5>Years</h5>
-              <p>
-                {yearStart} - {yearEnd}
-              </p>
-            </li>
-          </ul>
-            </div>
+            <ul>
+              <li>
+                <h5>Category</h5>
+                <p>{getCategory()}</p>
+              </li>
+              <li>
+                <h5>Location</h5>
+                <p>{site}</p>
+              </li>
+              <li>
+                <h5>Years</h5>
+                <p>
+                  {yearStart} - {yearEnd}
+                </p>
+              </li>
+            </ul>
+          </div>
           <div className="splash-collab">
             <h5>Collaborators</h5>
-              <div className="collab-content">
+            <div className="collab-content">
               {collab.map((name, index) => (
-                <p key={index}>{name}{index < collab.length - 1 ? ', ' : ''}</p>
+                <p key={index}>
+                  {name}
+                  {index < collab.length - 1 ? ", " : ""}
+                </p>
               ))}
-              </div>
+            </div>
           </div>
         </div>
-        <div className="splash-desc">
+        <div className="splash-desc text-reduced">
           <p>{description}</p>
         </div>
-        
-        
-        
       </div>
-      
-      
-      
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import RelatedProjectLinks from "../components/RelatedProjectLinks.jsx";
 
 const ExperienceSection = ({ experienceType }) => {
@@ -54,7 +54,9 @@ const ExperienceSection = ({ experienceType }) => {
                       </li>
                     </ul>
                     <button className="dropdown-button">
-                      {isEntrySelected(index) ? null : <FontAwesomeIcon icon={faPlus} />}
+                      {isEntrySelected(index) ? null : (
+                        <FontAwesomeIcon icon={faPlus} />
+                      )}
                     </button>
                   </div>
                   {isEntrySelected(index) && (
@@ -105,7 +107,9 @@ const ExperienceSection = ({ experienceType }) => {
                         </li>
                       </ul>
                       <button className="dropdown-button">
-                        {isEntrySelected(index) ? null : <FontAwesomeIcon icon={faPlus} />}
+                        {isEntrySelected(index) ? null : (
+                          <FontAwesomeIcon icon={faPlus} />
+                        )}
                       </button>
                     </div>
                   </div>

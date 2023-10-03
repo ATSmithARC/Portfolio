@@ -38,11 +38,11 @@ const ContactForm = () => {
       setHasElapsed(true);
     }, 10000); // 10000 milliseconds = 10 seconds
   };
-  
+
   useEffect(() => {
     handlePageLoad();
   }, []);
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setNameError(!name);
@@ -57,28 +57,31 @@ const ContactForm = () => {
       return;
     }
     if (!submitClicked) {
-        if (!hasElapsed) {
-        console.log('Please wait for at least 10 seconds before submitting.');
+      if (!hasElapsed) {
+        console.log("Please wait for at least 10 seconds before submitting.");
         return;
       }
       setSubmitClicked(true);
       // Submit logic
       if (name && email && message && recaptchaValue) {
-        var subject = 'An inquiry from '+ name;
-        var mailtoLink = 'mailto:atsmitharc@gmail.com' +
-                         '?subject=' + encodeURIComponent(subject) +
-                         '&body=' + encodeURIComponent(message);
+        var subject = "An inquiry from " + name;
+        var mailtoLink =
+          "mailto:atsmitharc@gmail.com" +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(message);
         window.location.href = mailtoLink;
       }
     }
   };
-  
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         {/* Honeypot Fields */}
         <div style={{ display: "none" }}>
-          <label htmlFor="honeypotField1">Do not fill this out</label>
+          <label htmlFor="honeypotField">Do not fill this out</label>
           <input
             type="text"
             id="honeypotField1"
@@ -86,7 +89,7 @@ const ContactForm = () => {
             value={honeypotField1}
             onChange={handleHoneypotField1Change}
           />
-          <label htmlFor="honeypotField2">Leave this field blank</label>
+          <label htmlFor="honeypotField">Leave this field blank</label>
           <input
             type="text"
             id="honeypotField2"
@@ -99,17 +102,31 @@ const ContactForm = () => {
         <div>
           <label>Your Name: {nameError && "*"}</label>
           {nameError && <span className="error">Invalid Name</span>}
-          <input maxLength="50" type="text" value={name} onChange={handleNameChange} />
+          <input
+            maxLength="50"
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+          />
         </div>
         <div>
           <label>Your Email: {emailError && "*"}</label>
-          {emailError && ( <span className="error">Invalid email.</span>)}
-          <input maxLength="50" type="email" value={email} onChange={handleEmailChange} />
+          {emailError && <span className="error">Invalid email.</span>}
+          <input
+            maxLength="50"
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+          />
         </div>
         <div>
           <label>Message: {messageError && "*"}</label>
-          {messageError && (<span className="error">Invalid message.</span>)}
-          <textarea maxLength="1500" value={message} onChange={handleMessageChange} />
+          {messageError && <span className="error">Invalid message.</span>}
+          <textarea
+            maxLength="1500"
+            value={message}
+            onChange={handleMessageChange}
+          />
         </div>
         <div>
           <ReCAPTCHA

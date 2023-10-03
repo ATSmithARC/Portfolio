@@ -12,10 +12,12 @@ export default function Contact() {
     const newHello = randomLanguage();
     setHello(newHello);
   };
-  
+
   return (
     <div className="page">
-      <h1 className="hello pointer" onClick={handleChangeHello}>Say {hello}!</h1>
+      <h1 className="heading-primary pointer" onClick={handleChangeHello}>
+        Say {hello}!
+      </h1>
       <DisplayEmail />
       <p className="centered"> ...or use the form below:</p>
       <ContactForm />
