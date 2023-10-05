@@ -33,7 +33,7 @@ const ScrollToTopButton = () => {
       <div className="scroll-btn-container">
         <button
           role="button"
-          className={`scroll-btn`}
+          className={`icon scroll-btn`}
           title="Scroll To Top"
           aria-label="Scroll To Top"
           onClick={scrollToTop}

@@ -12,10 +12,10 @@ export default function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1 className="heading-primary" role="heading" aria-level="1">
+        <h1 role="heading" aria-level="1">
           Andrew Smith
         </h1>
-        <section>
+        <section className="about-avatar">
           <div className="three-columns-flex">
             <div id="right" className="about-column">
               <DropdownList profile={a.human} />
@@ -104,7 +104,7 @@ export default function About() {
         <section className="three-columns-flex skills">
           <div className="about-column">
             <h3 role="heading" aria-level="3">
-              Languages:
+              Languages
             </h3>
             <ul>
               {a.skills.languages.map((item, index) => (
@@ -112,7 +112,7 @@ export default function About() {
               ))}
             </ul>
             <h3 role="heading" aria-level="3">
-              Libraries:
+              Libraries
             </h3>
             <ul>
               {a.skills.libraries.map((item, index) => (
@@ -120,7 +120,7 @@ export default function About() {
               ))}
             </ul>
             <h3 role="heading" aria-level="3">
-              Other:
+              Other
             </h3>
             <ul>
               {a.skills.other.map((item, index) => (
@@ -130,7 +130,7 @@ export default function About() {
           </div>
           <div className="about-column">
             <h3 role="heading" aria-level="3">
-              Applications:
+              Applications
             </h3>
             <ul>
               {a.skills.applications.map((item, index) => (
@@ -140,7 +140,7 @@ export default function About() {
           </div>
           <div className="about-column">
             <h3 role="heading" aria-level="3">
-              Architectural:
+              Architectural
             </h3>
             <ul>
               {a.skills.architectural.map((item, index) => (
@@ -148,7 +148,7 @@ export default function About() {
               ))}
             </ul>
             <h3 role="heading" aria-level="3">
-              Development:
+              Development
             </h3>
             <ul>
               {a.skills.development.map((item, index) => (

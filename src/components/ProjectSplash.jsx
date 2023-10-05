@@ -35,26 +35,26 @@ const ProjectSplash = ({ project, details }) => {
           <div className="splash-stats">
             <ul>
               <li>
-                <h5>Category</h5>
-                <p>{getCategory()}</p>
+                <h2 className="splash-stats-text">Category</h2>
+                <p className="splash-stats-text">{getCategory()}</p>
               </li>
               <li>
-                <h5>Location</h5>
-                <p>{site}</p>
+                <h2 className="splash-stats-text">Location</h2>
+                <p className="splash-stats-text">{site}</p>
               </li>
               <li>
-                <h5>Years</h5>
-                <p>
+                <h2 className="splash-stats-text">Years</h2>
+                <p className="splash-stats-text">
                   {yearStart} - {yearEnd}
                 </p>
               </li>
             </ul>
           </div>
           <div className="splash-collab">
-            <h5>Collaborators</h5>
+            <h2 className="splash-collab-text">Collaborators</h2>
             <div className="collab-content">
               {collab.map((name, index) => (
-                <p key={index}>
+                <p className="splash-collab-text" key={index}>
                   {name}
                   {index < collab.length - 1 ? ", " : ""}
                 </p>
@@ -62,7 +62,7 @@ const ProjectSplash = ({ project, details }) => {
             </div>
           </div>
         </div>
-        <div className="splash-desc text-reduced">
+        <div className="splash-desc">
           <p>{description}</p>
         </div>
       </div>

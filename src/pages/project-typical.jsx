@@ -20,7 +20,7 @@ export default function ProjectTypical({ i, details, sections }) {
   if (!project) {
     return (
       <div className="page">
-        <h2> This project doesnt appear to exist.</h2>
+        <h1> This project doesnt appear to exist.</h1>
         <img
           src="https://media.tenor.com/aTB70bcZZKcAAAAd/obi-wan-perhaps-the-archives-are-incomplete.gif"
           alt="If it's not in the Jedi archive, it probably doesnt exist."

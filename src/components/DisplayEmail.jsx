@@ -53,6 +53,8 @@ const DisplayEmail = () => {
           </a>
         )}{" "}
       </p>
+      <br/>
+      <p className="contact-text"> ...or use the form below:</p>
     </div>
   );
 };

@@ -2,7 +2,7 @@
   "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
     "title": "Part Designer",
-    "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
+    "tagline": "I value things with clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
     "header": "My design skills:",
     "skills": [
       "Architectural Design",
@@ -16,15 +16,15 @@
     "tagline": "I love to write code and build apps that enhance productivity, creativity, and accessibility to information.",
     "header": "My coding skills:",
     "skills": [
-      "OOP Libraries",
-      "CAD/BIM Plugins",
       "Data Management",
-      "Full Stack Web"
+      "CAD/BIM Plugins",
+      "Full Stack Web",
+      "OOP Libraries"
     ]
   },
   "human": {
     "title": "Part Human",
-    "tagline": "I'm an American currently living in Copenhagen. If I'm not behind my screen, I'm probably outside exploring the city.",
+    "tagline": "I'm an American living in Copenhagen. If I'm not behind my screen, I'm probably outside exploring the city.",
     "header": "My human skills:",
     "skills": [
       "Cycling in the Rain",
@@ -143,7 +143,7 @@
     "entries": [
       {
         "id": 0,
-        "title": "Computation in Architecture (M.A.A)",
+        "title": "Computation in Architecture (MA)",
         "employer": "Royal Danish Academy",
         "dates": "08/2021 - 07/2023",
         "desc": "I've developed a comprehensive knowledge of computational techniques (programming, digital fabrication, robotics), and gained practical skills in applying that knowledge to solve architectural design problems focused around reducing the ecological footprint of building methods & materials.",
@@ -160,7 +160,7 @@
       },
       {
         "id": 1,
-        "title": "CREATE Summer School",
+        "title": "2021 CREATE Summer School",
         "employer": "Syddansk Universitet",
         "dates": "08/2021",
         "desc": "This Summer program focused on exploring data-driven tectonic construction, and the production of 1:1 scale prototypes that aimed at advancing wood architecture through the use of novel digital design-to-fabrication workflows. Concepts introduced included performance-driven aggregations, circular assemblies, and wood forming through programmed material behavior.",

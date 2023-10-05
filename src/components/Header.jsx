@@ -82,8 +82,8 @@ export default function Header() {
           <TypeIt
             getBeforeInit={(instance) => {
               instance
-                .type("andrew_smith")
-                .pause(1500)
+                .type("andrew_smith", {instant:true})
+                .pause(2000)
                 .delete(11)
                 .pause(200)
                 .type("_s");
@@ -100,7 +100,7 @@ export default function Header() {
         <ThemeSwitcher />
         <button
           title="Close Menu Button"
-          className="nav-btn nav-close-btn"
+          className="icon nav-close-btn"
           onClick={handleNavClick}
           aria-label="Close Menu Button"
         >
@@ -109,7 +109,7 @@ export default function Header() {
       </nav>
       <button
         title="Menu Button"
-        className="nav-btn"
+        className="icon nav-btn"
         onClick={toggleNav}
         aria-label="Menu Button"
       >

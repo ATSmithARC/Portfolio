@@ -26,7 +26,7 @@ const DropdownList = ({ profile }) => {
           aria-pressed="false"
           title="Expand Dropdown"
           aria-label="Expand Dropdown"
-          className="dropdown-button"
+          className="icon"
         >
           {isOpen ? (
             <FontAwesomeIcon icon={faMinus} />
@@ -38,7 +38,7 @@ const DropdownList = ({ profile }) => {
       {isOpen && (
         <React.Fragment>
           <p className="dropdown-tagline"> {profile.tagline} </p>
-          <h3 className="centered" role="heading" aria-level="3"> {profile.header} </h3>
+          <h3 role="heading" aria-level="3"> {profile.header} </h3>
           <ul className="dropdown-list">
             {profile.skills.map((item, index) => (
               <li key={index}>

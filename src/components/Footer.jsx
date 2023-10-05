@@ -78,7 +78,6 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p className="text-small">
         <a
           role="link"
           href="https://github.com/ATSmithARC/Portfolio"
@@ -88,7 +87,6 @@ export default function Footer() {
           Andrew_Smith | <FontAwesomeIcon icon={faCreativeCommonsZero} />
           _2023 | Copenhagen_DK
         </a>
-      </p>
     </footer>
   );
 }

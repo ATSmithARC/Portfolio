@@ -58,7 +58,7 @@ const ExperienceSection = ({ experienceType }) => {
                       aria-pressed="false"
                       title="Expand Dropdown"
                       aria-label="Expand Dropdown"
-                      className="dropdown-button"
+                      className="icon"
                     >
                       {isEntrySelected(index) ? null : (
                         <FontAwesomeIcon icon={faPlus} />
@@ -117,7 +117,7 @@ const ExperienceSection = ({ experienceType }) => {
                         aria-pressed="false"
                         title="Expand Dropdown"
                         aria-label="Expand Dropdown"
-                        className="dropdown-button"
+                        className="icon"
                       >
                         {isEntrySelected(index) ? null : (
                           <FontAwesomeIcon icon={faPlus} />
