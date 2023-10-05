@@ -2,7 +2,7 @@
   "greetings": ["Hello", "Hi", "Hej", "안녕", "Hola", "Salut"],
   "designer": {
     "title": "Part Designer",
-    "tagline": "I value things with a clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
+    "tagline": "I value things with clear structure, clean style, purpose-driven elements, and thought-provoking interactions.",
     "header": "My design skills:",
     "skills": [
       "Architectural Design",
@@ -16,15 +16,15 @@
     "tagline": "I love to write code and build apps that enhance productivity, creativity, and accessibility to information.",
     "header": "My coding skills:",
     "skills": [
-      "OOP Libraries",
-      "CAD/BIM Plugins",
       "Data Management",
-      "Full Stack Web"
+      "CAD/BIM Plugins",
+      "Full Stack Web",
+      "OOP Libraries"
     ]
   },
   "human": {
     "title": "Part Human",
-    "tagline": "I'm an American currently living in Copenhagen. If I'm not behind my screen, I'm probably outside exploring the city.",
+    "tagline": "I'm an American living in Copenhagen. If I'm not behind my screen, I'm probably outside exploring the city.",
     "header": "My human skills:",
     "skills": [
       "Cycling in the Rain",
@@ -39,7 +39,7 @@
       "Hi, I'm Andrew Smith. I’m a multidisciplinary designer bridging the fields of architecture, computation, and application development. I have a combined 10 years of academic and professional experience in architecture, in which I hold a <a target='_blank' title='See Program Page' class='custom-underline'href='https://www.sciarc.edu/academics/undergraduate'>B.Arch</a> & <a target='_blank' title='See Program Page' class='custom-underline'href='https://royaldanishacademy.com/master-computation-in-architecture'>MA</a> degree. I'm passionate about design, technology, and anything to do with putting things together (or taking them apart!).",
       "During my B.Arch, I developed a deep interest in scripting and programming as a way to create and control architectural geometry. Later, as a designer at HKS Architects, I found programming and computational thinking instrumental in overcoming project-delivery challenges on complex projects like ",
       ". Professionally, I've helped teams of all sizes deliver dozens of competition proposals, construction document sets, and construction administration services within tight deadlines using computational techniques to automate tasks and manage project complexities.",
-      "Seeking academic foundation for my computational interests, I left practice in 2021 to pursue my MA in Computation in Architecture, which I have recently completed. Several applications developed in and around Master's studies like ",
+      "Seeking an academic foundation for my computational interests, I left practice in 2021 to pursue my MA in Computation in Architecture, which I have recently completed. Several applications developed in and around Master's studies like ",
       " are open-sourced on my Github.",
       "Currently, I'm seeking full-time employment where my experience and skills can contribute to innovative and sustainability-focused projects and initiatives. So, whether it's an employment inquiry, collaborating on a project, discussing app ideas, or simply saying hi, please reach out, and let's start putting something amazing together!"
     ]
@@ -123,7 +123,7 @@
         "title": "Film History T.A.",
         "employer": "SCI-Arc",
         "dates": "08/2016 - 04/2017",
-        "desc": "I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism and encouraging thoughtful communication.",
+        "desc": "I supported several of SCI-Arc's film history classes as a TA by kicking off topical discussions, managing film screenings, and grading written assignments. My tasks also included digitizing course materials and guiding students in analyzing films, aiming to enhance their understanding of cinematic criticism, and encouraging thoughtful communication.",
         "skills": [
           "Teaching Assistance",
           "Film Analysis",
@@ -143,7 +143,7 @@
     "entries": [
       {
         "id": 0,
-        "title": "Computation in Architecture (M.A.A)",
+        "title": "Computation in Architecture (MA)",
         "employer": "Royal Danish Academy",
         "dates": "08/2021 - 07/2023",
         "desc": "I've developed a comprehensive knowledge of computational techniques (programming, digital fabrication, robotics), and gained practical skills in applying that knowledge to solve architectural design problems focused around reducing the ecological footprint of building methods & materials.",
@@ -160,7 +160,7 @@
       },
       {
         "id": 1,
-        "title": "CREATE Summer School",
+        "title": "2021 CREATE Summer School",
         "employer": "Syddansk Universitet",
         "dates": "08/2021",
         "desc": "This Summer program focused on exploring data-driven tectonic construction, and the production of 1:1 scale prototypes that aimed at advancing wood architecture through the use of novel digital design-to-fabrication workflows. Concepts introduced included performance-driven aggregations, circular assemblies, and wood forming through programmed material behavior.",
@@ -197,25 +197,25 @@
   "skills": {
     "title": "Skills",
     "architectural": [
-      "Conceptual Design",
-      "Design Documentation",
-      "Construction Documentation",
-      "Constructi on Administration",
-      "Presentation",
       "Computational Design",
-      "Building Information Modeling",
-      "Life Cycle Assessment",
-      "Venue / Stadium Design"
+      "Sports Venue Design",
+      "Presentations",
+      "Conceptual Design",
+      "Design Documents",
+      "Construction Documents",
+      "Construction Admin",
+      "BIM Coordination",
+      "Life Cycle Assessment"
     ],
     "development": [
       "Plugin Development",
       "Web Development",
       "UI / UX Design",
-      "Object Oriented Programming",
+      "Object Libraries",
       "RESTful APIs"
     ],
     "applications": [
-      "Rhinocerous 3D",
+      "Rhinoceros 3D",
       "Grasshopper",
       "Autodesk Revit",
       "Rhino.Inside.Revit",

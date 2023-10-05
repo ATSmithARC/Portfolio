@@ -32,8 +32,10 @@ const ScrollToTopButton = () => {
     return (
       <div className="scroll-btn-container">
         <button
-          className={`scroll-btn`}
+          role="button"
+          className={`icon scroll-btn`}
           title="Scroll To Top"
+          aria-label="Scroll To Top"
           onClick={scrollToTop}
         >
           <FontAwesomeIcon icon={faChevronUp} />

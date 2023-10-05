@@ -30,7 +30,7 @@ function ProjectMenu(props) {
   return (
     <React.Fragment>
       <aside className="menu-container">
-        <button title="Filter Button" className="menu-btn" onClick={showMenu}>
+        <button title="Filter Button" className="icon menu-btn" onClick={showMenu}>
           <FontAwesomeIcon icon={faFilter} />
         </button>
         <ul className="menu" ref={menuRef}>

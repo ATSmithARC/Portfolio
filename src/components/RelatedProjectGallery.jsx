@@ -11,6 +11,7 @@ const RelatedProjectGallery = ({ projectIds }) => {
       <div className="related-gallery">
         {projectIds.map((id) => (
           <Link
+            role="link"
             rel="preload"
             as="image"
             key={projectList[id].id}
@@ -19,6 +20,7 @@ const RelatedProjectGallery = ({ projectIds }) => {
           >
             <div className="related-card">
               <img
+                role="img"
                 rel="preload"
                 key={projectList[id].id}
                 src={api + projectList[id].href + "-800.webp"}
@@ -26,7 +28,7 @@ const RelatedProjectGallery = ({ projectIds }) => {
                          ${api}${projectList[id].href}-600.webp 700w`}
                 alt={projectList[id].name}
               />
-              <h5>{projectList[id].name}</h5>
+              <h3 role="heading" aria-level="3">{projectList[id].name}</h3>
             </div>
           </Link>
         ))}

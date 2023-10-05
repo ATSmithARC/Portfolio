@@ -41,6 +41,7 @@ const RelatedProjectLinks = (props) => {
         return (
           <li>
             <Link
+              role="link"
               className={classNames}
               href={`/projects/${projectList[id].href}`}
             >

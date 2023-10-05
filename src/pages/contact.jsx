@@ -15,11 +15,10 @@ export default function Contact() {
 
   return (
     <div className="page">
-      <h1 className="heading-primary pointer" onClick={handleChangeHello}>
+      <h1 role="heading" aria-level="1" onClick={handleChangeHello}>
         Say {hello}!
       </h1>
       <DisplayEmail />
-      <p className="centered"> ...or use the form below:</p>
       <ContactForm />
     </div>
   );

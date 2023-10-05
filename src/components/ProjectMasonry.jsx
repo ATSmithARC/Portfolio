@@ -38,6 +38,7 @@ function ProjectMasonry(props) {
         })
         .map((project) => (
           <Link
+            role="link"
             rel="preload"
             as="image"
             key={project.id}
@@ -46,8 +47,7 @@ function ProjectMasonry(props) {
           >
             <div className="masonryItem" style={project.style}>
               <h2
-                className="heading-small bold t200 left"
-                role="cheading"
+                role="heading"
                 aria-level="2"
               >
                 {project.name}

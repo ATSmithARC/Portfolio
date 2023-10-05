@@ -9,7 +9,6 @@ import colorData from "../data/color-data.json";
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState({ colorSchemeIndex: 0, darkMode: false });
-
   const toggleColorScheme = () => {
     setTheme((prevTheme) => {
       const nextColorSchemeIndex =
@@ -45,17 +44,17 @@ const ThemeSwitcher = () => {
       <button
         role="button"
         title="Switch Page Colors"
-        className="theme-btn"
+        className="icon"
         onClick={toggleColorScheme}
       >
         <FontAwesomeIcon icon={faPalette} />
       </button>
-      <span> / </span>
+      <span>/</span>
       <button
         role="button"
         aria-pressed="false"
         title="Toggle Dark Mode"
-        className="theme-btn"
+        className="icon"
         onClick={toggleDarkMode}
       >
         {theme.darkMode ? (

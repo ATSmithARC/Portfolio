@@ -11,18 +11,6 @@ const DropdownList = ({ profile }) => {
     setIsOpen(!isOpen);
   };
 
-  /*
-  useEffect(() => {
-    const handleResize = () => {
-      setIsOpen(window.innerWidth > 800);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-*/
-  
   return (
     <div
       className={`dropdown-container ${isOpen ? "dropdown-open" : "pointer"}`}
@@ -32,8 +20,14 @@ const DropdownList = ({ profile }) => {
         className={`dropdown-header ${isOpen ? "dropdown-open pointer" : ""}`}
         onClick={isOpen ? toggleDropdown : null}
       >
-        <h2>{profile.title}</h2>
-        <button className="dropdown-button">
+        <h2 role="heading" aria-level="2">{profile.title}</h2>
+        <button
+          role="button"
+          aria-pressed="false"
+          title="Expand Dropdown"
+          aria-label="Expand Dropdown"
+          className="icon"
+        >
           {isOpen ? (
             <FontAwesomeIcon icon={faMinus} />
           ) : (
@@ -44,11 +38,11 @@ const DropdownList = ({ profile }) => {
       {isOpen && (
         <React.Fragment>
           <p className="dropdown-tagline"> {profile.tagline} </p>
-          <h5 className="centered"> {profile.header} </h5>
+          <h3 role="heading" aria-level="3"> {profile.header} </h3>
           <ul className="dropdown-list">
             {profile.skills.map((item, index) => (
               <li key={index}>
-                <h3>{item}</h3>
+                <p>{item}</p>
               </li>
             ))}
           </ul>
