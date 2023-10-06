@@ -100,7 +100,7 @@ const ContactForm = () => {
         </div>
         {/* Actual Fields */}
         <div>
-          <label for="your name">Your Name: {nameError && "*"}</label>
+          <label htmlFor="your name">Your Name: {nameError && "*"}</label>
           {nameError && <span className="error">Invalid Name</span>}
           <input
             maxLength="50"
@@ -110,21 +110,21 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <label for="your email">Your Email: {emailError && "*"}</label>
+          <label htmlFor="your email">Your Email: {emailError && "*"}</label>
           {emailError && <span className="error">Invalid email.</span>}
           <input
-            autocomplete="email"
-            autocapitalize="off"
-            autocorrect="off"
+            autoComplete="email"
+            autoCapitalize="off"
+            autoCorrect="off"
             maxLength="50"
-            spellcheck="false"
+            spellCheck="false"
             type="email"
             value={email}
             onChange={handleEmailChange}
           />
         </div>
         <div>
-          <label for="your message">Message: {messageError && "*"}</label>
+          <label htmlFor="your message">Message: {messageError && "*"}</label>
           {messageError && <span className="error">Invalid message.</span>}
           <textarea
             maxLength="1500"
