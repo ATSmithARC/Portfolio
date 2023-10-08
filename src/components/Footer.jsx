@@ -82,7 +82,7 @@ export default function Footer() {
           role="link"
           href="https://github.com/ATSmithARC/Portfolio"
           title="Design By Andrew_Smith (See Source)"
-          aria-label="Design By Andrew_Smith (See Source)"
+          aria-label="Andrew_Smith | _2023 | Copenhagen_DK"
         >
           Andrew_Smith | <FontAwesomeIcon icon={faCreativeCommonsZero} />
           _2023 | Copenhagen_DK

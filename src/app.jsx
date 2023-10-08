@@ -16,8 +16,8 @@ export default function Home() {
         <div className="content">
           <PageRouter />
         </div>
-        <Waves color={{ r: 225, g: 0, b: 0, a: 1 }} />
       </main>
+      <Waves />
       <Footer />
     </Router>
   );

@@ -2,12 +2,13 @@
 :root {
   --color-0: #000000;
   --color-1: #ffffff;
+  --color-2: #ff0000;
   --shadow-m: 0.5rem;
   --radius-s: 5px;
   --corner-w: 2.5vw;
   --translate-m: scale(1.04);
   --icon-scale: scale(1.2);
-  --border-m: 0.05rem solid var(--color-0);
+  --border-m: 2px solid var(--color-0);
   --ti-cursor-font-size: 1.5rem;
   --ti-cursor-color: var(--color-0);
 }
@@ -324,6 +325,7 @@ footer a {
   z-index: 5;
   border: none;
   border-radius: var(--radius-s);
+  filter: grayscale(35%);
 }
 .masonryItem:hover h2 {
   transform: translateY(-2rem);
@@ -333,6 +335,7 @@ footer a {
   border: var(--border-m);
   border-radius: var(--radius-s);
   transform: var(--translate-m);
+  filter: grayscale(0);
   z-index: 2;
 }
 .masonryItem:hover p {
@@ -584,6 +587,7 @@ h3 {
   min-width: 30vw;
   margin: 2rem auto 5rem auto;
   padding: 20px;
+  background-color: var(--color-1);
   border: var(--border-m);
   border-radius: var(--radius-s);
   box-shadow: var(--shadow-m) var(--shadow-m) var(--color-0);
@@ -649,6 +653,10 @@ h3 {
   height: 80vh;
   min-width: 35rem;
 }
+@keyframes deblur {
+  from {filter: blur(5rem);}
+  to {filter: blur(0);}
+}
 .splashimg {
   background-color: #f2f2f2;
   width: 100%;
@@ -657,6 +665,8 @@ h3 {
   object-fit: cover;
   border: none;
   border-radius: var(--radius-s);
+  animation-name: deblur;
+  animation-duration: 1s;
 }
 .splash-info {
   margin: 0 auto;
@@ -822,8 +832,6 @@ h3 {
   .theme-buttons {
     position: static;
   }
-
-  /* FOOTER MOBILE */
 
   /* CONTENT MOBILE */
   .wrapper {

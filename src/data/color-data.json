@@ -1,26 +1,32 @@
 [
   {
     "--color-0": "#000000",
-    "--color-1": "#ffffff"
+    "--color-1": "#ffffff",
+    "--color-2": "#ff0000"
   },
   {
     "--color-0": "#6A7BA2",
-    "--color-1": "#FFDFDE"
+    "--color-1": "#FFDFDE",
+    "--color-2": "#FFA500"
   },
   {
     "--color-0": "#00203F",
-    "--color-1": "#ADEFD1"
+    "--color-1": "#ADEFD1",
+    "--color-2": "#FFFF00"
   },
   {
     "--color-0": "#7b9acc",
-    "--color-1": "#FCF6F5"
+    "--color-1": "#FCF6F5",
+    "--color-2": "#008000"
   },
   {
     "--color-0": "#990011",
-    "--color-1": "#FCF6F5"
+    "--color-1": "#FCF6F5",
+    "--color-2": "#0000FF"
   },
   {
     "--color-0": "#00B1D2",
-    "--color-1": "#FDDB27"
+    "--color-1": "#FDDB27",
+    "--color-2": "#EE82EE"
   }
 ]
