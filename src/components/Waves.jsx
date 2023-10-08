@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { createNoise3D } from "simplex-noise";
 
-const Waves = (props) => {
+const hexToRgb = (hex) => {
+  hex = hex.replace(/^#/, '');
+  const bigint = parseInt(hex, 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return { r, g, b, a: 0.5 };
+};
+
+const Waves = () => {
   const containerRef = useRef(null);
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -10,22 +19,25 @@ const Waves = (props) => {
     height: height,
   });
   const noise3D = createNoise3D();
+  const rgbColor = hexToRgb("#c80000");
   const parameters = {
     factor: 0.037,
     variation: 0.001,
     amplitude: height / 2.5,
     lines: 50,
-    waveColor: props.color,
-    lineStroke: 0.5,
+    waveColor: rgbColor, // Use the accentColor here as an RGB object
+    lineStroke: 1.5,
     speed: 0.001,
   };
+
   const setupCanvas = () => {
     const context = containerRef.current.getContext("2d");
     const pixelRatio = Math.min(window.devicePixelRatio, 1.5);
     containerRef.current.width = width * pixelRatio;
     containerRef.current.height = height * pixelRatio;
     context.scale(pixelRatio, pixelRatio);
-
+    context.translate(0.5, 0.5);
+    context.imageSmoothingEnabled = true;
     setCanvasDimensions({ width, height });
   };
   const setupRandomness = () => {
@@ -107,5 +119,4 @@ function debounce(func, wait) {
     }, wait);
   };
 }
-
 export default Waves;

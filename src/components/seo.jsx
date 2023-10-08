@@ -6,46 +6,46 @@ import projectList from "../data/project-list.json";
 
 const Seo = () => {
   const [location] = useLocation();
-  
+
   function getPageTitle(location) {
-  const locationParts = location.split("/").filter(Boolean);
-  const currentPage =
-    locationParts.length > 0 ? locationParts[locationParts.length - 1] : "";
+    const locationParts = location.split("/").filter(Boolean);
+    const currentPage =
+      locationParts.length > 0 ? locationParts[locationParts.length - 1] : "";
 
-  function matchProject(currentPage) {
-    for (let i = 0; i < projectList.length; i++) {
-      if (projectList[i].href === currentPage) {
-        return projectList[i].name;
+    function matchProject(currentPage) {
+      for (let i = 0; i < projectList.length; i++) {
+        if (projectList[i].href === currentPage) {
+          return projectList[i].name;
+        }
       }
+      return SEO.title;
     }
-    return SEO.title;
+
+    if (currentPage) {
+      const prefix = "Andrew Smith | ";
+      switch (currentPage) {
+        case "about":
+          return prefix + "About";
+        case "contact":
+          return prefix + "Contact";
+        case "projects":
+          return prefix + "Projects";
+        case "undergraduate":
+          return prefix + "Projects - Undergraduate";
+        case "graduate":
+          return prefix + "Projects - Graduate";
+        case "pro-bono":
+          return prefix + "Projects - Pro Bono";
+        case "professional":
+          return prefix + "Projects - Professional";
+        default:
+          return matchProject(currentPage);
+      }
+    } else {
+      return SEO.title;
+    }
   }
 
-  if (currentPage) {
-    const prefix = "Andrew Smith | ";
-    switch (currentPage) {
-      case "about":
-        return prefix + "About";
-      case "contact":
-        return prefix + "Contact";
-      case "projects":
-        return prefix + "Projects";
-      case "undergraduate":
-        return prefix + "Projects - Undergraduate";
-      case "graduate":
-        return prefix + "Projects - Graduate";
-      case "pro-bono":
-        return prefix + "Projects - Pro Bono";
-      case "professional":
-        return prefix + "Projects - Professional";
-      default:
-        return matchProject(currentPage);
-    }
-  } else {
-    return SEO.title;
-  }
-}
-  
   const pageTitle = getPageTitle(location);
 
   return (

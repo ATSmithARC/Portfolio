@@ -30,8 +30,7 @@ const sectionProps = [
 ]
 
 const sections = [
-  <ContentSection properties={sectionProps[0]}/>,
-  <ContentSection properties={sectionProps[1]}/>
+  <section></section>
 ]
 
 
