@@ -4,21 +4,19 @@
     <meta charset="utf-8">
     <title>Single Page Apps for GitHub Pages</title>
     <script type="text/javascript">        
+      // Get the URL path segments and count them
       var pathSegments = window.location.pathname.split('/');
-      var pathSegmentsToKeep = pathSegments.length - 2;
+      var pathSegmentsToKeep = pathSegments.length - 2; 
+      console.log(window.location.pathname);
+      console.log(pathSegments.length);
       var l = window.location;
-      var g = (
+      l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep)
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
       );
-      
-      // Create an <h1> element and append 'l' as a string to it
-      var h1 = document.createElement('h1');
-      h1.textContent = l.toString();
-      
-      // Append the <h1> element to the body of the page
-      document.body.appendChild(h1);
     </script>
   </head>
   <body>
