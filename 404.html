@@ -7,14 +7,18 @@
       var pathSegments = window.location.pathname.split('/');
       var pathSegmentsToKeep = pathSegments.length - 2;
       var l = window.location;
-      var g = l.replace(
+      var g = (
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep)
       );
-      console.log(g)
+      
+      // Create an <h1> element and append 'l' as a string to it
+      var h1 = document.createElement('h1');
+      h1.textContent = l.toString();
+      
+      // Append the <h1> element to the body of the page
+      document.body.appendChild(h1);
     </script>
   </head>
   <body>
