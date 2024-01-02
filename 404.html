@@ -13,24 +13,28 @@
       // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
       // Note: this 404.html file must be at least 512 bytes for it to work
       // with Internet Explorer (it is currently > 512 bytes)
-      console.log("running 404.html 11:50");
+      console.log("running 404.html 12:14");
       var pathSegmentsToKeep = 0;
 
       var l = window.location;
-
+      console.log("hostname: " + l.hostname)
+      console.log("pathname: " + l.pathname)
       // Remove trailing slash if it exists
       var trimmedPathname = l.pathname.endsWith("/")
         ? l.pathname.slice(0, -1)
         : l.pathname;
-
+      console.log("trimmedPathname: " + trimmedPathname)
+      
       // Split the trimmed pathname into segments
       var segments = trimmedPathname
         .split("/")
         .slice(0, 1 + pathSegmentsToKeep);
-
+      console.log("segments: " + segments)
+      
       // Encode the segments and join them with '/'
       var encodedPath = segments.join("/").replace(/&/g, "~and~");
-
+      console.log("encodedPath: " + encodedPath)
+      
       // Construct the new URL
       var newUrl =
         l.protocol +
@@ -41,7 +45,8 @@
         encodedPath +
         (l.search ? "?" + l.search.slice(1).replace(/&/g, "~and~") : "") +
         l.hash;
-
+        console.log("newUrl: " + newUrl)
+        
       l.replace(newUrl);
     </script>
   </head>
