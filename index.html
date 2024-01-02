@@ -7,16 +7,14 @@
     <link rel="icon" href="https://storage.googleapis.com/atsmitharc-media/ico/favicon.ico" />
     <script type="text/javascript">
         (function(l) {
-          console.log("running index.html 18:34")
+          console.log("running index.html 18:45")
           console.log("href: " + l.href)
           console.log("pathname: " + l.pathname)
           console.log("search: " + l.search)
             if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1)
                 console.log("decoded: " + decoded)
-                window.history.replaceState(null, null, 
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
+                window.history.replaceState(null, null, decoded);
             }
         }(window.location))
     </script>
