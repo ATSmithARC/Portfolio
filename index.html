@@ -7,8 +7,10 @@
     <link rel="icon" href="https://storage.googleapis.com/atsmitharc-media/ico/favicon.ico" />
     <script type="text/javascript">
         (function(l) {
-          console.log("running index.html 18:02")
-          console.log(l)
+          console.log("running index.html 18:14")
+          console.log("href: " + l.href)
+          console.log("pathname: " + l.pathname)
+          console.log("search: " + l.search)
             if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
                     return s.replace(/~and~/g, '&');
