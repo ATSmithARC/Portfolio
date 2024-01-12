@@ -203,6 +203,9 @@ footer li {
 footer a {
   font-size: 0.75rem;
 }
+footer .icon:hover {
+  transform: var(--icon-scale);
+}
 .scroll-btn-container {
   display: flex;
   width: 100%;

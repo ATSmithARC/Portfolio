@@ -8,7 +8,7 @@
     "site": "Los Angeles, CA, US",
     "yearStart": 2013,
     "yearEnd": 2013,
-    "desc": "a parking-spot sized pavilion based on our personal measurements"
+    "desc": "a small pavilion based on my own proportions"
   },
   {
     "id": 1,
@@ -19,7 +19,7 @@
     "site": "Los Angeles, CA",
     "yearStart": 2014,
     "yearEnd": 2014,
-    "desc": "a circulatory expression of the figure and the field"
+    "desc": "an after-school club inspired by a cemetery's circulation"
   },
   {
     "id": 2,
@@ -52,7 +52,7 @@
     "site": "San Francisco, CA",
     "yearStart": 2016,
     "yearEnd": 2016,
-    "desc": "an exterior facade study of the SFMOMA"
+    "desc": "an exterior facade study of Snøhetta's SFMOMA"
   },
   {
     "id": 5,
@@ -63,7 +63,7 @@
     "site": "Copenhagen, DK, US",
     "yearStart": 2016,
     "yearEnd": 2016,
-    "desc": "a spherical building typology for an expansion to the SCI-Arc Campus"
+    "desc": "retopologizing the SCI-Arc campus as a spherical building"
   },
   {
     "id": 6,
@@ -74,7 +74,7 @@
     "site": "Palm Springs, CA, US",
     "yearStart": 2016,
     "yearEnd": 2016,
-    "desc": "a design-narrative approach to a residential house in water-stricken Palm Springs",
+    "desc": "a narrative approach to a residential house in water-stricken Palm Springs",
     "collab": ["TBD"]
   },
   {
@@ -86,7 +86,7 @@
     "site": "Los Angeles, CA, US",
     "yearStart": 2018,
     "yearEnd": 2017,
-    "desc": "a plan for the future of dodgers stadium"
+    "desc": "a district plan beyond the outfield of LA's Dodgers Stadium"
   },
   {
     "id": 8,
@@ -94,10 +94,10 @@
     "href": "structural-optimization-strategies",
     "style": {"aspectRatio": 1.91571},
     "category": 1,
-    "site": "Mexico City, MX",
-    "yearStart": 2018,
-    "yearEnd": 2018,
-    "desc": "a cross-section optimization stratgey for lattice structures"
+    "site": "Austin, TX, US",
+    "yearStart": 2019,
+    "yearEnd": 2019,
+    "desc": "a topology optimization stratgey for shell structures"
   },
   {
     "id": 9,
@@ -105,10 +105,10 @@
     "href": "polyhedral-timber-topologies",
     "style": {"aspectRatio": 1.7065},
     "category": 1,
-    "site": "Austin, TX, US",
-    "yearStart": 2019,
-    "yearEnd": 2019,
-    "desc": "a topology optimization stratgey for shell structures"
+    "site": "Mexico City, MX",
+    "yearStart": 2018,
+    "yearEnd": 2018,
+    "desc": "a cross-section optimization stratgey for lattice structures"
   },
   {
     "id": 10,
@@ -119,7 +119,7 @@
     "site": "Denton, TX, US",
     "yearStart": 2019,
     "yearEnd": 2020,
-    "desc": "a guide to hacking texas's fracking infrastructure"
+    "desc": "a proposal to hack Texas's abandoned fracking infrastructure"
   },
   {
     "id": 11,
@@ -152,7 +152,7 @@
     "site": "Hunstville, AL, US",
     "yearStart": 2020,
     "yearEnd": 2020,
-    "desc": "an innovative integrated design process"
+    "desc": "using Rhino.Inside.Revit to coordinate a parametric facade"
   },
   {
     "id": 14,
@@ -163,7 +163,7 @@
     "site": "Sydney, AU",
     "yearStart": 2020,
     "yearEnd": 2020,
-    "desc": "a waterfront pavilion inspired by storytelling"
+    "desc": "an iconic waterfront pavilion inspired by storytelling"
   },
   {
     "id": 15,
@@ -174,7 +174,7 @@
     "site": "Inglewood, CA, US",
     "yearStart": 2017,
     "yearEnd": 2021,
-    "desc": "a ship in a bottle"
+    "desc": "a cutting-edge 6,000 seat performance venue in Los Angeles."
   },
   {
     "id": 16,
@@ -211,14 +211,14 @@
   },
   {
     "id": 19,
-    "name": "Candle Holder^3",
+    "name": "Sammen",
     "href": "candle-holder-3",
     "style": {"aspectRatio": 1.0},
     "category": 1,
     "site": "Copenhagen, DK, US",
     "yearStart": 2021,
     "yearEnd": 2021,
-    "desc": "a bespoke candle set inspired by Japanese joinery"
+    "desc": "a bespoke interlocking candle set inspired by Japanese joinery"
   },
   {
     "id": 20,
@@ -251,7 +251,7 @@
     "site": "None",
     "yearStart": 2022,
     "yearEnd": 2023,
-    "desc": "an open-source library for modeling stadia geometries"
+    "desc": "an open-source library for modeling stadium geometries"
   },
   {
     "id": 23,

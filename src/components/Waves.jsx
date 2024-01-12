@@ -19,14 +19,14 @@ const Waves = () => {
     height: height,
   });
   const noise3D = createNoise3D();
-  const rgbColor = hexToRgb("#c80000");
+  const rgbColor = hexToRgb("#cc0000");
   const parameters = {
     factor: 0.037,
     variation: 0.001,
     amplitude: height / 2.5,
     lines: 50,
     waveColor: rgbColor, // Use the accentColor here as an RGB object
-    lineStroke: 1.5,
+    lineStroke: 1,
     speed: 0.001,
   };
 
@@ -36,8 +36,6 @@ const Waves = () => {
     containerRef.current.width = width * pixelRatio;
     containerRef.current.height = height * pixelRatio;
     context.scale(pixelRatio, pixelRatio);
-    context.translate(0.5, 0.5);
-    context.imageSmoothingEnabled = true;
     setCanvasDimensions({ width, height });
   };
   const setupRandomness = () => {
@@ -84,7 +82,6 @@ const Waves = () => {
 
   const render = (context, randomness) => {
     const { width, height } = canvasDimensions;
-
     context.clearRect(0, 0, width, height);
     drawPaths(context, width, height, randomness);
   };

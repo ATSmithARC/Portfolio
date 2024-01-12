@@ -59,7 +59,7 @@ const App = () => (
         path={r + "pro-bono"}
         component={() => <Projects filter="pro-bono" />}
       />
-      <Route path={r + projectList[0].href} component={P0} />
+      <Route path={"/projects/parking-pavilion"} component={P0} />
       <Route path={r + projectList[1].href} component={P1} />
       <Route path={r + projectList[2].href} component={P2} />
       <Route path={r + projectList[3].href} component={P3} />
