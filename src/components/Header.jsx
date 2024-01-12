@@ -78,7 +78,7 @@ export default function Header() {
   return (
     <header className={isProjectPage ? "project-header" : ""}>
       <div aria-label="Andrew Smith Logo" className="logomation">
-        <a href="./">
+        <Link href="/">
           <TypeIt
             getBeforeInit={(instance) => {
               instance
@@ -90,7 +90,7 @@ export default function Header() {
               return instance;
             }}
           />
-        </a>
+        </Link>
       </div>
       <nav ref={navRef}>
         <ActiveLink href="/">Home</ActiveLink>

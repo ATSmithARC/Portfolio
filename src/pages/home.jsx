@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <h1 className="home-text" role="heading" aria-level="1">
-        Hi, I'm Andrew
+        Hi, I'm Andrew.
       </h1>
       <h2 className="home-text" role="heading" aria-level="2">
         I'm a computational designer <br /> and part-time developer.
