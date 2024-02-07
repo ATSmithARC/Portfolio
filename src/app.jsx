@@ -6,8 +6,9 @@ import Seo from "./components/seo.jsx";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Waves from "./components/Waves.jsx";
+import WavesThree from "./components/WavesThree.jsx";
 
-export default function Home() {
+export default function App() {
   return (
     <Router>
       <Seo />
@@ -17,7 +18,7 @@ export default function Home() {
           <PageRouter />
         </div>
       </main>
-      <Waves />
+      <WavesThree />
       <Footer />
     </Router>
   );
