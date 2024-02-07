@@ -82,11 +82,7 @@ export default function Header() {
           <TypeIt
             getBeforeInit={(instance) => {
               instance
-                .type("andrew_smith", {instant:true})
-                .pause(2000)
-                .delete(11)
-                .pause(200)
-                .type("_s");
+                .type("a_s");
               return instance;
             }}
           />
